@@ -5,4 +5,4 @@ Just for previews and demos
 <a href = "niceDesigns/logInSignUp/page.html">LogIn-SignUp</a>
 
 ### Contract Previews
-
+<a href = "contracts/TRANS/index.html">Trans International</a?
