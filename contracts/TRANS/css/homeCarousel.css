@@ -1,0 +1,63 @@
+.welcomeButtonsContainer
+{
+    position: absolute;
+    z-index: 99;
+    top: 420px;
+    width: 100%
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    left: 30%;
+}
+
+.welcomeContainer
+{
+    /* background: red; */
+    width: 100%
+}
+
+.welcomeText
+{
+    font-size: 40px;
+    position: absolute;
+    z-index: 99;
+    top: 250px;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Manrope', sans-serif; 
+    font-weight: 800;
+    /* background: red;  */
+}
+
+.welcomeName
+{
+    font-size: 70px;
+    font-weight: 700;
+    position: absolute;
+    z-index: 98;
+    top: 285px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%; 
+    font-family: 'Manrope', sans-serif;
+    /* background: red; */
+}
+
+.homeCaption
+{
+    font-size: 20px;
+    font-weight: 500;
+    z-index: 99;
+    position: absolute;
+    top: 370px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    /* background: red; */
+}

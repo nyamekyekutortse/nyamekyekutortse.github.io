@@ -1,0 +1,939 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap');
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 98;
+    background: rgb(255, 255, 255);
+    /* background: rgb(234, 234, 234); */
+    /* background: rgb(234, 143, 38); */
+}
+
+nav .navbar
+{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+nav .navbar .nav-links .links
+{
+    display: flex;
+    text-transform: uppercase;
+    color: rgb(234, 143, 38);
+}
+
+nav .navbar .nav-links .links a:hover
+{
+    text-decoration: none;
+    font-weight: bold;
+    color:rgb(53, 53, 57);
+}
+
+nav .menuCloser .nav-logo-side,
+nav .menuCloser .topBanner,
+nav .nav-links .sideMenuLogo
+{
+    display: none;
+}
+
+nav .navbar .links li
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0 10px;
+    transition: all 0.5s ease;
+}
+
+nav .navbar .menu
+{
+    display: none;
+    font-size: 20px;
+}
+
+nav .navbar .nav-links .links li a
+{
+    height: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    font-weight: 500px;
+    transition: all 0.5s ease;
+}
+nav .navbar .nav-links
+{
+    height: 100%;
+    line-height: 70px;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .navbar .nav-links .links li .arrow
+{
+    height: 100%;
+    line-height: 70px;
+    width: 22px;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    transition: all 0.3s ease;
+}
+
+nav .navbar .nav-links .links li:hover .products-arrow,
+nav .navbar .nav-links .links li:hover .works-arrow,
+nav .navbar .nav-links .links li:hover .about-arrow,
+nav .navbar .nav-links .links li:hover .resources-arrow
+{
+    transform: scale(120%);
+}
+
+nav .navbar .nav-logo a
+{
+    width: 60px;
+    height: 100%;
+    padding-top: 6px;
+    line-height: 70px;
+    z-index: 99;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .sideLogo
+{
+    display: none;
+}
+
+nav .nav-links .companyNameSide
+{
+    display: none;
+}
+nav .nav-links .companyNameSideB
+{
+    display: none;
+}
+nav .navbar .nav-logo a:hover
+{
+    transform: scale(110%);
+    filter: drop-shadow(2px 2px 1.7px rgba(0, 0, 0, 0.283))
+}
+
+nav .navbar .menuOpen
+{
+    display: none;
+}
+
+.navbar .nav-links .links .dropDown
+{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(2px);
+    line-height: 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.505);
+    display: none;
+}
+
+.navbar .nav-links .links .dropDown li:hover
+{
+    background: rgb(227, 125, 8);
+    /* background: red; */
+}
+
+.navbar .nav-links .links .dropDown li a:hover
+{
+    color: rgb(255, 255, 255);
+}
+.navbar .nav-links .links .dropDown li
+{
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.255);
+}
+
+.navbar .nav-links .links .dropDown li a
+{
+    font-size: 15px;
+    font: 500;
+    color: rgb(51, 51, 51);
+}
+
+nav .menuCloser .icon-links 
+{
+    display: none;
+}
+
+.navbar .nav-links .links li:hover .productsDrop,
+.navbar .nav-links .links li:hover .aboutDrop,
+.navbar .nav-links .links li:hover .worksDrop,
+.navbar .nav-links .links li:hover .resourcesDrop
+{
+    display: block;
+}
+
+nav .bx-menu-alt-right
+{
+    display: none;
+}
+
+nav .menuCloser input,
+nav .backupLogo,
+nav .menuCloser label
+{
+    display: none;
+}
+/*----------------------Smaller device, Vertical Left Navbar------------------------------*/
+@media (max-width: 1000px)
+{
+
+    nav .navbar .links li
+    {
+        justify-content: left;
+        padding-top: 0px;
+        line-height: 60px;
+    }
+
+
+    .navbar .nav-links .links .dropDown li
+    {
+        position: relative;
+        top: -15px;
+        line-height: 40px;
+        border-bottom: none;
+        transition: all 0.3s ease;
+        background-color: none;
+    }
+
+
+    nav .navbar .nav-links
+    {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        max-width: 200px;
+        /* background: rgb(234, 143, 38); */
+        background: rgb(255, 255, 255);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .navbar .nav-links .links
+    {
+        display: block;
+        justify-content: space-evenly;
+        transition: all 0.3s ease-in-out;
+        padding-top: 0px;
+    }
+
+    .navbar .nav-links .links .dropDown li:hover
+    {
+        background: none;
+    }
+
+    .navbar .nav-links .links .dropDown li a:hover
+    {
+        color: black;
+    }
+
+    nav .navbar .nav-logo a
+    {
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .nav-links .companyNameSide
+    {
+        /* display: block; */
+        top: 0;
+        padding-top: 30px;
+        font-size: 65px;
+        font-weight: 900;
+        color: #fff;
+        z-index: 97;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 8px;
+        font-family: 'Manrope', sans-serif; 
+        text-decoration: none !important;   
+        filter: drop-shadow(2px 0 rgba(0, 0, 0, 0.283));
+        display: none;
+    }
+
+    /* Company name on expanded menu */
+    nav .nav-links .companyNameSideB
+    {
+        display: flex;
+        top: 0;
+        white-space: nowrap;
+        padding-top: 15px;
+        padding-left: 150px;
+        font-size: 25px;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+        z-index: 99;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: 9px;
+        font-family: 'Manrope', sans-serif;  
+        filter: drop-shadow(2px 2px 1.8px rgba(0, 0, 0, 0.283));
+    }
+    /* Company logo and name on expanded logo */
+    nav .nav-links .sideMenuBrand
+    {
+        display: flex;
+    }
+
+    nav .nav-links .sideMenuLogo
+    {
+        width: 70px;
+        top: 10px;
+        z-index: 99;
+        left: 60px;
+        position: relative;
+        display: flex;
+        transition: all 0.3s ease-in-out;
+        filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.283))
+    }
+
+    nav .nav-links .sideLogo:hover,
+    nav .nav-links .sideMenuLogo:hover
+    {
+        transform: scale(110%);
+        filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.48))
+    }
+
+    nav .navbar .nav-links .links li 
+    {
+        display: block;
+        border-bottom: none;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .nav-links .links .dropDown
+    {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        transition: all 0.3s ease;
+    }
+
+
+    .navbar .nav-links .links li:hover .productsDrop,
+    .navbar .nav-links .links li:hover .aboutDrop,
+    .navbar .nav-links .links li:hover .worksDrop,
+    .navbar .nav-links .links li:hover .resourcesDrop
+    {
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .navbar .nav-links .links li .arrow
+    {
+        line-height: 40px;
+    }
+
+    nav .menuCloser label,
+    nav .menuCloser input
+    {
+        display: block;
+        position: absolute;
+        color:rgb(51, 51, 51);
+        font-size: 30px;
+        z-index: 100;
+        justify-content: right;
+        padding-left: 90%;
+        padding-top: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .menuCloser i
+    {
+        transition: all 0.5s ease;
+    }
+
+    nav .menuCloser i:hover 
+    {
+        transform: scale(108%);
+        filter: drop-shadow(3px 0 rgba(0, 0, 0, 0.283));
+        color: black;
+        cursor: pointer;
+    }
+
+    nav .menuCloser input[type=checkbox]
+    {
+        display: none;
+    }
+
+    /* Menu toggling */
+    input:not(:checked) ~ .navbar
+    {
+        transform: translateX(-500px);
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:checked ~ .navbar
+    {
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:checked ~ .topBanner
+    {
+        display: none;
+    }
+    input:checked ~ .open
+    {
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:checked ~ .close
+    {
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:not(:checked) ~ .close
+    {
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:not(:checked) ~ .open
+    {
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:not(:checked) ~ .icon-links
+    {
+        display: block;
+        transition: all 0.5s ease;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 50px;
+        width: 70px;
+        height: 100vh;
+        /* background-color: rgb(234, 143, 38); */
+        background-color: rgb(255, 255, 255);
+        top: -65px;
+        position: relative;
+    }
+
+    input:not(:checked) ~ .icon-links i
+    {
+        display: block;
+        transition: all 0.5s ease-in-out;
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 70px;
+        padding-left: 20px;
+        top: 5px;
+        position: relative;
+        color:rgb(34, 33, 33);
+    }
+
+    
+    input:checked ~ .topBanner h1
+    {
+        display: none !important;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:not(:checked) ~ .icon-links i:hover
+    {
+        /* background-color: #fff; */
+        color: white;
+        background-color: rgb(234, 143, 38);
+        transition: all 0.5s ease;
+    }
+    
+    nav .menuCloser .topBanner .companyNameB
+    {
+        display: none
+    }
+
+    nav .menuCloser .icon-links a
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav .menuCloser .nav-logo-side
+    {
+        padding-left: 10px;
+        width: 70px;
+        padding-top: 8px;
+        display: block;   
+        cursor: pointer;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+        filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.183));
+        z-index: 10099;
+    }
+    
+    nav .menuCloser .nav-logo-side:hover
+    {
+        transform: scale(105%);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5))
+    }
+
+    /* Company name on non expanded menu */
+    /* FIXME: RESIZING */
+    nav .menuCloser .companyNameTop
+    {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        padding-left: 24%;
+        padding-top: 18px;
+        letter-spacing: 4px;
+        position: relative;     
+        color: rgb(0, 0, 0);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.283));
+        z-index: 1;
+    }
+
+    nav .backupLogo
+    {
+        display: none;
+    }
+
+    img[alt="company logo"]
+    {
+        display: none;
+    }
+
+    nav .menuCloser .companyNameTopB
+    {
+        font-size: 30px;
+        padding-top: 12px;
+        padding-left: 10px;
+        font-weight: 600;
+        color: white;
+        display: none;
+        filter: drop-shadow(3px 0 rgba(0, 0, 0, 0.283))
+    }
+
+    input:checked ~ .topBanner .companyNameTopB,
+    input:checked ~ .topBanner .companyNameTop
+    {
+        display: none !important;
+    }
+
+    nav .menuCloser .topBanner
+    {
+        display: flex;
+    }
+
+    nav .menuCloser .topBanner .companyName
+    {
+        display: flex;
+        align-content: center;
+        top: 0;
+        padding-top: 14px;
+        padding-left: 5%;
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: 5px;
+        font-family: 'Manrope', sans-serif;  
+        filter: drop-shadow(2px 0 rgba(0, 0, 0, 0.283));
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav .menuCloser .companyNameTop .nav-logo-top
+    {
+        display: flex;
+        width: 40px;
+        position: absolute;
+        z-index: 200;
+        top: 12px;
+        left: 5px;
+        transition: all 0.5s ease;
+    }
+    
+    nav .menuCloser .companyNameTop br
+    {
+        display: none;
+    }
+}
+
+/* 
+    NOTE: CLEAN    
+    Mobile: landscape
+    iPhone 13 Pro Max 926 x 428
+*/
+@media(max-width : 926px)
+{
+    nav .menuCloser .icon-links 
+    {
+        overflow: scroll;
+    }
+
+    nav .menuCloser .open,
+    nav .menuCloser .close
+    {
+        right: 2px;
+    } 
+
+    nav .menuCloser .companyNameTop
+    {
+        left: 6%;
+        font-size: 35px; 
+        top: -8px;
+    }
+}
+
+/* 
+    NOTE: CLEAN
+    Tablets - Portrait
+    Ipad 768 x 1024
+*/
+@media (max-width: 769px)
+{
+    nav .menuCloser .icon-links a,
+    nav .menuCloser .topBanner .companyName
+    {
+        display: none;
+    }
+
+    nav .menuCloser .topBanner .nav-logo-side
+    {
+        display: none;
+        width: 50px;
+        padding-top: 12px;
+    }
+
+    nav .navbar .nav-links .links li a,
+    .navbar .nav-links .links .dropDown li a
+    {
+        font-size: 20px;
+        letter-spacing: 2px
+    }
+
+    .navbar .nav-links .links .dropDown li
+    {
+        top: -5px;
+        line-height: 45px;
+        bottom: 0;
+    }
+
+    nav .navbar .nav-links
+    {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        max-width: 769px;
+        text-align: center;
+        padding-top: 0px;
+    }
+
+    nav .nav-links .companyNameSideB
+    {       
+        padding-top: 20px;
+        padding-left: 10%;
+        font-size: 30px;
+    }
+
+    nav .nav-links .sideMenuLogo
+    {
+        width: 70px;
+        top: 10px;
+        z-index: 99;
+        left: 10px;
+        position: relative;
+        display: flex;
+        transition: all 0.3s ease-in-out;
+        filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.283));
+    }
+
+    nav .menuCloser .icon-links 
+    {
+        display: none;
+    }
+
+    nav .nav-links .companyNameSide
+    {
+        bottom: 0px;
+        position: relative;
+        font-size: 45px;
+    }
+
+    nav .open,
+    nav .close
+    {
+        color:rgb(51, 51, 51);
+        right: 10px;
+    }
+
+    nav .menuCloser .companyNameTop
+    {
+        display: block;
+        top: 0;
+        padding-top: 10px;
+        padding-left: 30%;
+        font-size: 30px;
+        font-weight: 900;
+        color: black;
+        z-index: 97;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 8px;
+        font-family: 'Manrope', sans-serif; 
+        text-decoration: none !important;   
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.283));
+    }
+
+    nav .menuCloser .companyNameTopB
+    {
+        position: fixed;
+        padding-top: 30px;
+        padding-left: 35%;
+        font-size: 15px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 35px;
+        letter-spacing: 5px;
+        font-family: 'Manrope', sans-serif;  
+        filter: drop-shadow(2px 0 rgba(0, 0, 0, 0.133));
+    }
+
+    input:not(:checked) ~ .navbar
+    {
+        transform: translateY(-1000%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:checked ~ .backupLogo
+    {
+        transform: translateY(-1000%);
+        transition: all 0.5s ease-in-out;
+    }
+    nav .menuCloser .companyNameTop br
+    {
+        display : block;
+    }
+    
+    nav .menuCloser .companyNameTop .nav-logo-top
+    {
+        display: none;
+    }
+
+    nav .backupLogo
+    {
+        display: flex;
+        width: 55px;
+        position: absolute;
+        z-index: 1;
+        top: 8px;
+        left: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .backupLogo:hover
+    {
+        transform: scale(110%);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.283));
+    }
+}
+
+/* 
+    NOTE: working
+    Mobile: portrait
+    iPhone 13 Pro Max
+*/
+@media (max-width: 428px)
+{
+    nav .menuCloser .companyNameTop
+    {
+        left: -3%;
+        font-size: 25px;
+        top: -13px;
+    }
+
+    .backupLogo
+    {
+        z-index: 2;
+    }
+    nav .nav-links .sideMenuLogo
+    {
+        left: 2px;
+        z-index: 199;
+        position: relative;
+    }
+
+
+    input:checked ~ .topBanner .companyNameTop,
+    nav .backupLogo,
+    input:checked ~ .topBanner .companyNameTopB
+    {
+        display: flex;
+    }
+
+
+    nav .nav-links .companyNameSide
+    {
+        top: 0px;
+        padding-left: 7%;
+        font-size: 35px;
+    }
+
+    nav .nav-links .companyNameSideB
+    {
+        display: block;
+        padding-top: 25px;
+        justify-content: center;
+        left: -178px;
+        position: absolute;
+        font-size: 25px;
+        white-space: pre-wrap;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    nav .menuCloser .companyNameTop .nav-logo-top,
+    nav .menuCloser .companyNameTopB
+    {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 730px)
+{
+    nav .menuCloser .companyNameTop
+    {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        padding-left: 24%;
+        padding-top: 18px;
+        letter-spacing: 4px;
+        position: relative;     
+        color: rgb(0, 0, 0);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.283));
+        z-index: 1;
+    }
+
+    nav .nav-links .companyNameSideB
+    {
+        padding-left: 62%;
+    }
+
+    nav .backupLogo
+    {
+        display: block;
+        width: 55px;
+        position: absolute;
+        z-index: 300;
+        top: 10px;
+        left: 10px;
+        transition: all 0.5s ease;
+    }
+
+    nav .backupLogo:hover
+    {
+        transform: scale(110%);
+        filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.283));
+    }
+}
+
+
+
+
+
+
+/*
+    iPhone X
+*/
+@media (max-width: 300px)
+{
+    nav .menuCloser .companyNameTop
+    {
+        padding-left: 29px;
+        padding-top: 24px;
+        font-size: 11px;
+        color: black;
+        line-height: 17px;
+        white-space: pre-wrap;
+    }
+
+    nav .menuCloser .companyNameTopB
+    {
+        padding-left: 23%;
+    }
+
+    nav .nav-links .sideMenuLogo
+    {
+        left: 39%;
+        top: 20px;
+        width: 60px;
+        /* display: none; */
+    }
+
+    nav .nav-links .companyNameSideB
+    {
+        padding-top: 80px;
+        z-index: 98;
+        position: absolute;
+        font-size: 13px;
+        padding-left: 16%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: black;
+        letter-spacing: 3px;
+    }
+
+    nav .navbar .nav-links .links
+    {
+        padding-top: 50px;
+    }
+
+    nav .menuCloser .companyNameTop .nav-logo-top
+    {
+        display: flex;
+        width: 40px;
+        position: absolute;
+        z-index: 200;
+        top: 12px;
+        left: 5px;
+        transition: all 0.5s ease;
+    }
+
+    nav .menuCloser .companyNameTop .nav-logo-top:hover
+    {
+        transform: scale(110%);
+        filter: drop-shadow(3px 3px rgba(0, 0, 0, 0.283));
+    }
+
+    nav .menuCloser .companyNameTop br
+    {
+        display: block;
+    }
+    nav .backupLogo
+    {
+        display: none;
+    }
+}
