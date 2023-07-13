@@ -7,7 +7,7 @@ nav
     height: 100px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
     z-index: 2;
-    background: rgb(255, 255, 255);
+    background: rgb(0, 165, 211);
 
     /* background: rgb(234, 234, 234); */
     /* background: rgb(234, 143, 38); */
@@ -18,7 +18,7 @@ nav
     display: flex;    
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .navbar a
@@ -34,7 +34,7 @@ nav
     align-items: center;
     justify-content: center;
     z-index: 3;
-    gap: 10px;
+    gap: 15px;
     text-transform: uppercase;
     transition: all 0.5s ease-in-out;
 }
@@ -58,13 +58,15 @@ nav
 {
     display: none;
     transition: all 0.5s ease-in-out;
+    text-decoration: none !important;
 }
 
-.link:hover
+.link:hover .linkText
 {
     font-weight: 800;
     text-decoration: underline;
-    transition: all 0.5s ease-in-out;
+    color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 .link:hover .navIcon
@@ -72,6 +74,8 @@ nav
     display: block;
     text-align: center;
     transition: all 0.5s ease-in-out;
+    color: white;
+    text-decoration: none !important;
 }
 
 .name
@@ -86,6 +90,7 @@ nav
     position: relative;
     left: 27%;
     top: 13px;
+    color: white;
 }
 
 .last
@@ -93,6 +98,7 @@ nav
     position: relative;
     top: -10px;
     left: 27%;
+    color: white;
 }
 
 .projectShow
@@ -102,4 +108,10 @@ nav
     text-transform: uppercase;
     font-size: 30px;
     position: relative;
+    color: white;
+}
+
+.linkText
+{
+    color: white;
 }
