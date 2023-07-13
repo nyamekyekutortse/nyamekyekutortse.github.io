@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Curatory | Expanding Cards</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/8c9fcb09a3.js" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="options">
+         <div class="option active" style="--optionBackground:url(image1.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <i class="fas fa-walking"></i>
+               </div>
+               <div class="info">
+                  <div class="main">Blonkisoaz</div>
+                  <div class="sub">Omuke trughte a otufta</div>
+               </div>
+            </div>
+         </div>
+         <div class="option" style="--optionBackground:url(image2.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <i class="fas fa-snowflake"></i>
+               </div>
+               <div class="info">
+                  <div class="main">Oretemauw</div>
+                  <div class="sub">Omuke trughte a otufta</div>
+               </div>
+            </div>
+         </div>
+         <div class="option" style="--optionBackground:url(image3.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <i class="fas fa-tree"></i>
+               </div>
+               <div class="info">
+                  <div class="main">Iteresuselle</div>
+                  <div class="sub">Omuke trughte a otufta</div>
+               </div>
+            </div>
+         </div>
+         <div class="option" style="--optionBackground:url(image4.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <i class="fas fa-tint"></i>
+               </div>
+               <div class="info">
+                  <div class="main">Idiefe</div>
+                  <div class="sub">Omuke trughte a otufta</div>
+               </div>
+            </div>
+         </div>
+         <div class="option" style="--optionBackground:url(image5.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <i class="fas fa-sun"></i>
+               </div>
+               <div class="info">
+                  <div class="main">Inatethi</div>
+                  <div class="sub">Omuke trughte a otufta</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+         $(".option").click(function() {
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+         });
+      </script>
+   </body>
+</html>
