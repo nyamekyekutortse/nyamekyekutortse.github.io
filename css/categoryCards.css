@@ -1,0 +1,59 @@
+.categoryCard {
+    padding: 20px;
+    width: 330px;
+    min-height: 370px;
+    border-radius: 20px;
+    background: #212121;
+    box-shadow: 5px 5px 8px #1b1b1b,
+               -5px -5px 8px #272727;
+    transition: 0.4s;
+    position: absolute;
+    top: 500px;
+    left: 10px;
+  }
+  
+  .personalCategory-image:hover 
+  {
+    transform: scale(105%);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .category-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #b2eccf;
+    margin: 15px 0 0 10px;
+    text-transform: uppercase;
+  }
+  
+  .personalCategory-image 
+  {
+    min-height: 300px;
+    border-radius: 15px;
+    box-shadow: inset 5px 5px 3px #2f2f2f,
+              inset -5px -5px 3px #333333;
+    background-image: url("../media/image2.jpg");
+    background-size: cover;
+  }
+
+  .category-image .personalProject
+  {
+    background-image: url("../media/image2.jpg");
+  }
+  
+  .category-body {
+    margin: 13px 0 0 10px;
+    color: rgb(184, 184, 184);
+    font-size: 15px;
+  }
+  
+  .footer {
+    float: right;
+    margin: 28px 0 0 18px;
+    font-size: 13px;
+    color: #b3b3b3;
+  }
+  
+  .by-name {
+    font-weight: 700;
+  }
