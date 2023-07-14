@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    left: 30%;
+    left: 29%;
 }
 
 .welcomeContainer
@@ -60,4 +60,73 @@
     width: 100%;
     font-family: 'Manrope', sans-serif;
     /* background: red; */
+}
+
+.welcomeNameBContainer
+{
+    display:none
+}
+
+/* 
+    MOBILE: portrait
+    iPhone 14 Pro    
+*/
+
+@media(max-width: 393px)
+{
+    .welcomeText
+    {
+        top: 120px;
+        weight: 400;
+        letter-spacing: 1px;
+        font-size: 30px;
+    }
+
+    .welcomeNameBContainer
+    {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+    }
+
+    .welcomeNameB
+    {
+        top: 150px;
+        font-size: 20px;
+        font-size: 70px;
+        font-weight: 700;
+        position: absolute;
+        z-index: 98;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%; 
+        font-family: 'Manrope', sans-serif;
+    }
+
+    .welcomeNameB2
+    {
+        top: 215px;
+        font-size: 48px;
+        font-weight: 700;
+        position: absolute;
+        z-index: 98;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%; 
+        font-family: 'Manrope', sans-serif;
+        letter-spacing: 2px;
+    }
+
+    .homeCaption
+    {
+        top: 290px;
+    }
+
+    .welcomeName
+    {
+        display: none;
+    }
 }

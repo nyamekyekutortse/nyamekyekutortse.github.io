@@ -1,0 +1,482 @@
+<div class="navbarFull">
+    <div class="navFull-links">
+        <ul class="linksFull">
+            <div class="companyNameSideFull">TRANS
+            </div>
+            <div class="companyNameSideBFull">INTERNATIONAL</div>
+            <li>
+                <a href = "index.html"><i class='bx bxs-home'></i> Home</a>
+            </li>
+            <li>
+                <a href = "#"><i class='bx bxs-store'></i> Products</a>
+                <i class='bx bx-caret-down arrow products-arrow'></i>
+                <ul class="productsDrop dropDown">
+                    <li><a href = "#">In Stock</a></li>
+                    <li><a href = "#">Top Products</a></li>
+                    <li><a href = "#">Complete Catalog</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class='bx bxs-briefcase'></i> Our Works</a>
+                <i class='bx bx-caret-down arrow works-arrow'></i>
+                <ul class="worksDrop dropDown">
+                    <li><a href = "#">Clients</a></li>
+                    <li><a href = "#">Project Showcase</a></li>
+                </ul>
+            </li>
+            <li class = "nav-logo">
+                <a href="index.html">
+                    <img src="media/svg/logo_icon_noshadow.svg" alt = "LOGO">
+                </a>
+            </li>
+            <li>
+                <a href = "#"><i class='bx bxs-group' ></i> About Us</a>
+                <i class='bx bx-caret-down arrow about-arrow'></i>
+                <ul class="aboutDrop dropDown">
+                    <li><a>What We Do</a></li>
+                    <li><a>Who We Are</a></li>
+                    <li><a>Management</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href = "#"><i class='bx bx-file'></i> Resources</a>
+                <i class='bx bx-caret-down arrow resources-arrow'></i>
+                <ul class="resourcesDrop dropDown">
+                    <li><a href="#">Company Profile</a></li>
+                    <li><a href="#">Product Catalog</a></li>
+                    <li><a href="#">Company Brochure</a></li>
+                </ul>
+            </li>
+            <li><a href = "#"><i class='bx bxs-contact' ></i> Contact</a></li>
+        </ul>
+        <ul class="icon-links">
+            <li><<i class='bx bx-menu'></i></li>
+            <li><i class ="bx bx-home-alt" ></i></li>
+            <li><i class ="bx bx-home-alt" ></i></li>
+            <li><i class ="bx bx-home-alt" ></i></li>
+            <li><i class ="bx bx-home-alt" ></i></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+window.addEventListener("load", ()=>{
+    autoSlide();
+})
+
+/**
+ * Runs a slideshow automatically by calling the slide function every 3 seconds.
+ */
+function autoSlide() {
+    setInterval(() => {
+      slide(getItemActiveIndex() + 1); // slide speed is 3000 milliseconds
+    }, 1000);
+  }
+  
+function slide(nextSlideIndex)
+{
+        // Get an array of all carousel items.
+        const imagesArray = Array.from(document.querySelectorAll(".carousel-item"));
+        // Get the currently active item.
+        const active = document.querySelector(".carousel_item_active");
+        if(nextSlideIndex >= imagesArray.length)
+        {
+            nextSlideIndex = 0;
+        }
+        const newActive = itemsArray[nextSlideIndex];
+        newActive.classList.add(".carousel_next");
+        setTimeout(() =>{
+            newActive.classList.add(".carousel_img_next")
+            active.classList.add(".carousel_img_next")
+        }, 20);
+
+        newActive.addEventListener("transitionend", () =>
+            {
+                active.className = "carousel_item";
+                newActive.className = "carousel_item carousel_item_active";
+            },
+            {
+                once: true
+            })
+}
+
+/**
+ * Returns the index of the active item in the carousel.
+ * @return {number} The index of the active item.
+ */
+function getItemActiveIndex() {
+    // Get an array of all carousel items.
+    const imagesArray = Array.from(document.querySelectorAll(".carousel-item"));
+    // Get the currently active item.
+    const active = document.querySelector(".carousel_item_active");
+    // Get the index of the active item in the array.
+    const activeIndex = itemsArray.indexOf(active);
+    // Return the index of the active item.
+    return activeIndex;
+  }
+  
+
+
+
+  <div class="container">
+    <div class = "carousel">
+        <div class="carousel_inner">
+            <div class="carousel_item carousel_item_active">
+                <img src="media/png/homeBanner1.png" alt="" class="carousel_img">
+            </div>
+            <div class="carousel_item carousel_next carousel_img_next">
+                <img src="media/png/homeBanner2.png" alt="" class="carousel_img">
+            </div>
+            <div class="carousel_item">
+                <img src="media/png/homeBanner3.png" alt="" class="carousel_img">
+            </div>
+            <div class="carousel_item">
+                <img src="media/png/homeBanner4.png" alt="" class="carousel_img">
+            </div>
+        </div>
+</div>
+
+
+<div class="carousel carousel__fade">
+    <div class="carousel_inner">
+       <div class="carousel_item carousel_item__active">
+          <img src="media/png/homeBanner1_taller.png" alt="" class="carousel_img">
+          <div class="carousel_caption">
+             <h1 class="carousel_title">Welcome To<br>Trans International</h1>
+             <p class="carousel_description">
+                Ghana's premier supplier of building and construction materials
+             </p>
+          </div>
+       </div>
+       <div class="carousel_item">
+          <img src="media/png/homeBanner2_taller.png" alt="" class="carousel_img">
+          <div class="carousel_caption">
+            <h1 class="carousel_title">Welcome To<br>Trans International</h1>
+            <p class="carousel_description">
+                Ghana's premier company in logistics
+            </p>
+         </div>
+       </div>
+       <div class="carousel_item">
+          <img src="media/png/homeBanner3_taller.png" alt="" class="carousel_img">
+          <div class="carousel_caption">
+            <h1 class="carousel_title">Welcome To<br>Trans International</h1>
+            <p class="carousel_description">
+                Ghana's premier supplier of high end furniture
+            </p>
+         </div>
+       </div>
+       <div class="carousel_item">
+        <img src="media/png/homeBanner4_taller.png" alt="" class="carousel_img">
+        <div class="carousel_caption">
+            <h1 class="carousel_title">Welcome To<br>Trans International</h1>
+            <p class="carousel_description">
+                Ghana's premier supplier of general goods and services
+            </p>
+         </div>
+     </div>
+     <div class="carousel_item">
+        <img src="media/png/homeBanner5_taller.png" alt="" class="carousel_img">
+        <div class="carousel_caption">
+            <h1 class="carousel_title">Welcome To<br>Trans International</h1>
+            <p class="carousel_description">
+                <!--TODO: fix caption-->
+                Ghana's premier something in something tbd
+            </p>
+         </div>
+     </div>
+    </div>
+ </div>  
+</div>
+
+
+
+/* carousel */
+.carousel_inner{
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+ }
+ 
+ .carousel_inner::after{
+    content: "";
+    display: block;
+    clear: both;
+ }
+ 
+ .carousel_item{
+    position: relative;
+    float: left;
+    display: none;
+    width: 100%;
+    height: 30%;
+    margin-right: -100%;
+ }
+ 
+ /* slide effect */
+ .carousel_item__active,
+ .carousel_item__pos_next{
+    display: block;
+ }
+ 
+ .carousel_item__pos_next{
+    left: 100%;
+ }
+ 
+ .carousel_item__next{
+    transform: translateX(-100%);
+    transition: transform .5s ease-in-out;
+ }
+ 
+ /* fade effect */
+ .carousel__fade .carousel_item__pos_next{
+    left: 0;
+    opacity: 0;
+ }
+ 
+ .carousel__fade .carousel_item__next{
+    transform: none;
+    opacity: 1;
+    transition: opacity .8s ease-in-out;
+ }
+ 
+ .carousel__fade .carousel_item__active .carousel_item__next{
+    opacity: 0;
+ }
+ 
+ /* carousel */
+ .carousel_img{
+    display: block;
+    width: 100%;
+    height: 5%;
+ }
+
+ .carousel_caption{
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    color: #fff;
+    z-index: 50;
+    /* backdrop-filter: blur(5px); */
+ }
+ 
+ .carousel_title{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    filter: drop-shadow(2px 0 rgba(0, 0, 0, 0.283));
+    background-color: rgba(0, 0, 0, 0.336);
+    line-height: 120%;
+    
+    
+ }
+ 
+ .carousel_description
+ {
+    margin-top: \5rem;
+    line-height: 120%;
+    background-color: rgba(0, 0, 0, 0.410);
+}
+
+@media (max-width: 1000px)
+{
+
+}
+
+@media (max-width: 500px)
+{
+   .carousel_item__active
+   {
+      width: 150%;
+      padding-left: -9000px;
+   }
+
+   .carousel_item
+   {
+      width: 150%;
+      height: 70%;
+      margin-left: -30%;
+   }
+
+   .carousel_img
+   {
+      width: 150%;
+      height: 70%;
+      padding-left: 0;
+   }
+
+   .carousel_item__pos_next
+   {
+      width: 150%;
+      left: 0;
+      padding-right: -9000px;
+   }
+   .carousel_item__next{
+      padding-right: -9000px;
+   }
+}
+
+.banner1, .banner2, .banner3, .banner4, .banner5
+{
+   height: 30%;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.banner_image
+{
+   width: 100%;
+   position: absolute;
+   left: 0%;
+   right: 0%;
+   transform: translate(0%, 0%);
+}
+@keyframes zoom-out
+{
+   100%
+   {
+      width: 100%;
+   }
+}
+@keyframes swipeUp
+{
+   100%
+   {
+      transform: translateY(-100%);
+   }
+}
+.text-box
+{
+   width: 600px;
+   position: absolute;
+   top: 100px;
+   left: 30%;
+   color: white;
+   animation: textUp 3s linear;
+   transform: translateY(100px);
+   text-align: center;
+   justify-content: center;
+}
+@keyframes textup
+{
+   10%{transform: translateY(0px);}
+   100%{transform: translateY(0px);}
+}
+@keyframes fadein
+{
+   0%{opacity: 0;}
+   100%{opacity: 1;}
+}
+
+.text-box1{animation-delay: 0s;}
+.text-box2{animation-delay: 5s;}
+.text-box3{animation-delay: 10s;}
+.text-box4{animation-delay: 15s;}
+.text-box5{animation-delay: 20s;}
+
+.text-box h1
+{
+   text-transform: uppercase;
+   margin-bottom: 20px;
+}
+
+.text-box p
+{
+   font-size: 14px;
+   line-height: 18px;
+   margin-top: 50px;
+}
+
+.text-box span
+{
+   background-color: black;
+   height: 4px;
+   width: 300px;
+   position : absolute;
+   left: 25%;
+   
+}
+
+.banner1
+{
+   /* animation: slide1 3s linear infinite;
+   animation-delay: 0s; */
+}
+
+@keyframes slide1 
+{
+   0%{visibility: visible;}
+   25%{visibility: hidden;}
+   50%{visibility: hidden;}
+   75%{visibility: hidden;}
+   100%
+   {
+      visibility: visible;
+   }
+}
+
+.banner2
+{
+   animation: slide2 10s linear infinite;
+   animation-delay: 5s;
+}
+@keyframes slide2
+{
+   0%
+   {
+      visibility: hidden;
+      opacity: 0;
+   }
+   25%{visibility: hidden;}
+   50%
+   {
+      visibility: visible;
+      opacity: 1;
+   }
+   75%{visibility: hidden;}
+   100%{visibility: hidden;}
+}
+.banner3
+{
+   animation: slide3 15s linear infinite;
+   animation-delay: 10s;
+}
+@keyframes slide3
+{
+   0%
+   {
+      visibility: hidden;
+   }
+   25%{visibility: hidden;
+      opacity: 0;}
+   50%{visibility: hidden;}
+   75%
+   {
+      visibility: visible;
+      opacity: 1;
+   }
+   100%{visibility: hidden;}
+}
+.banner4
+{
+   animation: slide4 20s linear infinite;
+   animation-delay: 15s;
+}
+@keyframes slide4
+{
+   0%{visibility: hidden;opacity: 0;}
+   25%{visibility: hidden;}
+   50%{visibility: hidden;}
+   75%{visibility: hidden;}
+   100%{visibility: visible;opacity: 1;}
+
+}

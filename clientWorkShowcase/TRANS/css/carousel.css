@@ -1,7 +1,6 @@
 .owl-wrapper-outer
 {
-    width: 100%;
-    
+    width: 100%
 }
 
 .owl-wrapper
@@ -27,4 +26,22 @@
 .owl-carousel
 {
     width: 100%;
+}
+
+/* 
+    MOBILE: portrait
+    iPhone 14 Pro    
+*/
+
+@media(max-width: 393px)
+{
+    .owl-wrapper
+    {
+        height: 400px;
+    }
+
+    .owl-item img{
+        height : 400px;
+        object-fit: cover;
+    }
 }

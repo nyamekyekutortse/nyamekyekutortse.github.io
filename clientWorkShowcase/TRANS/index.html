@@ -112,6 +112,10 @@
                     <span class = "welcomeContainer">
                         <h1 class = "welcomeText">Welcome To</h1>
                         <h1 class = "welcomeName">Trans International</h1> 
+                        <span class="welcomeNameBContainer">
+                            <h1 class = "welcomeNameB">Trans</h1>
+                            <h1 class="welcomeNameB2">International</h1> 
+                        </span>
                         <p class = "homeCaption">a trusted and reliable Ghanaian logistics partner.</p>
                     </span>
                     
@@ -148,7 +152,10 @@
                         <h1 class = "welcomeText">Welcome To</h1>
                         <h1 class = "welcomeName">Trans International</h1> 
                     </span>
-                    <p class = "homeCaption">At Trans International Limited, we pride ourselves on our ability to perform and deliver on schedule, ensuring the contentment of our treasured clients.</p>
+                    <p class = "homeCaption">
+                        we pride ourselves on our ability to perform and deliver on schedule 
+                        <!--ensuring the contentment of our treasured clients.-->
+                    </p>
                     <span class="welcomeButtonsContainer">
                         <button class = "linkButton">
                             <span class="buttonSquare" aria-hidden="true">
@@ -156,7 +163,7 @@
                                     <i class='bx bx-chevron-right sideArrow'></i>
                                 </span>
                             </span>
-                            <span class="button-text"><a href = "#">Profile</a></span>
+                            <span class="button-text"><a href = "#">Our Work</a></span>
                         </button>
                         <button class = "linkButton">
                             <span class="buttonSquare" aria-hidden="true">
@@ -164,7 +171,7 @@
                                     <i class='bx bx-chevron-right sideArrow'></i>
                                 </span>
                             </span>
-                            <span class="button-text"><a href = "#">Visit Us</a></span>
+                            <span class="button-text"><a href = "#">Services</a></span>
                         </button>
                         <button class = "linkButton">
                             <span class="buttonSquare" aria-hidden="true">
@@ -172,23 +179,45 @@
                                     <i class='bx bx-chevron-right sideArrow'></i>
                                 </span>
                             </span>
-                            <span class="button-text"><a href = "#">Catalog</a></span>
+                            <span class="button-text"><a href = "#">Our Clients</a></span>
                         </button>
                     </span>
-                    <img src = "media/png/homecarousel/scaled/homeBanner_kitchen.png">
+                    <img src = "media/png/homecarousel/scaled/homeBanner_kitchen.png" alt = "kitchen photo">
                 </div>
                 <div>
                     <span class = "welcomeContainer">
                         <h1 class = "welcomeText">Welcome To</h1>
                         <h1 class = "welcomeName">Trans International</h1> 
                     </span>
-                    <p class = "homeCaption">Our dedicated team of highly experienced technical and competent administrative staff ensures that our practices are matchless, maintaining a superior level of integrity in all our interactions.</p> 
+                    <p class = "homeCaption">Our team of highly experienced technical and competent staff ensures that our practices are matchless
+                    </p> 
                     <span class="welcomeButtonsContainer">
-                        <button>Contact Us</button>
-                        <button>Appointment Scheduling</button>
-                        <button>Visit Us</button>
+                        <button class = "linkButton">
+                            <span class="buttonSquare" aria-hidden="true">
+                                <span class="icon arrow">
+                                    <i class='bx bx-chevron-right sideArrow'></i>
+                                </span>
+                            </span>
+                            <span class="button-text"><a href = "#">Partners</a></span>
+                        </button>
+                        <button class = "linkButton">
+                            <span class="buttonSquare" aria-hidden="true">
+                                <span class="icon arrow">
+                                    <i class='bx bx-chevron-right sideArrow'></i>
+                                </span>
+                            </span>
+                            <span class="button-text"><a href = "#">Our Team</a></span>
+                        </button>
+                        <button class = "linkButton">
+                            <span class="buttonSquare" aria-hidden="true">
+                                <span class="icon arrow">
+                                    <i class='bx bx-chevron-right sideArrow'></i>
+                                </span>
+                            </span>
+                            <span class="button-text"><a href = "#">Showcase</a></span>
+                        </button>
                     </span>
-                    <img src = "media/png/homecarousel/scaled/homeBanner_sittingRoom.png">
+                    <img src = "media/png/homecarousel/scaled/homeBanner_sittingRoom.png" alt = "sitting room photo">
                 </div>
                 <div>
                     <span class = "welcomeContainer">
@@ -197,9 +226,30 @@
                     </span>
                     <p class = "homeCaption">Together, we provide outstanding solutions tailored to your specific needs.</p>
                     <span class="welcomeButtonsContainer">
-                        <button>Contact Us</button>
-                        <button>Appointment Scheduling</button>
-                        <button>Visit Us</button>
+                        <button class = "linkButton">
+                            <span class="buttonSquare" aria-hidden="true">
+                                <span class="icon arrow">
+                                    <i class='bx bx-chevron-right sideArrow'></i>
+                                </span>
+                            </span>
+                            <span class="button-text"><a href = "#">Estimates</a></span>
+                        </button>
+                        <button class = "linkButton">
+                            <span class="buttonSquare" aria-hidden="true">
+                                <span class="icon arrow">
+                                    <i class='bx bx-chevron-right sideArrow'></i>
+                                </span>
+                            </span>
+                            <span class="button-text"><a href = "#">Contact</a></span>
+                        </button>
+                        <button class = "linkButton">
+                            <span class="buttonSquare" aria-hidden="true">
+                                <span class="icon arrow">
+                                    <i class='bx bx-chevron-right sideArrow'></i>
+                                </span>
+                            </span>
+                            <span class="button-text" style = "left: 20px;"><a href = "#">Consultation</a></span>
+                        </button>
                     </span>
                     <img src = "media/png/homecarousel/scaled/homeBanner_meetingRoom.png">
                 </div>
@@ -219,7 +269,15 @@
                 goToFirst: true,
                 autoplayTimeOut: 1000,
                 autoplayHoverPause: true,
-                pagination: false
+                pagination: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    1000: {
+                        items: 1,
+                    }
+                }
             });
         });
         </script>
