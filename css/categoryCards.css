@@ -8,6 +8,9 @@
     justify-content: center;
     width: 100%;
     left: 10px;
+    align-items: center;
+    align-content: center;
+    
 }
 
 .categoryCard {
@@ -64,22 +67,45 @@
     transition: 0.4s;
   } 
 
-  .personalCategory-image:hover,
-  .resourceCategory-image:hover,
-  .clientCategory-image:hover,
-  .curationCategory-image:hover 
+  .personalCategoryCard:hover .personalCategory-image,
+  .resourceCategoryCard:hover .resourceCategory-image,
+  .clientCategoryCard-image:hover .clientCategory-image,
+  .curationCategoryCard-image:hover .curationCategory-image 
   {
     transform: scale(90%);
     filter: grayscale(0%);
     transition: all 0.5s ease-in-out;
   }
   
-  .category-title {
+  .personalCategoryCard:hover .category-title
+  {
+    color: red;
+  }
+
+  .clientCategoryCard:hover .category-title
+  {
+    color: blue;
+  }
+
+  .curationCategoryCard:hover .category-title
+  {
+    color: green;
+  }
+
+  .resourceCategoryCard:hover .category-title
+  {
+    color: purple;
+  }
+  
+  .category-title 
+  {
     font-size: 18px;
     font-weight: 600;
-    color: #b2eccf;
+    color: #ffffff;
     margin: 15px 0 0 10px;
     text-transform: uppercase;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
   }
   
   .personalCategory-image 
@@ -124,21 +150,11 @@
     filter: grayscale(85%);
   }
 
-  .curationsCategory-image 
-  {
-    min-height: 300px;
-    border-radius: 15px;
-    box-shadow: inset 5px 5px 3px #2f2f2f,
-              inset -5px -5px 3px #333333;
-    background-image: url("../media/image2.jpg");
-    background-size: cover;
-  }
-
-
   .category-body {
     margin: 13px 0 0 10px;
     color: rgb(184, 184, 184);
     font-size: 15px;
+    text-align: center;
   }
   
   .footer {
@@ -151,3 +167,4 @@
   .by-name {
     font-weight: 700;
   }
+
