@@ -69,8 +69,8 @@
 
   .personalCategoryCard:hover .personalCategory-image,
   .resourceCategoryCard:hover .resourceCategory-image,
-  .clientCategoryCard-image:hover .clientCategory-image,
-  .curationCategoryCard-image:hover .curationCategory-image 
+  .clientCategoryCard:hover .clientCategory-image,
+  .curationCategoryCard:hover .curationCategory-image 
   {
     transform: scale(90%);
     filter: grayscale(0%);
@@ -96,7 +96,7 @@
   {
     color: purple;
   }
-  
+
   .category-title 
   {
     font-size: 18px;
