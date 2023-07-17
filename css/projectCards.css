@@ -1,0 +1,43 @@
+.listToggleContainer
+{
+    position: relative;
+    display: flex;
+    padding-top: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.projectContainer
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
+    position: absolute;
+    top: 500px;
+    justify-content: center;
+    width: 100%;
+    left: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+.onSwitch,
+.offSwitch
+{
+    font-size : 40px;
+    color: blue;
+    cursor: pointer;
+}
+
+.gridIcon,
+.listIcon
+{
+    font-size: 40px;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}

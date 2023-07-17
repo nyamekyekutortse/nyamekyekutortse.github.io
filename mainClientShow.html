@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="css/homeHero.css">
         <link rel="stylesheet" href="css/categoryCards.css">
+        <link rel = "stylesheet" href = "css/searchBar.css">
+        <link rel = "stylesheet" href = "css/projectCards.css">
         <!-- external libraries, fonts, icons -->
         <link rel="stylesheet" href="#">
         <!-- seo and accessibility -->
@@ -91,7 +93,31 @@
             </div>
         </nav>
         <!-- search bar -->
+        <div class="wrap">
+            <div class="search">
+               <input type="text" class="searchTerm" placeholder="Enter Search Keyword">
+               <button type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
+         <!-- viewing toggler -->
+         <span class = "listToggleContainer">
+            <!-- grid icon -->
+            <i class="fa-solid fa-grip gridIcon"></i>
+            <input id = "listToggle" type = "checkbox" role = "button"/>
+            <label for = "listToggle">
+                <i class="fa-solid fa-toggle-off offSwitch"></i>
+            </label>
+            <label for = "listToggle">
+                <i class="fa-sharp fa-solid fa-toggle-on onSwitch"></i>
+            </label>
+            <!-- list icon -->
+            <i class="fa-sharp fa-solid fa-rectangle-list listIconInActive"></i>
+            <i class="fa-solid fa-table-list listIconActive"></i>
+         </span>
         <!-- thumbnails -->
+        <!-- tabular view -->
         <footer>
             End Of Page
         </footer>

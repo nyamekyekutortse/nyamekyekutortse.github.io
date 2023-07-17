@@ -2,25 +2,23 @@
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2%;
+    grid-gap: 5px;
     position: absolute;
-    top: 500px;
+    top: 120px;
     justify-content: center;
     width: 100%;
-    left: 10px;
+    place-items: center;
     align-items: center;
-    align-content: center;
-    
 }
 
 .categoryCard {
     padding: 20px;
     width: 330px;
     min-height: 370px;
-    border-radius: 20px;
-    background: #212121;
-    box-shadow: 5px 5px 8px #1b1b1b,
-               -5px -5px 8px #272727;
+    border-radius: 10px;
+    /* background: #212121; */
+    /* box-shadow: 5px 5px 8px #1b1b1b, */
+               /* -5px -5px 8px #272727; */
     transition: 0.4s;
     position: absolute;
     top: 500px;
@@ -30,10 +28,10 @@
   .personalCategoryCard {
     width: 330px;
     min-height: 370px;
-    border-radius: 20px;
+    border-radius: 5px;
     background: #212121;
-    box-shadow: 5px 5px 8px #1b1b1b,
-               -5px -5px 8px #272727;
+    /* box-shadow: 5px 5px 8px #1b1b1b, */
+               /* -5px -5px 8px #272727; */
     transition: 0.4s;
   } 
 
@@ -123,8 +121,8 @@
   {
     min-height: 300px;
     border-radius: 15px;
-    box-shadow: inset 5px 5px 3px #2f2f2f,
-              inset -5px -5px 3px #333333;
+    /* box-shadow: inset 5px 5px 3px #2f2f2f, */
+              /* inset -5px -5px 3px #333333; */
     background-image: url("../media/resourceThumb.jpg");
     background-size: cover;
     filter: grayscale(100%);
