@@ -103,18 +103,23 @@
          </div>
          <!-- viewing toggler -->
          <span class = "listToggleContainer">
-            <!-- grid icon -->
-            <i class="fa-solid fa-grip gridIcon"></i>
-            <input id = "listToggle" type = "checkbox" role = "button"/>
-            <label for = "listToggle">
-                <i class="fa-solid fa-toggle-off offSwitch"></i>
-            </label>
-            <label for = "listToggle">
-                <i class="fa-sharp fa-solid fa-toggle-on onSwitch"></i>
-            </label>
+            <span class = "toggleIcons">
+                <!-- grid icon -->
+                <i class="fa-solid fa-grip gridIcon"></i>
             <!-- list icon -->
-            <i class="fa-sharp fa-solid fa-rectangle-list listIconInActive"></i>
-            <i class="fa-solid fa-table-list listIconActive"></i>
+                <i class="fa-sharp fa-solid fa-rectangle-list listIconInActive"></i>
+                <i class="fa-solid fa-table-list listIconActive"></i>
+            </span>
+            
+            <div class="inputContainer">
+                <input id = "listToggle" type = "checkbox" role = "button"/>
+            </div>
+            <div class="inputLabelContainer">
+                <label for = "listToggle" class = "listToggle">
+                    <i class="fa-solid fa-circle toggleCircle"></i>
+                </label>
+            </div>
+
          </span>
         <!-- thumbnails -->
         <!-- tabular view -->

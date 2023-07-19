@@ -62,6 +62,22 @@ input[type="checkbox"]::before
     transition: 0.5s;
 }
 
+.inputContainer
+{
+    display: grid;
+    place-items: center;
+    z-index: 20;
+}
+
+.inputLabelContainer
+{
+    display: grid;
+    place-items: center;
+    z-index: 30;
+    position: absolute;
+    top: 345px;
+}
+
 input[type="checkbox"]:checked::before
 {
     transform: translateX(100%);
@@ -71,4 +87,31 @@ input[type="checkbox"]:checked::before
 input[type="checkbox"]:checked
 {
     background: green;
+}
+
+.toggleCircle
+{
+    position: absolute;
+    font-size: 50px;
+    
+}
+
+input[type = "checkbox"]:checked + .inputLabelContainer i
+{
+    color: red;   
+}
+
+input[type="checkbox"]:not(:checked) + .listToggle .toggleCircle 
+{
+    color: blue;  
+}
+
+.inputContainer input:checked + .inputLabelContainer > .listToggle > .toggleCircle
+{
+    display: none;
+}
+
+input[type="checkbox"]:not(:checked) + .listToggle
+{
+    display: inline-block;
 }
