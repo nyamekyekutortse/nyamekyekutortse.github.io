@@ -1,0 +1,22 @@
+.projectListings {
+    display: flex;
+    position: relative;
+    width: 100%;
+    left: 5px;
+    padding-top: 300px;
+}
+
+.gridView {
+    display: flex; /* Change this to "flex" instead of "grid" */
+    position: relative;
+}
+
+.project {
+    flex: 1; /* Add this line to make each project container take equal width */
+    height: 200px;
+    background: red;
+    display: flex;
+    position: relative; /* Change this to "relative" instead of "absolute" */
+    top: 300px; /* Remove this line */
+    margin-right: 10px;
+}

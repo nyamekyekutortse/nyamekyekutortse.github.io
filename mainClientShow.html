@@ -11,8 +11,10 @@
         <link rel = "stylesheet" href = "css/searchBar.css">
         <link rel = "stylesheet" href = "css/projectCards.css">
         <link rel = "stylesheet" href = "css/toggleSwitch.css">
+        <link rel="stylesheet" href="css/projects.css">
         <!-- external libraries, fonts, icons -->
         <link rel="stylesheet" href="#">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!-- seo and accessibility -->
@@ -107,25 +109,92 @@
          <div class="checkbox-wrapper-35">
             <input value="private" name="switch" id="switch" type="checkbox" class="switch">
             <label for="switch">
-                <!-- ICONS -->
-                <span class="listIcons">
-                    <i class="fa-sharp fa-regular fa-rectangle-list listInactive"></i>
-                    <i class="fa-sharp fa-solid fa-rectangle-list listActive"></i>
-                </span>
-                <span class="gridIcons">
-                    <i class="fa-sharp fa-solid fa-border-all gridInactive"></i>
-                </span>
+                <div class="toggleIcons">
+                    <!-- ICONS -->
+                    <span class="listIcons">
+                        <i class="fa-sharp fa-regular fa-rectangle-list listInactive"></i>
+                        <i class="fa-sharp fa-solid fa-rectangle-list listActive"></i>
+                    </span>
+                    <span class="gridIcons">
+                        <!-- <i class="fa-sharp fa-solid fa-border-all gridActive"></i> -->
+                        <i class='bx bxs-grid-alt gridActive' ></i>
+                        <!-- <i class="fa-sharp fa-solid fa-border-none gridInactive"></i> -->
+                        <i class='bx bx-grid-alt gridInactive' ></i>
+                    </span>
+                </div>
                 <span class="toggleCaption">
                     <span class="switch-x-text">
                         Viewing as
                     </span>
                     <span class="switch-x-toggletext">
-                        <span class="switch-x-unchecked"><span class="switch-x-hiddenlabel">Unchecked: </span>Grid View</span>
-                        <span class="switch-x-checked"><span class="switch-x-hiddenlabel">Checked: </span>List View</span>
+                        <span class="switch-x-unchecked"><span class="switch-x-hiddenlabel">Unchecked: </span><pre> Grid View</pre></span>
+                        <span class="switch-x-checked"><span class="switch-x-hiddenlabel">Checked: </span><pre> List View</pre></span>
                     </span>
                 </span>
             </label>
-          </div>          
+          </div>
+          <div class="projectListings">
+            <!-- Grid Views -->
+            <div class="gridView">
+                <span class="project">
+                    <span class="projectThumb">
+
+                    </span>
+                    <span class="projectName">
+                        1 Project Name Here
+                    </span>
+                    <span class="projectProgress">
+                        Progress Bar Here
+                    </span>
+                    <span class="projectSummary">
+                        So far this project this and that
+                    </span>
+                    <span class="developmentTech">
+                        <i class='bx bxl-javascript'></i>
+                    </span>
+                </span>
+
+                <span class="project">
+                    <span class="projectThumb">
+
+                    </span>
+                    <span class="projectName">
+                        Project 2 Name Here
+                    </span>
+                    <span class="projectProgress">
+                        Progress Bar Here
+                    </span>
+                    <span class="projectSummary">
+                        So far this project this and that
+                    </span>
+                    <span class="developmentTech">
+                        <i class='bx bxl-javascript'></i>
+                    </span>
+                </span>
+
+                <span class="project">
+                    <span class="projectThumb">
+
+                    </span>
+                    <span class="projectName">
+                        Project 3 Name Here
+                    </span>
+                    <span class="projectProgress">
+                        Progress Bar Here
+                    </span>
+                    <span class="projectSummary">
+                        So far this project this and that
+                    </span>
+                    <span class="developmentTech">
+                        <i class='bx bxl-javascript'></i>
+                    </span>
+                </span>
+            </div>
+            <!-- List Views -->
+            <div class="listView">
+
+            </div>
+        </div>          
         <!-- thumbnails -->
         <!-- tabular view -->
         <footer>
