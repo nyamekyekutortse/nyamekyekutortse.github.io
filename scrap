@@ -1,0 +1,18 @@
+         <span class = "listToggleContainer">
+            <span class = "toggleIcons">
+                <!-- grid icon -->
+                <i class="fa-solid fa-grip gridIcon"></i>
+            <!-- list icon -->
+                <i class="fa-sharp fa-solid fa-rectangle-list listIconInActive"></i>
+                <i class="fa-solid fa-table-list listIconActive"></i>
+            </span>
+            
+            <div class="inputContainer">
+                <input id = "listToggle" type = "checkbox" role = "button"/>
+            </div>
+            <div class="inputLabelContainer">
+                <label for = "listToggle" class = "listToggle">
+                    <i class="fa-solid fa-circle toggleCircle"></i>
+                </label>
+            </div>
+         </span>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
     <head>
         <title>
             Nyamekye Kutortse | Project Showcase
@@ -11,8 +10,11 @@
         <link rel="stylesheet" href="css/categoryCards.css">
         <link rel = "stylesheet" href = "css/searchBar.css">
         <link rel = "stylesheet" href = "css/projectCards.css">
+        <link rel = "stylesheet" href = "css/toggleSwitch.css">
         <!-- external libraries, fonts, icons -->
         <link rel="stylesheet" href="#">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <!-- seo and accessibility -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,24 +104,28 @@
             </div>
          </div>
          <!-- viewing toggler -->
-         <span class = "listToggleContainer">
-            <span class = "toggleIcons">
-                <!-- grid icon -->
-                <i class="fa-solid fa-grip gridIcon"></i>
-            <!-- list icon -->
-                <i class="fa-sharp fa-solid fa-rectangle-list listIconInActive"></i>
-                <i class="fa-solid fa-table-list listIconActive"></i>
-            </span>
-            
-            <div class="inputContainer">
-                <input id = "listToggle" type = "checkbox" role = "button"/>
-            </div>
-            <div class="inputLabelContainer">
-                <label for = "listToggle" class = "listToggle">
-                    <i class="fa-solid fa-circle toggleCircle"></i>
-                </label>
-            </div>
-         </span>
+         <div class="checkbox-wrapper-35">
+            <input value="private" name="switch" id="switch" type="checkbox" class="switch">
+            <label for="switch">
+                <!-- ICONS -->
+                <span class="listIcons">
+                    <i class="fa-sharp fa-regular fa-rectangle-list listInactive"></i>
+                    <i class="fa-sharp fa-solid fa-rectangle-list listActive"></i>
+                </span>
+                <span class="gridIcons">
+                    <i class="fa-sharp fa-solid fa-border-all gridInactive"></i>
+                </span>
+                <span class="toggleCaption">
+                    <span class="switch-x-text">
+                        Viewing as
+                    </span>
+                    <span class="switch-x-toggletext">
+                        <span class="switch-x-unchecked"><span class="switch-x-hiddenlabel">Unchecked: </span>Grid View</span>
+                        <span class="switch-x-checked"><span class="switch-x-hiddenlabel">Checked: </span>List View</span>
+                    </span>
+                </span>
+            </label>
+          </div>          
         <!-- thumbnails -->
         <!-- tabular view -->
         <footer>
