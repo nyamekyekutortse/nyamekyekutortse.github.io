@@ -4,8 +4,10 @@
 
   .checkbox-wrapper-35
   {
-    display: grid;
-    place-items: center;
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
   }
   
   .toggleIcons
@@ -34,7 +36,7 @@
     -ms-user-select: none;
     user-select: none;
     /* added by me */
-    top: 350px;
+    top: 200px;
   }
   
   .checkbox-wrapper-35 .switch + label::before,
