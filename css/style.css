@@ -3,12 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope', sans-serif;  
 }
 
 body
 {
-    background: black;  
+    background: rgba(0, 0, 0, 1); 
 }
 
 .button {
@@ -18,8 +18,8 @@ body
     cursor: pointer;
     display: flex;
     align-items: center;
-    border: 1px solid #3d3d3d;
-    background-color: #000000;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 1);
     overflow: hidden;
   }
   
@@ -34,7 +34,7 @@ body
 
   .button .button__text {
     transform: translateX(16px);
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     font-weight: 600;
   }
   
@@ -43,19 +43,14 @@ body
     transform: translateX(109px);
     height: 100%;
     width: 39px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 1);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .button .svg {
-    width: 20px;
-    fill: #fff;
-  }
-  
   .button:hover {
-    background: #272424;
+    background: #c50101;
   }
   
   .button:hover .button__text {

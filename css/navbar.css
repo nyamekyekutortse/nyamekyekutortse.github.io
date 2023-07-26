@@ -7,7 +7,15 @@ nav
     height: 100px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    background: rgb(0, 165, 211);
+    /* background: rgb(0, 165, 211); */
+    background-color: rgba(13, 13, 13, 0.13);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+nav:hover
+{
+    background-color: rgb(0, 0, 0)
 }
 
 .navbar
@@ -22,7 +30,7 @@ nav
 .navbar a
 {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 1);
     transition: all 0.5s ease-in-out;
 }
 
@@ -56,14 +64,15 @@ nav
     transition: all 0.5s linear;
 }
 
-.link .navIcon
+.navIcon
 {
-    /* display: none; */
+    display: block;
+    text-align: center
+    position: relative;
     opacity: 0;
     color: transparent;
     transition: all 0.5s ease-in-out;
     text-decoration: none !important;
-    text-align: right;
 }
 
 .link:hover .linkText
@@ -80,7 +89,7 @@ nav
     text-align: center;
     transition: all 0.5s ease-in-out;
     opacity: 100%;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     text-decoration: none !important;
 }
 
@@ -96,7 +105,7 @@ nav
     position: relative;
     left: 27%;
     top: 13px;
-    color: white;
+    color: rgba(255, 255, 255, 1);
 }
 
 .last
@@ -104,7 +113,7 @@ nav
     position: relative;
     top: -10px;
     left: 27%;
-    color: white;
+    color: rgba(255, 255, 255, 1);
 }
 
 .projectShow
@@ -119,7 +128,7 @@ nav
 
 .linkText
 {
-    color: white;
+    color: rgb(183, 182, 182);
     font-weight: 400;
     font-family: 'Orbitron', sans-serif;
     transition: all 0.5s ease-in-out;
