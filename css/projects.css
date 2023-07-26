@@ -13,8 +13,11 @@
 .gridView 
 {
     display: grid;
+    display: flex;
+    flex-wrap:wrap;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     position: relative;
+    width: 100%;
 }
 
 .project 
@@ -136,5 +139,35 @@
     .project 
     {
         width: 450px;
+    }
+}
+
+@media(max-width: 1420px)
+{
+    .gridView
+    {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+    }
+
+    .project
+    {
+        width: 400px;
+    }
+}
+
+@media(max-width: 1024px)
+{
+    .gridView
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+    }
+
+    .project
+    {
+        width: 300px;
     }
 }
