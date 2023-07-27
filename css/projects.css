@@ -1,11 +1,13 @@
-/* using imac screen for default view */
+/* 
+   iMac 24"
+*/
 
 .projectListings 
 {
     display: flex;
     position: relative;
     width: 100%;
-    top: 320px;
+    top: 350px;
     left: 0.25%;
     justify-content: center;
 }
@@ -13,8 +15,6 @@
 .gridView 
 {
     display: grid;
-    display: flex;
-    flex-wrap:wrap;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     position: relative;
     width: 100%;
@@ -128,6 +128,9 @@
     border-radius: 10px;
   }
 
+  /* 
+    MacBook Pro | HiDPI Laptop
+  */
 @media(max-width: 1440px)
 {
     .gridView 
@@ -135,29 +138,42 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         position: relative;
+        left: 1%;
     }
     .project 
     {
         width: 450px;
     }
+
+    .projectSummary
+    {
+        font-size: 13px;
+    }
 }
 
-@media(max-width: 1420px)
+/* 
+    Microsoft Surface Pro 7 
+*/
+@media(max-width: 1368px)
 {
     .gridView
     {
-        display: none;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         position: relative;
+        left: 0;
     }
 
     .project
     {
-        width: 400px;
+        width: 445px;
     }
 }
 
-@media(max-width: 1024px)
+/* 
+    MDPI Laptop
+*/
+@media(max-width: 1280px)
 {
     .gridView
     {
@@ -168,6 +184,13 @@
 
     .project
     {
-        width: 300px;
+        width: 420px;
     }
+
+    .projectName,
+    .projectProgress
+    {
+        left: 25%;
+    }
+
 }

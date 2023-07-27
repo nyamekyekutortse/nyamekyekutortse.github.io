@@ -72,3 +72,27 @@
         left: 31%;
     }
 }
+
+@media(max-width: 1368px)
+{
+  .buttonsContainer
+  {
+      display: flex;
+      position: relative;
+      top: 87%;
+      gap: 7px;
+      left: 31%;
+  }
+}
+
+@media(max-width: 1280px)
+{
+  .buttonsContainer
+  {
+      display: flex;
+      position: relative;
+      top: 87%;
+      gap: 7px;
+      left: 27%;
+  }
+}
