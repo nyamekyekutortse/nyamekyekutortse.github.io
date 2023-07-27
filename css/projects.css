@@ -128,8 +128,9 @@
     border-radius: 10px;
   }
 
-  /* 
-    MacBook Pro | HiDPI Laptop
+  /* Compatible devices
+    MacBook Pro 
+    HiDPI Laptop
   */
 @media(max-width: 1440px)
 {
@@ -151,8 +152,9 @@
     }
 }
 
-/* 
-    Microsoft Surface Pro 7 
+/* Compatible devices
+    Microsoft Surface Pro 7 (Landscape)
+    ASUS something?
 */
 @media(max-width: 1368px)
 {
@@ -170,7 +172,7 @@
     }
 }
 
-/* 
+/* Compatible devices
     MDPI Laptop
 */
 @media(max-width: 1280px)
@@ -192,5 +194,18 @@
     {
         left: 25%;
     }
+}
 
+/* 
+    Surface Pro 7 (portrait)
+ */
+@media(max-width: 912px)
+{
+    .gridView
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        left: 1.5%;
+    }
 }

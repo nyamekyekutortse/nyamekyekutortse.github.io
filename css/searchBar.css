@@ -51,10 +51,26 @@ body
 }
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
+  width: 40%;
   position: absolute;
   top: 290px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
 }
+
+/* 
+    Surface Pro 7 (portrait)
+ */
+ @media(max-width: 912px)
+ {
+    .wrap
+    {
+      width: 50%;
+      position: absolute;
+      top: 290px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 30;
+    }
+ }

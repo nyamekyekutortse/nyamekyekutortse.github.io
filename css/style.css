@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;  
+    cursor: url("../media/graphics/cursor.png"), auto;
+}
+html
+{
+  scroll-behavior: smooth;
 }
 
 body
