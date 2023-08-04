@@ -5,6 +5,7 @@
     top: 87%;
     gap: 10px;
     left: 39%;
+    z-index: 99;
 }
 
 .button {
