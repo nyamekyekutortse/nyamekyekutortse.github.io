@@ -8,8 +8,11 @@
         <link rel = "stylesheet" href = "css/navbar.css">
         <link rel = "stylesheet" href = "css/homeHero.css">
         <link rel = "stylesheet" href="css/categoryCards.css">
+        <link rel = "stylesheet" href="css/categoryCarousels.css">
+        <link rel = "stylesheet" href="css/originalCarousels.css">
         <!-- external libraries, fonts, icons -->
         <link rel = "stylesheet" href = "#">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
         <!-- seo and accessibility -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +41,7 @@
                             </p> 
                         </span>
                     </a>
-                    <a href = "#">
+                    <a href = "mainCuratoryShow.html">
                         <span class = "link">
                             <i class="fa-solid fa-folder-open navIcon"></i>
                             <p class="linkText">
@@ -89,54 +92,90 @@
                 </div>
             </div>
         </nav>
-        <!-- hero featured project -->
-        <!-- <div class = "wrapper">
-            <div class="featuredProject">
-                <span class = linksAndButtons>
-                    <button class = "linkButton">
-                        View Repository
-                    </button>
-                    <button class = "linkButton">
-                        Download Assets
-                    </button>
-                    <button class = "linkButton">
-                        Contact
-                    </button>
-                </span>
-                <span class="heading">
-                    <h1 class="featuredProject">
-                        Featured Project
-                    </h1>
-                    <p class = "pName">
-                        Name: 
-                        <br>Project Showcase
+        <!-- Search Bar Maybe -->
+        <!-- Project Carousels -->
+        <div class="projectCarousels">
+            <div class="categoryContainer" id = "personalCategory">
+                <!-- Text Summary -->
+                <div class = categoryText>
+                    <span class = "categoryHead">Browse | Demo | Explore</span>
+                    <h2>Personal <br>Projects</h2>
+                    <hr>
+                    <p class = categoryDescription>
+                        A collection of personal not for commission projects primarily used in project based learning.
+                        These projects may not be regularly updated and some may not even 
+                        be completed because why not?
                     </p>
-                    <p class = "pCat">
-                        Category: 
-                        <br>Personal Web Development
-                    </p>
-                    <p class="projectDescription">This project is a web development project done for myself.<br>
-                        This project is a simple portfolio style gallery <br>
-                        used to showcase or display projects<br>
-                        I have worked on over time.<br>
-                        This space also will serve as an area where I will place <br>
-                        open source material to be rendered.<br>
-                        Clients can also come here to <br>
-                        preview the progress of their projects<br> 
-                        at any stage prior to handing over.<br>
-                        This site would be updated on a regular basis.
-                    </p>
-                    <span class="completionStatus">
-                        
-                    </span>
-                </span>
-                <span class="demoSlides">
-
-                </span>
+                    <a href = "mainPersonalShow.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>Browse Category</span>
+                    </a>
+                </div>
+                <!-- Carousel -->
+                <div class = "swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide--one">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 1</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--two">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 2</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--three">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 3</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--four">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 4</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--five">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 5</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
-        </div> -->
+        </div>
         <!-- project cards -->
-        <div class = "projectsContainer">
+        <div class = "projectsContainer" style="display: none;">
             <!-- personal projects -->
             <div class="personalCategoryCard">
                 <div class="personalCategory-image"></div>
@@ -235,6 +274,8 @@
             End Of Page
         </footer>
         <!-- scripts -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+        <script  src="javascript/projectCarousel.js"></script>
         <script src="https://kit.fontawesome.com/8c9fcb09a3.js" crossorigin="anonymous"></script>
     </body>
 </html>

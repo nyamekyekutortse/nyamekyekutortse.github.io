@@ -1,0 +1,46 @@
+        <!-- hero featured project -->
+        <!-- <div class = "wrapper">
+            <div class="featuredProject">
+                <span class = linksAndButtons>
+                    <button class = "linkButton">
+                        View Repository
+                    </button>
+                    <button class = "linkButton">
+                        Download Assets
+                    </button>
+                    <button class = "linkButton">
+                        Contact
+                    </button>
+                </span>
+                <span class="heading">
+                    <h1 class="featuredProject">
+                        Featured Project
+                    </h1>
+                    <p class = "pName">
+                        Name: 
+                        <br>Project Showcase
+                    </p>
+                    <p class = "pCat">
+                        Category: 
+                        <br>Personal Web Development
+                    </p>
+                    <p class="projectDescription">This project is a web development project done for myself.<br>
+                        This project is a simple portfolio style gallery <br>
+                        used to showcase or display projects<br>
+                        I have worked on over time.<br>
+                        This space also will serve as an area where I will place <br>
+                        open source material to be rendered.<br>
+                        Clients can also come here to <br>
+                        preview the progress of their projects<br> 
+                        at any stage prior to handing over.<br>
+                        This site would be updated on a regular basis.
+                    </p>
+                    <span class="completionStatus">
+                        
+                    </span>
+                </span>
+                <span class="demoSlides">
+
+                </span>
+            </div>
+        </div> -->
