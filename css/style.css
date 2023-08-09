@@ -15,7 +15,8 @@ html
 body
 {
     /* background: rgb(255, 255, 255);  */
-    background-image: url("../media/techy.jpg")
+    background-image: url("../media/techy.jpg");
+    overflow-x: hidden;
 }
 
 .button {
