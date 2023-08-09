@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@100;300;700&display=swap');
+
 .projectCarousels
 {
     box-sizing: border-box;
@@ -15,6 +17,16 @@
     backdrop-filter: blur(10px);
     height: 500px;
     margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.categoryContainer:hover
+{
+    background-color: rgba(0, 0, 0, 0.93);
+}
+
+.categoryContainer:hover p{
+    color: rgba(255, 233, 233, 1);
 }
 
 .categoryContainer .categoryHead
@@ -48,6 +60,18 @@
     -moz-text-fill-color: transparent;
 }
 
+.categoryContainer:hover h2
+{
+    background-color: #0f1417;
+    background-image: linear-gradient(45deg, #636e79, #a8c9ff);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
 .categoryContainer hr
 {
     display: block;
@@ -70,6 +94,7 @@
 
 .categoryContainer a
 {
+    font-family: 'manrope', sans-serif;
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -79,7 +104,7 @@
     border-radius: 0.125rem;
     transition: 0.3s ease-in-out;
     border: 2px solid #c2c2c2;
-    margin-top: 5px;
+    margin-top: 8px;
     padding: 0.625rem 1.875rem;
 }
 
@@ -116,14 +141,23 @@
 
 .swiper-slide h3 
 {
-    color: #ff0000;
-    font-family: "manrope", sans-serif;
-    font-weight: 400;
+    color: rgba(233, 232, 293, 1);
+    font-family: "victor mono", monospace;
+    font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.4;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.125rem;
     padding: 0 0 0 1.563rem;
     text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.slideCaption .devTechs
+{
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 0px;
+    position: relative;
+    left: 27px;
 }
 
 .swiper-slide p 
@@ -150,12 +184,12 @@
 .swiper-slide .slideLinks
 {
     display: flex;
+    position: relative;
+    top: -12px;
 }
 
 .swiper-slide .slideLinks a
 {
-    /* margin: 1.25rem 1.563rem 3.438rem 1.563rem; */
-    /* padding: 0.438em 1.875rem; */
     margin-right: -10px;
     font-size: 0.9rem;  
 }

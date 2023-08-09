@@ -12,6 +12,7 @@
         <link rel = "stylesheet" href="css/originalCarousels.css">
         <!-- external libraries, fonts, icons -->
         <link rel = "stylesheet" href = "#">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
         <!-- seo and accessibility -->
         <meta charset="UTF-8">
@@ -172,24 +173,194 @@
                     </div>
                 </div>
             </div>
-            <div class="categoryContainer" id = "personalCategory">
+            <div class="categoryContainer" id = "clientCategory">
                 <!-- Text Summary -->
                 <div class = categoryText>
                     <span class = "categoryHead">Browse | Demo | Explore</span>
                     <h2>Client-Based <br>Projects</h2>
                     <hr>
                     <p class = categoryDescription>
-                        A collection of personal not for commission projects primarily used in project based learning.
-                        These projects may not be regularly updated and some may not even 
-                        be completed because why not?
+                        A collection of contracted out projects. Spend most of my time on these to acheive a 
+                        turn around time of <= 30 days. Previews here may not be completed until end of contract period.
+                        Please not most previews here are just as a means of progress reporting and are in no way the finished
+                        product.
                     </p>
-                    <a href = "mainPersonalShow.html">
+                    <a href = "mainClientShow.html">
                         <i class="fa-solid fa-box-archive"></i>
                         <span>Browse Category</span>
                     </a>
                 </div>
                 <!-- Carousel -->
-                <div class = "swiper">
+                <div class = "swiper" style="top: -370px;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide--one">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>TRANS INTERNATIONAL</h3>
+                                <p>
+                                    Fully functional website for logistics and trading company, TRANS INTERNATIONAL GHANA
+                                </p>
+                                <span class="devTechs">
+                                    <i class="fa-brands fa-html5"></i>
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                    <i class="fa-brands fa-js"></i>
+                                </span>
+                                <span class = "slideLinks">
+                                    <a href = "clientWorkShowcase/TRANS/index.html">Demo</a>
+                                    <a href = "protectedContent.html">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--two">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 2</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class="devTechs">
+                                    <i class="fa-brands fa-html5"></i>
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                    <i class="fa-brands fa-js"></i>
+                                </span>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#"><i class="fa-solid fa-file-code"></i>Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--three">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 3</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--four">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 4</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--five">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 5</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="categoryContainer" id = "curationCategory">
+                <!-- Text Summary -->
+                <div class = categoryText>
+                    <span class = "categoryHead">Browse | Demo | Explore</span>
+                    <h2>Asset <br>Curation</h2>
+                    <hr>
+                    <p class = categoryDescription>
+                        A collection of open source projects by other developers from all over the world.
+                        Many of these assets by default would have needed some tinkering for reuse. However, I take the time to refactor the
+                        source code to make them more accessible and easy to understand. Fully reviewed ones would be adequately commented as well.
+                    </p>
+                    <a href = "mainCuratoryShow.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>Browse Category</span>
+                    </a>
+                </div>
+                <!-- Carousel -->
+                <div class = "swiper" style="top: -390px;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide--one">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 1</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--two">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 2</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--three">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 3</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--four">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 4</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide--five">
+                            <div class="slideCaption">
+                                <!-- TODO: Replace placeholders -->
+                                <h3>Project Name 5</h3>
+                                <p>Project Description placeholder text will go here describing nature and progress on project</p>
+                                <span class = "slideLinks">
+                                    <a href = "#">Demo</a>
+                                    <a href = "#">Source</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="categoryContainer" id = "developerCategory">
+                <!-- Text Summary -->
+                <div class = categoryText>
+                    <span class = "categoryHead">Browse | Demo | Explore</span>
+                    <h2>Developer <br>Resources</h2>
+                    <hr>
+                    <p class = categoryDescription>
+                        A collection of tools and resources put together for development purposes.
+                        These include resources such as implementations of algorithms, templates for environment setup
+                        , notes, documentations, guides etc. Anything a growing developer would need to streamline work flow.
+                        This is more for my benefit than anything else but everyone else is welcome to these as well.
+                    </p>
+                    <a href = "mainClientShow.html">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>Browse Category</span>
+                    </a>
+                </div>
+                <!-- Carousel -->
+                <div class = "swiper" style="top: -392px;">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide swiper-slide--one">
                             <div class="slideCaption">
