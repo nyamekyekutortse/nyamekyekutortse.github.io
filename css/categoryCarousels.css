@@ -221,24 +221,36 @@
     opacity: 1;
 }
 
-.swiper-slide--one 
+/* Client Slides */
+.swiper-slide--clientOne 
 {
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("clientWorkShowcase/TRANS/FEATURETHUMB.png") ;
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                url("/clientWorkShowcase/TRANS/FEATURETHUMB.png");
+    background-size: cover;
 }
   
-.swiper-slide--two 
+.swiper-slide--clientTwo 
 {
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
 }
   
-.swiper-slide--three 
+.swiper-slide--clientThree 
 {
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") ;
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                url("/clientWorkShowcase/CHOTEN/FirstRun/FEATURETHUMB.png") ;
 }
   
-.swiper-slide--four 
+.swiper-slide--clientFour 
 {
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.swiper-slide--clientFive 
+{
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
 
 .swiper-3d .swiper-slide-shadow-left,
