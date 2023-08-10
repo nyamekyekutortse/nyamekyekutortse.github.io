@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Yatra+One&family=Ysabeau+Office:wght@1;100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap');
+body{
+    background: url("/media/graphics/blackTexture.jpg");
+    text-align: center;
+    /*overflow: hidden;*/
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: default;
+    transition: all 2.9s ease-in-out;
+  }
+
+  body:hover
+  {
+    background: rgb(0, 0, 0);
+  }
+  
+  body:after{
+    content: "";
+    opacity: 0.020;
+    
+    /*width: 120%;
+    height: 120%;
+    animation: move 5s linear infinite;
+    top:-50px; left:-50px;*/
+    
+    top:0; left:0; bottom:0; right:0;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  /*@keyframes move {
+    to{
+      left: 0px;
+      top: 0px;
+    }
+  }*/
+  
+  #container{
+    top: 50%; 
+    left: 45%;
+    width: 15%;
+    height: 30%;
+    margin-top: -200px;
+    margin-left: -125px;
+    position: absolute;
+    object-fit: cover;
+    background: url("/media/image2.jpg");
+    background-size: cover;
+    border: rgb(0, 0, 0) solid 3px;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+    /*box-shadow: 0px 2px 3px rgba(0,0,0,0.25);*/
+    /*transition: all 0.5s cubic-bezier(0.19,1.0,0.22,1.0);*/
+    border-radius: 50%;
+    animation: bounce cubic-bezier(0.19,1.0,0.22,1.0) 1.5s alternate infinite;
+    -webkit-animation: bounce cubic-bezier(0.19,1.0,0.22,1.0) 1.5s alternate infinite;
+  }
+  
+  #avatar{
+    border: white solid 7px;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+    /*box-shadow: 0px 2px 3px rgba(0,0,0,0.25);*/
+    /*transition: all 0.5s cubic-bezier(0.19,1.0,0.22,1.0);*/
+    border-radius: 50%;
+    animation: bounce cubic-bezier(0.19,1.0,0.22,1.0) 1.5s alternate infinite;
+    -webkit-animation: bounce cubic-bezier(0.19,1.0,0.22,1.0) 1.5s alternate infinite;
+    width: 250px;
+    height: 250px;
+    /*maxthon duplicate*/
+  }
+  
+  @keyframes bounce {
+      to{
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+    }
+  }
+  @-webkit-keyframes bounce { /*maxthon duplicate*/
+      to{
+      -webkit-transform: translateY(-12px) scale(1.03);
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+    }
+  }
+  
+  /*#avatar:hover{
+    transform: translateY(-7px) scale(1.05);
+    -webkit-transform: translateY(-7px) scale(1.05); /*maxthon
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+  }*/
+  
+  #text
+  {
+    margin-top: 7px;
+    position: absolute;
+    top: 320px;
+    left: 5%;
+  }
+  
+  h1, p{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: Segoe UI, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: rgba(0,0,0,1);
+  }
+  
+  h1{
+    color: rgba(226, 226, 226, 0.75); /*#016A9A;*/
+    text-shadow: 0px 1px 0px rgba(89, 89, 89, 0.75);
+    font-size: 18px;
+  }
+  
+  p{
+    color: rgba(108, 108, 108, 0.46);
+    text-shadow: 0px 1px 0px rgba(89, 89, 89, 0.75);
+  }
+  
+video 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: all 0.5s linear;
+  }
+
+body:hover video
+{
+    opacity: 0;
+}
+
+h1 i
+{
+    font-size: 15px;
+    position: absolute;
+    top: 3px;
+    left: 122px;
+}

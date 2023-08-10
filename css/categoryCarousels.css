@@ -222,35 +222,112 @@
 }
 
 /* Client Slides */
-.swiper-slide--clientOne 
-{
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-                url("/clientWorkShowcase/TRANS/FEATURETHUMB.png");
-    background-size: cover;
-}
-  
-.swiper-slide--clientTwo 
-{
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-                url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
-}
-  
-.swiper-slide--clientThree 
-{
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-                url("/clientWorkShowcase/CHOTEN/FirstRun/FEATURETHUMB.png") ;
-}
-  
-.swiper-slide--clientFour 
-{
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-                url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-}
+    /* TRANS international */
+    .swiper-slide--clientOne 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/clientWorkShowcase/TRANS/FEATURETHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .swiper-slide--clientTwo 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+    /* Choten Limited */
+    .swiper-slide--clientThree 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/clientWorkShowcase/CHOTEN/FirstRun/FEATURETHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
 
-.swiper-slide--clientFive 
+    .swiper-slide--clientFour 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+    /* Construction Ambassadors */
+    .swiper-slide--clientFive 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/clientWorkShowcase/CAL/FEATURETHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+
+/* Personal Slides */
+    /* kutortse.com/nyamekye  */
+    .swiper-slide--personalOne 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .swiper-slide--personalTwo 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-slide--personalThree 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-slide--personalFour 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-slide--personalFive 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+.categoryContainer:hover .swiper-slide--clientOne, 
+.categoryContainer:hover .swiper-slide--clientTwo,
+.categoryContainer:hover .swiper-slide--clientThree,
+.categoryContainer:hover .swiper-slide--clientFour,
+.categoryContainer:hover .swiper-slide--clientFive
+.categoryContainer:hover .swiper-slide--personalOne, 
+.categoryContainer:hover .swiper-slide--personalTwo,
+.categoryContainer:hover .swiper-slide--personalThree,
+.categoryContainer:hover .swiper-slide--personalFour,
+.categoryContainer:hover .swiper-slide--personalFive
 {
-    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
-                url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    filter: none;
 }
 
 .swiper-3d .swiper-slide-shadow-left,
