@@ -316,6 +316,53 @@
         transition: all 0.4s ease-in-out;
     }
 
+
+/* Curation Slides */
+    /* Flex Cards */
+    .swiper-slide--curationOne 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/curatory/expandingFlexCards/FEATUREDTHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    .swiper-slide--curationTwo 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/curatory/foldHero/FEATUREDTHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-slide--curationThree 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/curatory/landingSwiper/FEATUREDTHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-slide--curationFour 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/curatory/comingSoon/FEATUREDTHUMB.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .swiper-slide--curationFive 
+    {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                    url("/media/graphics/placeHolder.png");
+        background-size: cover;
+        filter: grayscale(85%);
+        transition: all 0.4s ease-in-out;
+    }
 .categoryContainer:hover .swiper-slide--clientOne, 
 .categoryContainer:hover .swiper-slide--clientTwo,
 .categoryContainer:hover .swiper-slide--clientThree,
