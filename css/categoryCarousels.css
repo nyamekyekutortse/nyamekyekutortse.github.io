@@ -119,7 +119,7 @@
     width: 100%;
     position: relative;
     top: -328px;
-    left: 49%;
+    left: 60%;
 }
 
 .swiper-slide
@@ -174,6 +174,12 @@
     overflow: hidden;
 }
 
+.slideText
+{
+    width: 65%;
+    overflow: hidden;
+}
+
 .slideCaption
 {
     position: relative;
@@ -193,7 +199,7 @@
     width: 30px;
     position: relative;
     top: -70px;
-    left: 550px;
+    left: 76%;
 }
 
 .swiper-slide .slideLinks a
@@ -373,6 +379,11 @@
 .categoryContainer:hover .swiper-slide--personalThree,
 .categoryContainer:hover .swiper-slide--personalFour,
 .categoryContainer:hover .swiper-slide--personalFive
+.categoryContainer:hover .swiper-slide--curationOne, 
+.categoryContainer:hover .swiper-slide--curationTwo,
+.categoryContainer:hover .swiper-slide--curationThree,
+.categoryContainer:hover .swiper-slide--curationFour,
+.categoryContainer:hover .swiper-slide--curationFive
 {
     filter: none;
 }
@@ -383,6 +394,410 @@
     background-image: none;
 }
 
+#curationSwiper
+{
+    top: -380px;
+    width: 115%;
+}
+
+#clientSwiper
+{
+    top: -380px;
+    width: 115%;
+}
+
+
+@media screen and (max-width: 1440px)
+{
+    .projectCarousels
+    {
+        box-sizing: border-box;
+        width: 100%;
+        position: relative;
+        top: 42px;
+        z-index: 10;
+        column-gap: 3rem;
+        padding-block: min(20vh, 3rem);
+    }
+    
+    .categoryContainer
+    {
+        background-color: rgba(1, 49, 75, 0.59);
+        backdrop-filter: blur(10px);
+        height: 500px;
+        margin-top: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .categoryContainer:hover
+    {
+        background-color: rgba(0, 0, 0, 0.93);
+    }
+    
+    .categoryContainer:hover p{
+        color: rgba(255, 233, 233, 1);
+    }
+    
+    .categoryContainer .categoryHead
+    {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+        color: #717171;
+    }
+    
+    .categoryContainer .categoryText
+    {
+        margin-left: 10px;
+    }
+    
+    .categoryContainer h2
+    {
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-family: "manrope", sans-serif;
+        font-weight: 900;
+        /* font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem); */
+        font-size: 55px;
+        background-color: #4b5054;
+        background-image: linear-gradient(45deg, #000000, #d4c6c6);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    
+    .categoryContainer:hover h2
+    {
+        background-color: #0f1417;
+        background-image: linear-gradient(45deg, #636e79, #a8c9ff);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    
+    .categoryContainer hr
+    {
+        display: block;
+        background: #005baa;
+        height: 0.15rem;
+        width: 10.25rem;
+        border: none;
+        margin: 1.125rem 0 1.875rem 0;   
+    }
+    
+    .categoryContainer .categoryDescription
+    {
+        width: 500px;
+    }
+    
+    .categoryContainer .categoryDescription p
+    {
+        line-height: 1.6px;
+    }
+    
+    .categoryContainer a
+    {
+        font-family: 'manrope', sans-serif;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #717171;
+        font-weight: 500;
+        background: #fff;
+        border-radius: 0.125rem;
+        transition: 0.3s ease-in-out;
+        border: 2px solid #c2c2c2;
+        margin-top: 8px;
+        padding: 0.625rem 1.875rem;
+    }
+    
+    .categoryContainer a:hover
+    {
+        border: 0.125rem solid #005baa;
+        color: #005baa;
+    }
+    
+    .swiper 
+    {
+        width: 100%;
+        position: relative;
+        top: -328px;
+        left: 49%;
+    }
+    
+    .swiper-slide
+    {
+        height: 480px !important;
+    }
+    
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active 
+    {
+      background: #fff;
+    }
+    
+    .swiper-pagination 
+    {
+        bottom: 1.25rem !important;
+        display: none;
+    }
+    
+    .swiper-slide h3 
+    {
+        color: rgba(233, 232, 293, 1);
+        font-family: "victor mono", monospace;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-bottom: 0.125rem;
+        padding: 0 0 0 1.563rem;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    
+    .slideCaption .devTechs
+    {
+        color: rgba(255, 255, 255, 1);
+        margin-bottom: 0px;
+        position: relative;
+        left: 27px;
+    }
+    
+    .swiper-slide p 
+    {
+        color: #dadada;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        padding: 0 1.563rem;
+        line-height: 15px;
+        font-size: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .slideCaption
+    {
+        position: relative;
+        top: 350px;
+        width: 100%;
+        height: 150px;
+        background-color: rgba(22,22,22,1)
+        
+    }
+    .slideCaption p{
+        width: 80%;
+    }
+    .swiper-slide .slideLinks
+    {
+        display: grid;
+        white-space: nowrap;
+        width: 30px;
+        position: relative;
+        top: -70px;
+        left: 550px;
+    }
+    
+    .swiper-slide .slideLinks a
+    {
+        margin-right: 10px;
+        font-size: 15px;  
+        text-align: center;
+    }
+    
+    .swiper-slide .slideLinks a:hover 
+    {
+        color: #005baa;
+    }
+    
+    .swiper-slide div 
+    {
+        display: none;
+        opacity: 0;
+        padding-bottom: 0.625rem;
+    }
+    
+    .swiper-slide-active div 
+    {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Client Slides */
+        /* TRANS international */
+        .swiper-slide--clientOne 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/clientWorkShowcase/TRANS/FEATURETHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .swiper-slide--clientTwo 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+        /* Choten Limited */
+        .swiper-slide--clientThree 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/clientWorkShowcase/CHOTEN/FirstRun/FEATURETHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--clientFour 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+        /* Construction Ambassadors */
+        .swiper-slide--clientFive 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/clientWorkShowcase/CAL/FEATURETHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+    
+    /* Personal Slides */
+        /* kutortse.com/nyamekye  */
+        .swiper-slide--personalOne 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .swiper-slide--personalTwo 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--personalThree 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--personalFour 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--personalFive 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+    
+    /* Curation Slides */
+        /* Flex Cards */
+        .swiper-slide--curationOne 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/curatory/expandingFlexCards/FEATUREDTHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .swiper-slide--curationTwo 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/curatory/foldHero/FEATUREDTHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--curationThree 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/curatory/landingSwiper/FEATUREDTHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--curationFour 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/curatory/comingSoon/FEATUREDTHUMB.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    
+        .swiper-slide--curationFive 
+        {
+            background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), 
+                        url("/media/graphics/placeHolder.png");
+            background-size: cover;
+            filter: grayscale(85%);
+            transition: all 0.4s ease-in-out;
+        }
+    .categoryContainer:hover .swiper-slide--clientOne, 
+    .categoryContainer:hover .swiper-slide--clientTwo,
+    .categoryContainer:hover .swiper-slide--clientThree,
+    .categoryContainer:hover .swiper-slide--clientFour,
+    .categoryContainer:hover .swiper-slide--clientFive
+    .categoryContainer:hover .swiper-slide--personalOne, 
+    .categoryContainer:hover .swiper-slide--personalTwo,
+    .categoryContainer:hover .swiper-slide--personalThree,
+    .categoryContainer:hover .swiper-slide--personalFour,
+    .categoryContainer:hover .swiper-slide--personalFive
+    .categoryContainer:hover .swiper-slide--curationOne, 
+    .categoryContainer:hover .swiper-slide--curationTwo,
+    .categoryContainer:hover .swiper-slide--curationThree,
+    .categoryContainer:hover .swiper-slide--curationFour,
+    .categoryContainer:hover .swiper-slide--curationFive
+    {
+        filter: none;
+    }
+    
+    .swiper-3d .swiper-slide-shadow-left,
+    .swiper-3d .swiper-slide-shadow-right 
+    {
+        background-image: none;
+    }
+    
+}
 @media screen and (min-width: 93.75rem) 
 {
     .swiper 

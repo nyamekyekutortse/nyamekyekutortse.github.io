@@ -113,14 +113,14 @@
                 <div class="toggleIcons">
                     <!-- ICONS -->
                     <span class="listIcons">
-                        <i class="fa-sharp fa-regular fa-rectangle-list listInactive"></i>
-                        <i class="fa-sharp fa-solid fa-rectangle-list listActive"></i>
+                        <i class="fa-sharp fa-regular fa-rectangle-list listInactive" id = "listInactive"></i>
+                        <i class="fa-sharp fa-solid fa-rectangle-list listActive" id = "listActive"></i>
                     </span>
                     <span class="gridIcons">
                         <!-- <i class="fa-sharp fa-solid fa-border-all gridActive"></i> -->
-                        <i class='bx bxs-grid-alt gridActive' ></i>
+                        <i class='bx bxs-grid-alt gridActive' id = "gridActive"></i>
                         <!-- <i class="fa-sharp fa-solid fa-border-none gridInactive"></i> -->
-                        <i class='bx bx-grid-alt gridInactive' ></i>
+                        <i class='bx bx-grid-alt gridInactive' id = "gridInactive"></i>
                     </span>
                 </div>
                 <span class="toggleCaption">
@@ -136,7 +136,7 @@
           </div>
           <div class="projectListings">
             <!-- Grid Views -->
-            <div class="gridView">
+            <div class="gridView" id = "grid">
                 <span class="project" id = "TRANS INTERNATIONAL">
                     <span class="projectThumb">
                         <img src = "media/resourceThumb.jpg" alt="TI">
@@ -158,7 +158,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a href = "clientWorkShowcase/TRANS/index.html">
                             <button class="button">
@@ -169,7 +169,7 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
@@ -195,7 +195,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a>
                             <button class="button">
@@ -206,7 +206,7 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
@@ -232,7 +232,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a>
                             <button class="button">
@@ -243,7 +243,7 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
@@ -269,7 +269,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a>
                             <button class="button">
@@ -280,7 +280,7 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
@@ -306,7 +306,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a>
                             <button class="button">
@@ -317,7 +317,7 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
@@ -343,7 +343,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a>
                             <button class="button">
@@ -354,7 +354,7 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
@@ -381,7 +381,7 @@
                         <i class='bx bxl-javascript'></i>
                         <i class='bx bxl-css3' ></i>
                     </span>
-                    <!-- preview, source buttons -->
+                    <!-- preview, progress buttons -->
                     <span class="buttonsContainer">
                         <a>
                             <button class="button">
@@ -392,24 +392,93 @@
                         <a>
                             <button class="button">
                                 <i class='bx bx-code-block'></i>
-                                <p class="text">source</p>
+                                <p class="text">progress</p>
                               </button>
                         </a>
                     </span>
                 </span>
             </div>
             <!-- List Views -->
-            <div class="listView">
-
+            <div class="listView" id = "list">
+                <table id = "listTable">
+                    <thead id = "tableHeader">
+                      <tr>
+                        <th>Thumb</th>
+                        <th>Project Type</th>
+                        <th>Dev Tech</th>
+                        <th>Client Name</th>
+                        <th>Project Status</th>
+                        <th>Dev Time</th>
+                        <th>preview | updates</th>
+                      </tr>
+                    </thead>
+                    <tbody id = "tableEntries">
+                      <tr>
+                        <td><img src = "clientWorkShowcase/TRANS/media/svg/logo_icon_noshadow.svg" alt = "thumbnail"></td>
+                        <td>website</td>
+                        <td>
+                            <span class="listTech">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class='bx bxl-javascript'></i>
+                                <i class='bx bxl-css3' ></i>
+                            </span>
+                        </td>
+                        <td><strong>showSpeed</strong></td>
+                        <td>15</td>
+                        <td>The speed of the show/reveal</td>
+                      </tr>
+                      <tr>
+                        <td><strong>showEasing</strong></td>
+                        <td>'linear'</td>
+                        <td>The easing of the show/reveal</td>
+                      </tr>
+                      <tr>
+                        <td><strong>hideSpeed</strong></td>
+                        <td>50</td>
+                        <td>The speed of the hide/conceal</td>
+                      </tr>
+                      <tr>
+                        <td><strong>hideEasing</strong></td>
+                        <td>'linear'</td>
+                        <td>The easing of the hide/conceal</td>
+                      </tr>					
+                      <tr>
+                        <td><strong>width</strong></td>
+                        <td>'auto'</td>
+                        <td>The width that the data will be truncated to - <em>('auto' or px amount)</em></td>
+                      </tr>
+                      <tr>
+                        <td><strong>ellipsis</strong></td>
+                        <td>true</td>
+                        <td>Set to true to enable the ellipsis</td>
+                      </tr>
+                      <tr>
+                        <td><strong>title</strong></td>
+                        <td>false</td>
+                        <td>Set to true to show the full data on hover</td>
+                      </tr>
+                      <tr>
+                        <td><strong>afterShow</strong></td>
+                        <td> $.noop</td>
+                        <td>The callback fired after the show/reveal</td>
+                      </tr>
+                      <tr>
+                        <td><strong>afterHide</strong></td>
+                        <td>$.noop</td>
+                        <td>The callback fired after the hide/conceal</td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>          
         <!-- thumbnails -->
         <!-- tabular view -->
         <footer>
             <!-- End Of Page -->
-            <a target="_blank" href="https://icons8.com/icon/zjQE4tefmFLU/cursor">Cursor</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            <!-- <a target="_blank" href="https://icons8.com/icon/zjQE4tefmFLU/cursor">Cursor</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
         </footer>
         <!-- scripts -->
         <script src="https://kit.fontawesome.com/8c9fcb09a3.js" crossorigin="anonymous"></script>
+        <script src = "javascript/viewToggler.js"></script>
     </body>
 </html>
