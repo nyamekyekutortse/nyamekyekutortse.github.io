@@ -403,13 +403,13 @@
                 <table id = "listTable">
                     <thead id = "tableHeader">
                       <tr>
-                        <th>Thumb</th>
-                        <th>Project Type</th>
-                        <th>Dev Tech</th>
-                        <th>Client Name</th>
-                        <th>Project Status</th>
-                        <th>Dev Time</th>
-                        <th>preview | updates</th>
+                        <th id = "thumbnailEntry">Thumb</th>
+                        <th id = "projectType">Project Type</th>
+                        <th id = "projectTech">Dev Tech</th>
+                        <th id = "projectClient">Client Name</th>
+                        <th id = "projectState">Project Status</th>
+                        <th id = "projectTime">Dev Notes</th>
+                        <th id = "projectLinks">preview | updates</th>
                       </tr>
                     </thead>
                     <tbody id = "tableEntries">
@@ -419,13 +419,36 @@
                         <td>
                             <span class="listTech">
                                 <i class="fa-brands fa-html5"></i>
+                                <i class='bx bxl-css3'></i>
                                 <i class='bx bxl-javascript'></i>
-                                <i class='bx bxl-css3' ></i>
+                                
                             </span>
                         </td>
-                        <td><strong>showSpeed</strong></td>
-                        <td>15</td>
+                        <td>TRANS INTERNATIONAL</td>
+                        <td>
+                            <span class="projectProgress" style="color: rgba(1, 1, 1, 1);">
+                                In Progress<br>
+                                <progress value="30" max="100"></progress>
+                                <span class="progressValue">30%</span>
+                            </span>
+                        </td>
                         <td>The speed of the show/reveal</td>
+                        <td>
+                            <span class="listButtonsContainer">
+                                <a href = "clientWorkShowcase/TRANS/index.html">
+                                    <button class="button">
+                                        <i class="fa-solid fa-expand"></i>
+                                        <p class="text">preview</p>
+                                      </button>
+                                </a>
+                                <a>
+                                    <button class="button">
+                                        <i class='bx bx-code-block'></i>
+                                        <p class="text">progress</p>
+                                      </button>
+                                </a>
+                            </span>
+                        </td>
                       </tr>
                       <tr>
                         <td><strong>showEasing</strong></td>
