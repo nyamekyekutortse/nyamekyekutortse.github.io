@@ -1,0 +1,36 @@
+ITEM,CAT,UoM
+acid,tiling materials,
+binding wire,materials,coil|coils
+carpenters,labour,
+chemical waterproof,materials,day|days
+chippings,materials,trip|trips
+coping,tiling materials,piece_pc|pieces_pcs
+cement,materials,bag|bags
+electricians,labor,
+electrical works,civil works,
+excavation,civil works,
+filtration sand,equipment,unit|units
+filtration works,civil works,
+flanges,equipment,unit|units
+inlets,equipment,unit|units
+iron rods,material,ton|tons
+labour,tiling materials,m^2
+logistics and haulage,civil works,
+masons and laborers,labour
+main drain,equipment
+nails,material
+plumbers,labour
+plumbing fittings,equipment,
+plywood,material
+pool ladder,equipment,unit|units
+pool led lights,equipment,set|sets
+pool tiles,tiling materials,m^2
+river sand,material
+skimmers,equipment,unit|units
+solid blocks,material,unit|units
+steel benders,labor,
+tifix,tiling materials,
+tile grout,tiling materials,bag|bags
+transportation,tiling material,
+water pump,equipment,unit|units
+wood,material,piece_pc|pieces_pcs

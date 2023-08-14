@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <head>
+        <title id = "pageTitle"> New Invoice</title>
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/sectioning.css">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <!-- Footer -->
+        <section id = "topSection">
+            <!-- document title and stuff go here. -->
+            <div class="leftLogo">
+                <img src = "media/white.svg" alt="logo" class="logo" id="leftLogoImage">
+                <span class = "header">official invoice</span>
+            </div>
+            <span class="documentHeading" id = "invoiceTitle">
+                proposed construction of 16ft x 24ft rectangular residential swimming pool.
+                <hr>
+            </span>
+            <hr id = verticalSeparator>
+            <div id = "additions" class="additionalInfo">
+                <span id = "dateContainer">date drafted: <span id = "date" class = "dateText"></span></span>
+                <br>
+                <span>name of client: 
+                    <br>
+                    <input role = "form" id = "clientName" aria-label = "name of client">
+                </span>
+                <br>
+                <span>project location:<br>
+                    <input role = "form" id = "projectLocation" aria-label = "location of project"></span>
+                <br>
+                <span>contractor name: <input role = "form" id = "contractorName" aria-label = "name of contractor"></span>
+                <br>
+                <span>currency:
+                    <br>
+                    <input role = "form" id = "transactionCurrency" aria-label="currency of transaction" placeholder = 'ghana cedi (ghs)'>
+                </span>
+            </div>            
+        </section>
+
+        <section id = "initialSummary">
+
+        </section>
+
+        <section id = "precentageBreakdown">
+
+        </section>
+
+        <section id = materialInvoice>
+
+        </section>
+
+        <section id = equipmentInvoice>
+
+        </section>
+
+        <section id = laborInvoice>
+
+        </section>
+
+        <section id="tilingInvoice">
+
+        </section>
+        <footer id = "disclaimer">
+            <span class="voidCondition">
+                This Invoice is valid for 10 days upon receipt.
+            </span>
+            <span class="contactInformation">
+                Contact info goes here.
+            </span>
+        </footer>
+        <!-- Scripts -->
+        <script src = "javascript/main.js"></script>
+        <script src = "javascript/computation.js"></script>
+        <script src = "javascript/constants.js"></script>
+    </body>
+</html>
