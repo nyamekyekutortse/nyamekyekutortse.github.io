@@ -13,7 +13,8 @@
 
 .categoryContainer
 {
-    background-color: rgba(1, 49, 75, 0.59);
+    /* background-color: rgba(1, 49, 75, 0.59); */
+    background-color: rgba(186, 186, 186, 0.74);
     backdrop-filter: blur(10px);
     height: 500px;
     margin-top: 10px;
