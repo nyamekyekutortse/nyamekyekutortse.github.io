@@ -5,6 +5,7 @@
 - Client Liason: Vincent Ablordeppey
 ### DELIVERABLES CHECKLIST
 - [ ] webapp
+- [ ] printable version
 - [ ] excel templates
 - [ ] word templates
 - [ ] samples

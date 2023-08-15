@@ -1,3 +1,8 @@
+.sectionsContainer
+{
+    display: inline-block;
+}
+
 #topSection
 {
     margin-top: 5%;
@@ -104,8 +109,239 @@ input[role = form]
 
 #initialSummary
 {
-
+    background-color: rgb(102, 118, 135);
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 15%;
+    justify-content: center;
+    text-transform: uppercase;
 }
+
+#discountPercent
+{
+    margin-right: 5%;
+}
+
+#amountDue
+{
+    margin-left: 3%;
+}
+
+.numberForm
+{
+    width: 25% !important;
+    color: rgba(0 , 0, 0 ,1);
+}
+
+#percentageBreakdown
+{
+    display: flex;
+    margin-top: 20%;
+    width: 100%;
+    height: auto;
+    background-color: rgb(102, 118, 135);
+    position: fixed;
+    justify-content: center;
+    text-transform: uppercase;
+    gap: 5%;
+}
+
+#materialInvoice
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 28%;
+    width: 100%;
+    height: auto;
+    background-color: rgb(102, 118, 135);
+    position: fixed;
+    align-items: left;
+    text-transform: uppercase;
+    gap: 5%;
+}
+
+#materialTableHeader
+{
+    border-bottom: solid 5px rgba(255, 255, 255, 1);
+}
+
+#materialInvoice h2
+{
+    text-align: center;
+}
+
+#mobilization
+{
+    display: block;
+}
+
+#baseDescription,
+#baseMaterial
+{
+    width: 30%;
+}
+
+#materialTable
+{
+    /* background:red; */
+    width: 60%;
+    margin-left: 20%;
+    text-align: left;
+}
+
+
+#materialTable th
+{
+    /* background: blue; */
+    border-bottom: solid 1.5px rgba(255, 255, 255, 1);
+}
+
+#materialTable th,
+#materialTable th tr td{
+    border-right: solid 1px rgba(255, 255, 255, 1);
+}
+
+#materialQuantity
+{
+    width: 15%;
+}
+
+#baseQuantity #quantityValue
+{
+    width: 60%;
+}
+#baseQuantity #myInput
+{
+    width: 30%;
+    position: relative;
+    top: -3px;
+}
+
+#unitPrice
+{
+    width: 15%;
+}
+
+#baseUnit #priceCurrency
+{
+    width: 30%;
+}
+
+#baseUnit #priceValue
+{
+    width: 60%;
+}
+
+#baseTotal
+{
+    width: 15%;
+}
+
+#baseTotal #totalCurrency
+{
+    width: 30%;
+}
+
+#baseTotal #computedTotal
+{
+    width: 60%;
+}
+
+#subTotal
+{
+    position: relative;
+    margin-top: 0%;
+    width: 6%;
+}
+
+#computedSubTotal
+{
+    justify-self: right;
+    left: 89.8%;
+    position: relative;
+}
+
+#subCurrency
+{
+    width: 3%;
+}
+
+table td
+{
+    border-bottom: solid 1px rgba(255, 255, 255, 1);
+}
+
+table tr:last-child
+{
+    border-top: solid 3px red;
+    /* background: red; */
+}
+
+
+/* #unitPrice
+{
+    text-align: center;
+    width: 20%;
+}
+
+#UPSub
+{
+    display: flex;
+    text-align: center;
+    align-items: left; 
+}
+#UPSub thead
+{
+    gap: 20%;
+}
+
+#UPSub th
+{
+    position: relative;
+    width: 50%;
+    background: green;
+    margin-left: 2000px;
+}
+
+#quantityValue
+{
+    width: 150%;
+}
+
+#myInput
+{
+    width:10%;
+}
+
+#baseUnit
+{
+    display: flex;
+}
+
+#priceCurrency,
+#priceValue
+{
+    width: 70%;
+} */
+
+input
+{
+    color: black;
+    text-transform: uppercase;
+}
+
+/* #inflationValue
+{
+    display: flex;
+} */
+/* p .description
+{
+    font-size: 25px;
+    top: 100px;
+    position: relative;
+} */
 
 @media(max-width: 1440px)
 {
@@ -113,9 +349,41 @@ input[role = form]
     {
         font-size: 350%;
     }
-    
+
     .additionalInfo
     {
         margin-top: -11.5%
+    }
+
+    #initialSummary
+    {
+        top: 10%;
+    }
+
+    #percentageBreakdown
+    {
+        top: 5%;
+    }
+
+    #materialInvoice
+    {
+        top: 7.5%;
+    }
+
+    #materialTable
+    {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+}
+
+
+@media print
+{
+    #amountDue
+    {
+        font-size: 20px;
+        color: green;
     }
 }

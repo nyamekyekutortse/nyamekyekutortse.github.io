@@ -26,3 +26,28 @@ dateTexts.innerText = formattedDate.toString();
 const enteredTitle = document.getElementById("invoiceTitle").innerText;
 const pageTitle = document.getElementsByTagName("title");
 pageTitle[0].innerText = enteredTitle;
+
+
+// Units of measure
+// let unitsOfMeasure = ["coil", "coils", "day", "days", "trip", "trips", "pc", "pcs", "bag", "bags", "unit", "units", "ton", "tons", "sq. meter", "sq. meters", "set", "sets"]
+// unitsOfMeasure = unitsOfMeasure.sort((a, b) => (a < b));
+// console.log(unitsOfMeasure.toString());
+// const units = document.getElementById("unitsOfMeasure");
+
+// unitsOfMeasure.forEach(unit =>
+//     {
+//         const option = document.createElement("option");
+//         option.value = unit;
+//         option.innerText = unit;
+//         units.appendChild(option);
+//     })
+// console.log("complete");
+
+let items = [  "COIL", "COILS", "DAY", "DAYS", "TRIP", "TRIPS", "PC", "PCS", "BAG", "BAGS", "UNIT", "UNITS", "TON", "TONS", "SQ. METER", "SQ. METERS", "SET", "SETS"]
+  const dataList = document.getElementById('myList');
+  
+  items.forEach(item => {
+    const option = document.createElement('option');
+    option.value = item;
+    dataList.appendChild(option);
+  });

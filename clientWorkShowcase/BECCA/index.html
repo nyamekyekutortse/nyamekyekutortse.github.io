@@ -8,60 +8,167 @@
 
     <body>
         <!-- Footer -->
-        <section id = "topSection">
-            <!-- document title and stuff go here. -->
-            <div class="leftLogo">
-                <img src = "media/white.svg" alt="logo" class="logo" id="leftLogoImage">
-                <span class = "header">official invoice</span>
+        <main>
+            <div class="sectionsContainer">
+                <section id = "topSection">
+                    <!-- document title and stuff go here. -->
+                    <div class="leftLogo">
+                        <img src = "media/white.svg" alt="logo" class="logo" id="leftLogoImage">
+                        <span class = "header">official invoice</span>
+                    </div>
+                    <span class="documentHeading" id = "invoiceTitle">
+                        proposed construction of 16ft x 24ft rectangular residential swimming pool.
+                        <hr>
+                    </span>
+                    <hr id = verticalSeparator>
+                    <div id = "additions" class="additionalInfo">
+                        <span id = "dateContainer">date drafted: <span id = "date" class = "dateText"></span></span>
+                        <br>
+                        <span>name of client: 
+                            <br>
+                            <input role = "form" id = "clientName" aria-label = "name of client">
+                        </span>
+                        <br>
+                        <span>project location:<br>
+                            <input role = "form" id = "projectLocation" aria-label = "location of project"></span>
+                        <br>
+                        <span>contractor name: <input role = "form" id = "contractorName" aria-label = "name of contractor"></span>
+                        <br>
+                        <span>currency:
+                            <br>
+                            <input role = "form" id = "transactionCurrency" aria-label="currency of transaction" placeholder = 'ghana cedi (gh&#8373)'>
+                        </span>
+                    </div>            
+                </section>
+                <p class="description">
+                    description goes here
+                </p>
+                <section id = "initialSummary"> 
+                    <span id="intitalSum">
+                        Initial Sum (GH&#8373) <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "Initial sum">
+                    </span>
+                    <span id = "discounts">
+                        Discount(%) <input type = number role = form class = "numberForm" placeholder = "0.0" step = "0.01" aria-label = "discount as percentage" id = "discountPercent">
+                        Discount(GH&#8373) <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "discount as monetary value">
+                    </span>
+                    <span id="amountDue">
+                        Amount Due(GH&#8373) <input type = "number" role = form class = numberForm placeholder = "0.00" step = "0.01" aria-label = "final amount due for client">
+                    </span>
+                </section>
+        
+                <section id = "percentageBreakdown">
+                    <span id="mobilization">
+                        <h2>mobilization</h2>
+                        <span id="mobPercent">
+                            mobilization(%): 
+                            <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        </span>
+                        <hr>
+                        <span id = "mobilizationVal">
+                            mobilization(gh&#8373):
+                            <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        </span>
+                    </span>
+                    <!-- <hr id="verticalSeparator"> -->
+                    <span id="balance">
+                        <h2>balance</h2>
+                        <span id="balancePercent">
+                            balance(%):
+                            <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        </span>
+                        <hr>
+                        <span id="balanceVal">
+                            balance(gh&#8373):
+                            <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        </span>
+                    </span>
+                    <span id = "inflationAdjust">
+                        <h2>
+                            inflation adjustment
+                        </h2>
+                        <span id="inflationPercent">
+                            inflation(%):
+                            <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        </span>
+                        <hr>
+                        <span id="inflationValue">
+                            inflation(gh&#8373):
+                            <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        </span>
+                    </span>
+                </section>
+        
+                <section id = materialInvoice>
+                    <h2>material invoice</h2>
+                    <span class="invoiceTable">
+                        <table id = "materialTable">
+                            <thead id = "materialTableHeader">
+                                <th id = "description">
+                                    description
+                                </th>
+                                <th id = "materialName">
+                                    material
+                                </th>
+                                <th id = "materialQuantity">
+                                    quantity
+                                </th>
+                                <th id = "unitPrice">
+                                    unit price <sub>gh&#8373</sub>
+                                <th id = "computedTotal">
+                                    total
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr id="baseRow">
+                                    <td id = "baseDescription">
+                                        <input role = form type = "text" placeholder="enter item description" aria-label="description of item">
+                                    </td>
+                                    <td id="baseMaterial">
+                                        <input role = form type = "text" placeholder="enter material name" aria-label="name of material">
+                                    </td>
+                                    <td id="baseQuantity">
+                                        <!-- <input role = form type = "number" placeholder="enter quantity" aria-label="quantity of material">
+                                        <input id = "unitsOfMeasure" type = "text" role = form placeholder="units" aria-label = "unit of measure" list = "units" style="color: black;">
+                                        <datalist id = "units"></datalist>  -->
+                                        <input role = form type = "number" placeholder="enter quantity" aria-label="quantity of material" id = "quantityValue">
+                                        <input type="text" id="myInput" list="myList" placeholder= "unit" style="color: black;">
+                                        <datalist id="myList"></datalist>
+                                     </td>
+                                     <td id = "baseUnit">
+                                         <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "priceCurrency">
+                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue">
+                                     </td>
+                                     <td id = baseTotal>
+                                        <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency">
+                                        <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" id = computedSubTotal>
+                                        <!-- TODO: update aria labels when cleaning up -->
+                                        <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="">
+                                        <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </span>
+                </section>
+        
+                <section id = equipmentInvoice>
+        
+                </section>
+        
+                <section id = laborInvoice>
+        
+                </section>
+        
+                <section id="tilingInvoice">
+        
+                </section>
             </div>
-            <span class="documentHeading" id = "invoiceTitle">
-                proposed construction of 16ft x 24ft rectangular residential swimming pool.
-                <hr>
-            </span>
-            <hr id = verticalSeparator>
-            <div id = "additions" class="additionalInfo">
-                <span id = "dateContainer">date drafted: <span id = "date" class = "dateText"></span></span>
-                <br>
-                <span>name of client: 
-                    <br>
-                    <input role = "form" id = "clientName" aria-label = "name of client">
-                </span>
-                <br>
-                <span>project location:<br>
-                    <input role = "form" id = "projectLocation" aria-label = "location of project"></span>
-                <br>
-                <span>contractor name: <input role = "form" id = "contractorName" aria-label = "name of contractor"></span>
-                <br>
-                <span>currency:
-                    <br>
-                    <input role = "form" id = "transactionCurrency" aria-label="currency of transaction" placeholder = 'ghana cedi (ghs)'>
-                </span>
-            </div>            
-        </section>
+        </main>
 
-        <section id = "initialSummary">
-
-        </section>
-
-        <section id = "precentageBreakdown">
-
-        </section>
-
-        <section id = materialInvoice>
-
-        </section>
-
-        <section id = equipmentInvoice>
-
-        </section>
-
-        <section id = laborInvoice>
-
-        </section>
-
-        <section id="tilingInvoice">
-
-        </section>
         <footer id = "disclaimer">
             <span class="voidCondition">
                 This Invoice is valid for 10 days upon receipt.
@@ -74,5 +181,6 @@
         <script src = "javascript/main.js"></script>
         <script src = "javascript/computation.js"></script>
         <script src = "javascript/constants.js"></script>
+        <script src = "javascript/structure.js"></script>
     </body>
 </html>

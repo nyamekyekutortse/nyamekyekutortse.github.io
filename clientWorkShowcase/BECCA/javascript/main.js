@@ -13,3 +13,6 @@ class InvoiceItems
     }
 }
 
+function printPage() {
+    window.print();
+  }
