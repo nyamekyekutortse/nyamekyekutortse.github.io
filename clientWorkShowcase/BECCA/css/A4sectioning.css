@@ -1,0 +1,348 @@
+#topSection
+{
+    position: relative;
+    width: 8.05in;
+    margin-left: 0.2in;
+    display: flex;
+    /* background: red; */
+    margin-top: 0.25in;
+    height: 2in;
+}
+
+input[type=text]
+{
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 1);
+}
+.leftLogo
+{
+    width: 2in;
+    position: relative;
+}
+
+.header
+{
+    position: absolute;
+    z-index: 3;
+    top: -0.05in;
+    font-size: 30px;
+    text-align: center;
+    left: 2.1in;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#invoiceTitle
+{
+    position: absolute;
+    display: flex;
+    left: 2.1in;
+    top: 0.32in;
+    width: 5in;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+
+#projectTitle
+{
+    width: 5.5in;
+    height: 0.35in;
+    /* resize: both; */
+    /* height: auto; */
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    vertical-align: top;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 1);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+#additions
+{
+    position: absolute;
+    top: 0.65in;
+    text-transform: uppercase;
+}
+
+.clientInfo
+{
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 0.15in;
+}
+
+#clientName,
+#contractorName
+{
+    width: 3in;
+}
+
+.contractorInfo
+{
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 0.15in;
+    margin-top: 0.04in;
+}
+
+#dateContainer
+{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 0.049in;
+}
+
+/* Section 2 */
+#initialSummary
+{
+    position: relative;
+    width: 8.05in;
+    margin-left: 0.2in;
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    margin-top: 0.25in;
+    gap: 1.28in;
+    
+}
+
+.sectionDivider
+{
+    margin-top: -0.95in;
+}
+
+.numbers
+{
+    display: flex;
+    gap: 1.28in;
+    margin-top: -0.95in;
+    text-transform: uppercase;
+}
+
+#initialSum
+{
+    display: block;
+    position: relative;
+}
+
+#discounts
+{
+    display:block;
+    margin-left: 0in;
+    text-align: center;
+}
+
+#discounts input
+{
+    text-align: center;
+}
+
+#amountDue
+{
+    display: block;
+    position: relative;
+    /* padding-right: 1.5in;  */
+    text-align: right;
+}
+
+#amountDue input
+{
+    text-align: right;
+}
+#discountPercent,
+#discountVal
+{
+    width: 1.5in;
+}
+
+#initialValue,
+#amountValue
+{
+    width: 2.0in;
+}
+
+.description
+{
+    text-align: center;
+}
+
+/* section 3 */
+
+
+#percentageBreakdown
+{
+    position: relative;
+    width: 8.05in;
+    margin-left: 0.2in;
+    display: flex;
+    background: rgb(255, 145, 0);
+    margin-top: 0.25in;
+    height: 1.2in;
+    text-transform: uppercase;
+    gap: 0.5in;
+}
+
+h2
+{
+    font-size: 15px;
+}
+
+#mobPercent, 
+#mobilizationVal,
+#balancePercent,
+#balanceVal,
+#inflationPercent,
+#inflationValue
+{
+    font-size: 10px;
+    display: block;
+}
+
+#mobPercent input, 
+#mobilizationVal input
+{
+    width: 1in;
+    color: rgba(0, 0, 0, 1);
+}
+
+#balancePercent input,
+#balanceVal input
+{
+    width: 1in;
+    color: rgba(0, 0, 0, 1);
+}
+
+#inflationPercent input,
+#inflationValue input
+{
+    width: 1in;
+    color: rgba(0, 0, 0, 1);
+}
+
+/* Section 3 */
+#materialInvoice
+{
+    position: relative;
+    width: 8.05in;
+    margin-left: 0.2in;
+    display: block;
+    background: orange;
+    margin-top: 0.25in;
+    height: auto;
+}
+
+#unitPrice
+{
+    width: -100in;
+}
+
+#materialTable
+{
+    margin-left: 0.07in;
+}
+#materialTableHeader th
+{
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.descriptionEntry input
+{
+    width: 1.5in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.materialEntry input
+{
+    width: 2.2in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.quantityEntry
+{
+    gap: 0.05in;  
+}
+
+.quantityEntry input[type="number"]
+{
+    width: 0.75in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.quantityEntry input[type="text"]
+{
+    width: 0.8in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.unitPrices
+{
+
+}
+
+.unitPrices input[type = "number"]
+{
+    width: 0.75in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.unitPrices input[type = "text"]
+{
+    width: 0.5in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.totalEntry
+{
+    gap: 0.05in;
+}
+
+.totalEntry input[type = "text"]
+{
+    width: 0.4in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.totalEntry input[type = "number"]
+{
+    width: 0.75in;
+    color: rgba(0, 0, 0, 1);
+}
+
+th{
+    /* background-color: orange; */
+    border-right: solid 1px rgba(255, 255, 255, 1);
+    border-bottom: solid 1px rgba(255, 255, 255, 1);
+}
+
+#computedSubTotal
+{
+    /* align-items: right; */
+    padding-left: 5.15in;
+}
+
+.subTotalRow input[type = "text"]
+{
+    width: 0.4in;
+}
+
+.subTotalRow input[type = "number"]
+{
+    width: 0.75in;
+}
+
+#addMaterialButton
+{
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+}
+
+/* Section 4 */

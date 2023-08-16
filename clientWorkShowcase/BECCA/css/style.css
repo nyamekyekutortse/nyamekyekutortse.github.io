@@ -7,8 +7,25 @@
     color: rgba(255, 255, 255, 1);
     font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
+
 body
 {
-    background: rgba(0, 0, 0, 1);
-    display: block;
+    background: rgb(0, 229, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main
+{
+    width: 8.5in;
+    min-height: 11in;
+    height: auto;
+    background: green;
+    overflow: hidden;
+}
+
+title
+{
+    text-transform: uppercase;
 }

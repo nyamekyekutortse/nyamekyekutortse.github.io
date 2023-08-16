@@ -20,12 +20,20 @@ if (dayOfMonth === 1 || dayOfMonth === 21 || dayOfMonth === 31) {
 }
 
 const formattedDate = `${dayOfWeek}, ${dayOfMonth} ${month}, ${year}`;
-dateTexts.innerText = formattedDate.toString();
+// dateTexts.innerText = formattedDate.toString();
 
 // Page Title Setting
-const enteredTitle = document.getElementById("invoiceTitle").innerText;
-const pageTitle = document.getElementsByTagName("title");
-pageTitle[0].innerText = enteredTitle;
+const titleInput = document.getElementById("projectTitle");
+console.log("skr" + titleInput.value);
+titleInput.addEventListener('change', () => 
+{
+  let enteredTitle = titleInput.value;
+  console.log(enteredTitle);
+  let pageTitle = document.getElementsByTagName("title");
+  pageTitle[0].innerText = enteredTitle.toUpperCase();
+});
+
+
 
 
 // Units of measure
@@ -43,11 +51,11 @@ pageTitle[0].innerText = enteredTitle;
 //     })
 // console.log("complete");
 
-let items = [  "COIL", "COILS", "DAY", "DAYS", "TRIP", "TRIPS", "PC", "PCS", "BAG", "BAGS", "UNIT", "UNITS", "TON", "TONS", "SQ. METER", "SQ. METERS", "SET", "SETS"]
-  const dataList = document.getElementById('myList');
+// let items = [  "COIL", "COILS", "DAY", "DAYS", "TRIP", "TRIPS", "PC", "PCS", "BAG", "BAGS", "UNIT", "UNITS", "TON", "TONS", "SQ. METER", "SQ. METERS", "SET", "SETS"]
+//   const dataList = document.getElementById('myList');
   
-  items.forEach(item => {
-    const option = document.createElement('option');
-    option.value = item;
-    dataList.appendChild(option);
-  });
+//   items.forEach(item => {
+//     const option = document.createElement('option');
+//     option.value = item;
+//     dataList.appendChild(option);
+//   });
