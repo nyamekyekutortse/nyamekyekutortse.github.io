@@ -54,22 +54,34 @@
                     Below is a brief summary of the invoice. Further breakdown is the subsequent sections
                 </p>
                 <hr class = "sectionDivider">
-                <div class="numbers">
-                    <span id="intitalSum">
-                        <h2>Initial Sum <span class = "currencyEntry">(GH&#8373)</span> </h2>                        
-                        <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue">
-                    </span>
-                    <span id = "discounts">
-                        <h2>Discount (%)</h2>
-                        <input type = number role = form class = "numberForm" placeholder = "0.0" step = "0.01" aria-label = "discount as percentage" id = "discountPercent">
-                        <h2>Discount <span class = "currencyEntry">(GH&#8373)</span></h2>
-                        <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "discount as monetary value" id = "discountVal">
-                    </span>
-                    <span id="amountDue">
-                        <h2><span class = "currencyEntry">Amount Due (GH&#8373)</span></h2>
-                        <input type = "number" role = form class = numberForm placeholder = "0.00" step = "0.01" aria-label = "final amount due for client" id = "amountValue">
-                    </span>
-                </div>
+                <span class="overviewBill">
+                    <div class="numbers">
+                        <span id="intitalSum">
+                            <h2>Initial Sum <span class = "currencyEntry">(GH&#8373)</span> </h2>                        
+                            <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue">
+                        </span>
+                        <span id = "discounts">
+                            <span class="discountPercentContainer">
+                                <h2>Discount (%)</h2>
+                                <input type = number role = form class = "numberForm" placeholder = "0.0" step = "0.01" aria-label = "discount as percentage" id = "discountPercent">
+                            </span>
+                            <span class="discountValueContainer">
+                                <h2>Discount <span class = "currencyEntry">(GH&#8373)</span></h2>
+                                <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "discount as monetary value" id = "discountVal">
+                            </span>
+
+                        </span>
+                        <span id="amountDue">
+                            <h2><span class = "currencyEntry">Amount Due (GH&#8373)</span></h2>
+                            <input type = "number" role = form class = numberForm placeholder = "0.00" step = "0.01" aria-label = "final amount due for client" id = "amountValue">
+                        </span>
+                    </div>
+                    <div class="breakdown">
+                        <span class="materialCost">
+                            <h2>Material Cost</h2>
+                        </span>
+                    </div>
+                </span>
 
             </section>
             <!-- SECTION 3 -->
@@ -139,7 +151,7 @@
                         <tbody>
                             <tr id="baseRow">
                                 <td id = "baseDescription" class = "descriptionEntry">
-                                    <input role = form type = "text" placeholder = "item description" aria-label="description of item">
+                                    <input role = form type = "text" placeholder = "material description" aria-label="description of item">
                                 </td>
                                 <td id="baseMaterial" class = "materialEntry">
                                     <input role = form type = "text" placeholder="material name" aria-label="name of material">
@@ -175,52 +187,152 @@
             <section id = equipmentInvoice>
                 <h2>pool equipment invoice</h2>
                 <span class="invoiceTable">
-                    <table id = "materialTable">
-                        <thead id = "materialTableHeader">
+                    <table id = "poolEquipmentTable">
+                        <thead id = "equipmentTableHeader">
                             <tr>
-                                <th id = "materialDescription">
+                                <th id = "equipmentDescription">
                                     description
                                 </th>
-                                <th id = "materialName">
+                                <th id = "equipmentName">
                                     material
                                 </th>
-                                <th id = "materialQuantity">
+                                <th id = "equipmentQuantity">
                                     quantity
                                 </th>
-                                <th id = "unitPrice">
+                                <th id = "equipmentUnitPrice">
                                     unit price
                                 </th>
-                                <th id = "computedTotal">
+                                <th id = "equipmentComputedTotal">
                                     total
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr id="baseRow">
-                                <td id = "baseDescription" class = "descriptionEntry">
-                                    <input role = form type = "text" placeholder = "item description" aria-label="description of item">
+                            <tr id="equipmentBaseRow">
+                                <td id = "equipmentBaseDescription" class = "descriptionEntry">
+                                    <input role = form type = "text" placeholder = "equipment description" aria-label="description of equipment">
                                 </td>
-                                <td id="baseMaterial" class = "materialEntry">
-                                    <input role = form type = "text" placeholder="material name" aria-label="name of material">
+                                <td id="baseEquipment" class = "materialEntry">
+                                    <input role = form type = "text" placeholder="equipment name" aria-label="name of equipment">
                                 </td>
-                                <td id="baseQuantity" class = "quantityEntry">
+                                <td id="baseEquipmentQuantity" class = "quantityEntry">
                                     <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue">
                                     <input type="text" id="myInput" list="myList" placeholder= "unit" style="color: black;">
                                  </td>
-                                 <td id = "baseUnitPrice" class = "unitPrices">
+                                 <td id = "baseEquipmentUnitPrice" class = "unitPrices">
                                     <input role = "form" type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "priceCurrency" class = "currencyEntry">
                                          <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue">
                                  </td>
-                                 <td id = "baseTotal" class = "totalEntry">
+                                 <td id = "baseEquipmentTotal" class = "totalEntry">
                                     <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
                                     <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
                                  </td>
                             </tr>
-                            <tr id = "summationRow">
+                            <tr id = "equipmentSummationRow">
                                 <td>
-                                    <button onclick="addMaterialItem()" id = "addMaterialButton">New Item</button>
+                                    <button onclick="addPoolEquipment()" id = "addMaterialButton">New Item</button>
                                 </td>
-                                <td colspan="4" id = "computedSubTotal" class = "subTotalRow">
+                                <td colspan="4" id = "computedEquipmentSubTotal" class = "subTotalRow">
+                                    <!-- TODO: update aria labels when cleaning up -->
+                                    <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
+                                    <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </span>
+            </section>
+
+            <!-- Section 6 -->
+            <section id = "tilingInvoice">
+                <h2>tiling material invoice</h2>
+                <span class="invoiceTable">
+                    <table id = "tilingTable">
+                        <thead id = "tilingTableHeader">
+                            <tr>
+                                <th id = "tilingDescription">
+                                    description
+                                </th>
+                                <th id = "tilingName">
+                                    material
+                                </th>
+                                <th id = "tilingQuantity">
+                                    quantity
+                                </th>
+                                <th id = "tilingUnitPrice">
+                                    unit price
+                                </th>
+                                <th id = "tilingComputedTotal">
+                                    total
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="tilingBaseRow">
+                                <td id = "tilingBaseDescription" class = "descriptionEntry">
+                                    <input role = form type = "text" placeholder = "description" aria-label="description of equipment">
+                                </td>
+                                <td id="baseTiling" class = "materialEntry">
+                                    <input role = form type = "text" placeholder = "material name" aria-label="name of equipment">
+                                </td>
+                                <td id="baseTilingQuantity" class = "quantityEntry">
+                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue">
+                                    <input type="text" id="myInput" list="myList" placeholder= "unit" style = "color: black;">
+                                 </td>
+                                 <td id = "baseTilingUnitPrice" class = "unitPrices">
+                                    <input role = "form" type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "priceCurrency" class = "currencyEntry">
+                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue">
+                                 </td>
+                                 <td id = "baseTilingTotal" class = "totalEntry">
+                                    <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
+                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                 </td>
+                            </tr>
+                            <tr id = "equipmentSummationRow">
+                                <td>
+                                    <button onclick="addTilingMaterial()" id = "addMaterialButton">New Item</button>
+                                </td>
+                                <td colspan="4" id = "computedEquipmentSubTotal" class = "subTotalRow">
+                                    <!-- TODO: update aria labels when cleaning up -->
+                                    <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
+                                    <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </span>
+            </section>
+
+            <!-- Section 7 -->
+            <section id = "laborInvoice">
+                <h2>labor and civil works invoice</h2>
+                <span class="laborTable">
+                    <table id = "laborTable">
+                        <thead id = "laborTableHeader">
+                            <tr>
+                                <th id = "laborDescription">
+                                    labor description
+                                </th>
+                                <th id = "tilingComputedTotal">
+                                    charge
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="laborBaseRow">
+                                <td id = "laborBaseDescription" class = "descriptionEntry">
+                                    <input role = form type = "text" placeholder = "labor description" aria-label="description of equipment">
+                                </td>
+                                 <td id = "baseLaborTotal" class = "totalEntry">
+                                    <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
+                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                 </td>
+                            </tr>
+                            <tr id = "equipmentSummationRow">
+                                <td>
+                                    <button onclick="addLaborEntry()" id = "addMaterialButton">New Item</button>
+                                </td>
+                                <td colspan="4" id = "computedLaborSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
                                     <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">

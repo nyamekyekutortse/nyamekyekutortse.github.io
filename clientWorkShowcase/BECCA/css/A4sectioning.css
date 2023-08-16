@@ -1,3 +1,8 @@
+input
+{
+    color: black;
+}
+
 #topSection
 {
     position: relative;
@@ -107,10 +112,17 @@ input[type=text]
     margin-left: 0.2in;
     display: flex;
     flex-direction: column;
-    /* background: red; */
+    background: red;
     margin-top: 0.25in;
     gap: 1.28in;
     
+}
+
+.overviewBill
+{
+    display: flex;
+    line-height: 0.3in;
+    gap: 0.5in;
 }
 
 .sectionDivider
@@ -120,10 +132,12 @@ input[type=text]
 
 .numbers
 {
-    display: flex;
+    display: block;
     gap: 1.28in;
+    width: 4in;
     margin-top: -0.95in;
     text-transform: uppercase;
+    /* background: pink; */
 }
 
 #initialSum
@@ -132,11 +146,31 @@ input[type=text]
     position: relative;
 }
 
+#initialSum input
+{
+    width: 1.5in;
+}
+
 #discounts
 {
-    display:block;
+    display:flex;
     margin-left: 0in;
     text-align: center;
+    gap: 0.1in;
+}
+
+.discountPercentContainer
+{
+    text-align: left;
+    line-height: 0.1in;
+    padding-top: 0.2in;
+}
+
+.discountValueContainer
+{
+    text-align: right;
+    line-height: 0.1in;
+    padding-top: 0.2in;
 }
 
 #discounts input
@@ -149,7 +183,7 @@ input[type=text]
     display: block;
     position: relative;
     /* padding-right: 1.5in;  */
-    text-align: right;
+    text-align: left;
 }
 
 #amountDue input
@@ -243,11 +277,14 @@ h2
     width: -100in;
 }
 
-#materialTable
+#materialTable,
+#poolEquipmentTable
 {
     margin-left: 0.07in;
 }
-#materialTableHeader th
+#materialTableHeader th,
+#equipmentTableHeader th,
+#tilingTableHeader th
 {
     font-size: 13px;
     text-transform: uppercase;
@@ -323,7 +360,7 @@ th{
     border-bottom: solid 1px rgba(255, 255, 255, 1);
 }
 
-#computedSubTotal
+.subTotalRow
 {
     /* align-items: right; */
     padding-left: 5.15in;
@@ -346,3 +383,48 @@ th{
 }
 
 /* Section 4 */
+#equipmentInvoice
+{
+    position: relative;
+    width: 8.05in;
+    margin-left: 0.2in;
+    display: block;
+    background: orange;
+    margin-top: 0.25in;
+    height: auto;
+}
+
+
+/* Section 5 */
+#tilingInvoice
+{
+    position: relative;
+    width: 8.05in;
+    margin-left: 0.2in;
+    display: block;
+    background: orange;
+    margin-top: 0.25in;
+    height: auto;
+}
+
+/* section 7 */
+#laborInvoice
+{
+    position: relative;
+    width: 4.55in;
+    margin-left: 0.2in;
+    display: block;
+    background: orange;
+    margin-top: 0.25in;
+    height: auto;
+}
+
+#computedLaborSubTotal
+{
+    padding-left: 0in;
+}
+
+#laborTable .descriptionEntry input
+{
+    width: 3in;
+}
