@@ -57,28 +57,75 @@
                 <span class="overviewBill">
                     <div class="numbers">
                         <span id="intitalSum">
-                            <h2>Initial Sum <span class = "currencyEntry">(GH&#8373)</span> </h2>                        
-                            <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue">
+                            <h2>Initial Sum <br>
+                                <span class = "currencyEntry">(GH&#8373)</span> 
+                            </h2>                        
+                            <input type = number role = form class = "numberForm" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue">
                         </span>
+                        <h2>discount</h2>
                         <span id = "discounts">
-                            <span class="discountPercentContainer">
-                                <h2>Discount (%)</h2>
-                                <input type = number role = form class = "numberForm" placeholder = "0.0" step = "0.01" aria-label = "discount as percentage" id = "discountPercent">
+                            <span class = "percentValueHeader">
+                                <h3>Percentage (%)</h3>
+                                <h3>Value (GH&#8373)</h3>
                             </span>
-                            <span class="discountValueContainer">
-                                <h2>Discount <span class = "currencyEntry">(GH&#8373)</span></h2>
-                                <input type = number role = form class = "numberForm" placeholder="0.00" step = "0.01" aria-label = "discount as monetary value" id = "discountVal">
+                            <span class = "percentValue">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "discountPercent">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" id = "discountValue">
                             </span>
 
                         </span>
                         <span id="amountDue">
-                            <h2><span class = "currencyEntry">Amount Due (GH&#8373)</span></h2>
-                            <input type = "number" role = form class = numberForm placeholder = "0.00" step = "0.01" aria-label = "final amount due for client" id = "amountValue">
+                            <h2>
+                                <span class = "currencyEntry">Amount Due <br>(GH&#8373)</span>
+                            </h2>
+                            <input type = "number" role = form class = numberForm placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "final amount due for client" id = "amountValue">
                         </span>
                     </div>
                     <div class="breakdown">
                         <span class="materialCost">
                             <h2>Material Cost</h2>
+                            <span class = "percentValueHeader">
+                                <h3>Percentage (%)</h3>
+                                <h3>Value (GH&#8373)</h3>
+                            </span>
+                            <span class = "percentValue">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                            </span>
+                            
+                        </span>
+                        <span class="equipmentsFixtures">
+                            <h2>equipment and fixtures</h2>
+                            <span class = "percentValueHeader">
+                                <h3>Percentage (%)</h3>
+                                <h3>Value (GH&#8373)</h3>
+                            </span>
+                            <span class = "percentValue">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" max  ="100" class = "percentageIn">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                            </span>
+                        </span>
+                        <span class="poolTiling">
+                            <h2>Pool Tiling and coping</h2>
+                            <span class = "percentValueHeader">
+                                <h3>Percentage (%)</h3>
+                                <h3>Value (GH&#8373)</h3>
+                            </span>
+                            <span class = "percentValue">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                            </span>
+                        </span>
+                        <span class="civWorks">
+                            <h2>civil works and labor charges</h2>
+                            <span class = "percentValueHeader">
+                                <h3>Percentage (%)</h3>
+                                <h3>Value (GH&#8373)</h3>
+                            </span>
+                            <span class = "percentValue">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                            </span>
                         </span>
                     </div>
                 </span>
@@ -91,11 +138,11 @@
                     <h2>mobilization</h2>
                     <span id="mobPercent">
                         <p>mobilization(%)</p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" max = "100">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" max = "100" id = "mobilPercent">
                     </span>
                     <span id = "mobilizationVal">
                         <p>mobilization<span class = "currencyEntry">(gh&#8373)</span></p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "mobilTotal">
                     </span>
                 </span>
                 <!-- <hr id="verticalSeparator"> -->
@@ -103,11 +150,11 @@
                     <h2>balance</h2>
                     <span id="balancePercent">
                         <p>balance(%)</p>
-                        <input role="form" type = "number" aria-label = "balance percent" placeholder="0.00" step = "0.01">
+                        <input role="form" type = "number" aria-label = "balance percent" placeholder="0.00" step = "0.01" id = "balPercent">
                     </span>
                     <span id="balanceVal">
                         <p>balance <span class = "currencyEntry">(gh&#8373)</span></p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = balTotal>
                     </span>
                 </span>
                 <span id = "inflationAdjust">
@@ -123,6 +170,7 @@
                         <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
                     </span>
                 </span>
+                <button onclick = "verifyBreakDown()">confirm / verify</button>
             </section>
             <!-- SECTION 4 -->
             <section id = materialInvoice>
@@ -157,16 +205,16 @@
                                     <input role = form type = "text" placeholder="material name" aria-label="name of material">
                                 </td>
                                 <td id="baseQuantity" class = "quantityEntry">
-                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue">
+                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue" class = "quantityValues">
                                     <input type="text" id="myInput" list="myList" placeholder= "unit" style="color: black;">
                                  </td>
                                  <td id = "baseUnitPrice" class = "unitPrices">
                                     <input role = "form" type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "priceCurrency" class = "currencyEntry">
-                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue">
+                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue" class = "unitPriceEntry">
                                  </td>
                                  <td id = "baseTotal" class = "totalEntry">
                                     <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
-                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal" class = "entryTotal">
                                  </td>
                             </tr>
                             <tr id = "summationRow">
@@ -176,12 +224,13 @@
                                 <td colspan="4" id = "computedSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
-                                    <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                    <input id = "materialSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </span>
+                <button onclick = "calculateTotalMaterial()">confirm / verify</button>
             </section>
             <!-- SECTION  5 -->
             <section id = equipmentInvoice>
@@ -216,16 +265,16 @@
                                     <input role = form type = "text" placeholder="equipment name" aria-label="name of equipment">
                                 </td>
                                 <td id="baseEquipmentQuantity" class = "quantityEntry">
-                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue">
+                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue" class = "quantityValues">
                                     <input type="text" id="myInput" list="myList" placeholder= "unit" style="color: black;">
                                  </td>
                                  <td id = "baseEquipmentUnitPrice" class = "unitPrices">
                                     <input role = "form" type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "priceCurrency" class = "currencyEntry">
-                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue">
+                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue" class = "unitPriceEntry">
                                  </td>
                                  <td id = "baseEquipmentTotal" class = "totalEntry">
                                     <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
-                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal" class = "entryTotal">
                                  </td>
                             </tr>
                             <tr id = "equipmentSummationRow">
@@ -235,12 +284,13 @@
                                 <td colspan="4" id = "computedEquipmentSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
-                                    <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                    <input id = "poolSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </span>
+                <button onclick = "calculatePoolTotal()">confirm / verify</button>
             </section>
 
             <!-- Section 6 -->
@@ -276,16 +326,16 @@
                                     <input role = form type = "text" placeholder = "material name" aria-label="name of equipment">
                                 </td>
                                 <td id="baseTilingQuantity" class = "quantityEntry">
-                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue">
-                                    <input type="text" id="myInput" list="myList" placeholder= "unit" style = "color: black;">
+                                    <input role = form type = "number" placeholder = "0" aria-label="quantity of material" id = "quantityValue" class = "quantityValues">
+                                    <input type="text" id="myInput" list="myList" placeholder= "unit" style = "color: black;" class = "quantityEntry">
                                  </td>
                                  <td id = "baseTilingUnitPrice" class = "unitPrices">
                                     <input role = "form" type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "priceCurrency" class = "currencyEntry">
-                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue">
+                                         <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "unit price" id = "priceValue" class = "unitPriceEntry">
                                  </td>
                                  <td id = "baseTilingTotal" class = "totalEntry">
                                     <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
-                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal" class = "entryTotal">
                                  </td>
                             </tr>
                             <tr id = "equipmentSummationRow">
@@ -294,13 +344,15 @@
                                 </td>
                                 <td colspan="4" id = "computedEquipmentSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
+                                    <span>SUBTOTAL</span><br>
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
-                                    <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                    <input id = "tilingSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </span>
+                <button onclick = "calculateTotalTiling()">confirm / verify</button>
             </section>
 
             <!-- Section 7 -->
@@ -325,7 +377,7 @@
                                 </td>
                                  <td id = "baseLaborTotal" class = "totalEntry">
                                     <input role = form type = "text" placeholder="GH&#8373" aria-label = "unit price" id = "totalCurrency" class = "currencyEntry">
-                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal">
+                                    <input type = "number" role = form placeholder="0.00" step = "0.01" aria-label = "total" id = "computedTotal" class = "entryTotal">
                                  </td>
                             </tr>
                             <tr id = "equipmentSummationRow">
@@ -334,13 +386,16 @@
                                 </td>
                                 <td colspan="4" id = "computedLaborSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
+                                    <span>SUBTOTAL</span>
+                                    <br>
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
-                                    <input id = "subTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
+                                    <input id = "laborSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </span>
+                <button onclick = "calculateTotalLabor()">confirm / verify</button>
             </section>
             <footer id = "disclaimer">
                 <span class="voidCondition">
@@ -356,5 +411,6 @@
         <script src = "javascript/computation.js"></script>
         <script src = "javascript/constants.js"></script>
         <script src = "javascript/structure.js"></script>
+        <script src = "javascript/convenience.js"></script>
     </body>
 </html>
