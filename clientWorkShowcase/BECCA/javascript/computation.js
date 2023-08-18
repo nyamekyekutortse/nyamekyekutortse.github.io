@@ -57,6 +57,10 @@ function calculateTilingEntryTotals()
     for(let i = 0; i < unitPrices.length; i++)
     {
         console.log((parseFloat(unitPrices[i].value) * parseFloat(quantities[i].value)));
+        if(isNaN(parseFloat(quantities[i].value)))
+            quantities[i].value = "0.00";
+        if(isNaN(parseFloat(unitPrices[i].value)))
+            unitPrices[i].value = "0.00";
         totalEntries[i].value = (parseFloat(unitPrices[i].value) * parseFloat(quantities[i].value)).toFixed(2);
         console.log(totalEntries[i].value);
     } 
@@ -94,6 +98,10 @@ function calculatePoolEntryTotals()
     for(let i = 0; i < unitPrices.length; i++)
     {
         console.log((parseFloat(unitPrices[i].value) * parseFloat(quantities[i].value)));
+        if(isNaN(parseFloat(quantities[i].value)))
+            quantities[i].value = "0.00";
+        if(isNaN(parseFloat(unitPrices[i].value)))
+            unitPrices[i].value = "0.00";
         totalEntries[i].value = (parseFloat(unitPrices[i].value) * parseFloat(quantities[i].value)).toFixed(2);
         console.log(totalEntries[i].value);
     } 
@@ -131,6 +139,10 @@ function calculateMaterialEntryTotals()
     for(let i = 0; i < unitPrices.length; i++)
     {
         console.log((parseFloat(unitPrices[i].value) * parseFloat(quantities[i].value)));
+        if(isNaN(parseFloat(quantities[i].value)))
+            quantities[i].value = "0.00";
+        if(isNaN(parseFloat(unitPrices[i].value)))
+            unitPrices[i].value = "0.00";
         totalEntries[i].value = (parseFloat(unitPrices[i].value) * parseFloat(quantities[i].value)).toFixed(2);
         console.log(totalEntries[i].value);
     } 
@@ -142,53 +154,181 @@ function verifyBreakDown()
     calculateTotalTiling();
     calculateTotalMaterial();
     calculateTotalLabor();
+    // MOBILIZATION
     let mobilizationPercent = document.getElementById("mobilPercent");
     let mobilizationTotal = document.getElementById("mobilTotal");
+    if(isNaN(parseFloat(mobilizationPercent.value)))
+        mobilizationPercent.value = "0.00";
+    if(isNaN(parseFloat(mobilizationTotal.value)))
+        mobilizationTotal.value = "0.00";  
     if(parseFloat(mobilizationPercent.value) > 100)
-    {
         mobilizationPercent.value = 100;
-    }
     if(parseFloat(mobilizationPercent.value) < 0)
-    {
-        mobilizationPercent.value = 0;
-    }
-    if(((parseFloat(mobilizationPercent.value) > 0 && parseFloat(mobilizationPercent.value) <= 100)) || 
-        ((parseFloat(mobilizationTotal.value)) >= 0))
-    {
-        if(parseFloat(mobilizationPercent) * runningTotal != parseFloat(mobilizationTotal.value))
-        {
-            mobilizationTotal.value = ((parseFloat(mobilizationPercent.value) * runningTotal).toFixed(2)) / 100;
-        }
-    }
-    else if(parseFloat(mobilizationPercent.value) == 0 && parseFloat(mobilizationTotal.value))
-    {
-        mobilizationPercent.value = ((parseFloat(mobilizationTotal.value) * 100) / runningTotal).toFixed(2);
-    }
-
-    //Balance
-    let balancePercent = document.getElementById("balPercent");
+        mobilizationPercent.value = 0;    
+    
+    // BALANCE
+    let balancePercent = document.getElementById("balPercent");    
     let balanceTotal = document.getElementById("balTotal");
+    if(isNaN(parseFloat(balancePercent.value)))
+        balancePercent.value = "0.00";
+    if(isNaN(parseFloat(balanceTotal.value)))
+        balanceTotal.value = "0.00";
+     // validation for percentage    
     if(parseFloat(balancePercent.value) > 100)
-    {
         balancePercent.value = 100;
-    }
     if(parseFloat(balancePercent.value) < 0)
+        balancePercent.value = 0;    
+    
+
+    //mobil percent in mobil val not
+    //compute mobil val, balance percent, balance value
+    if(parseFloat(mobilizationPercent.value) > 0)
     {
-        balancePercent.value = 0;
+        mobilizationTotal.value = ((parseFloat(mobilizationPercent.value) / 100) * runningTotal).toFixed(2);
+        balancePercent.value = (100 - parseFloat(mobilizationPercent.value)).toFixed(2);
+        balanceTotal.value = (runningTotal - parseFloat(mobilizationTotal.value)).toFixed(2);
     }
-    if(((parseFloat(balancePercent.value) > 0 && parseFloat(balancePercent.value) <= 100)) || 
-        ((parseFloat(balanceTotal.value)) >= 0))
+    //mobilVal in mobil percent not
+    //compute mobil percent, balance percent, balance value
+    else if(parseFloat(mobilizationTotal.value) > 0)
     {
-        if(parseFloat(balancePercent) * runningTotal != parseFloat(balanceTotal.value))
+        mobilizationPercent.value = ((parseFloat(mobilizationTotal.value) / runningTotal) * 100).toFixed(2);
+        balancePercent.value = (100 - parseFloat(mobilizationPercent.value)).toFixed(2);
+        balanceTotal.value = (runningTotal - parseFloat(mobilizationTotal.value)).toFixed(2);
+    }
+    //bal % entered, bal val not
+    //compute bal val, mobil %, mobil val
+    else if(parseFloat(balancePercent.value) > 0)
+    {
+        balanceTotal.value = ((parseFloat(balancePercent.value) / 100) * runningTotal).toFixed(2);
+        mobilizationPercent.value = (100 - parseFloat(balancePercent.value)).toFixed(2);
+        mobilizationTotal.value = (runningTotal - parseFloat(balanceTotal.value)).toFixed(2);
+    }
+    //bal val entered
+    //compute bal %, mobil %, mobil val
+    else if(parseFloat(balanceTotal.value) > 0)
+    {
+        balancePercent.value = ((parseFloat(balanceTotal.value) / runningTotal) * 100).toFixed(2);
+        mobilizationPercent.value = (100 - parseFloat(balancePercent.value));
+        mobilizationTotal.value = (runningTotal - parseFloat(balanceTotal.value)).toFixed(2);
+    }
+    else if(parseFloat(mobilizationTotal.value) <= 0 && parseFloat(mobilizationPercent.value) <= 0)
+    {
+        balancePercent.value = "100.00";
+        balanceTotal.value = runningTotal.toFixed(2);
+    } 
+    else if(parseFloat(balanceTotal.value) <= 0 && parseFloat(balancePercent.value) <= 0)
+    {
+        mobilizationPercent.value = "100.00";
+        mobilizationTotal.value = runningTotal.toFixed(2);
+    } 
+    // Inflation computation COMPLETE
+    let inflationPercent = document.getElementById("inflationPercentIn");
+    let inflationValue = document.getElementById("inflationValueIn");
+    console.log(inflationPercent.value)
+    if(isNaN(parseFloat(inflationPercent.value)) || parseFloat(inflationPercent.value) < 0)
+        inflationPercent.value = 0.00;
+    if(isNaN(parseFloat(inflationValue.value)) || parseFloat(inflationValue.value) < 0)
+        inflationValue.value = 0.00;
+    // both are entered already (positives)
+    if(parseFloat(inflationPercent.value) > 0 && parseFloat(inflationValue.value) > 0)
+    {
+        //check if they correspond
+        console.log("working on inflation");
+        let tempInflationFromPercent = (parseFloat(inflationPercent.value) / 100) * parseFloat(inflationValue.value);
+        console.log(tempInflationFromPercent - parseFloat(inflationValue.value));
+        if(tempInflationFromPercent - parseFloat(inflationValue.value) <= 0.01 && tempInflationFromPercent - parseFloat(inflationValue.value) > 0 || (parseFloat(inflationValue.value) - tempInflationFromPercent <= 0.01 && parseFloat(inflationValue.value) - tempInflationFromPercent > 0))
         {
-            balanceTotal.value = ((parseFloat(balancePercent.value) * runningTotal).toFixed(2)) / 100;
+            //they correspond
+            console.log("inflation percent and value correspond");
+        }
+        //percentage takes priority
+        else
+        {
+            console.log("inflation percent and value do not correspond");
+            inflationValue.value = ((parseFloat(inflationValue.value) / 100) * runningTotal).toFixed(2);
         }
     }
-    else if(parseFloat(balancePercent.value) == 0 && parseFloat(balanceTotal.value))
+    //percentage is entered, value is not
+    else if(parseFloat(inflationValue.value) <= 0 && parseFloat(inflationPercent.value) > 0)
     {
-        balancePercent.value = ((parseFloat(balanceTotal.value) * 100) / runningTotal).toFixed(2);
+        console.log("percentage is entered, value is not")
+        inflationValue.value = ((parseFloat(inflationPercent.value) / 100) * runningTotal).toFixed(2);
     }
+    //value is entered, percentage is not
+    else if(parseFloat(inflationValue.value) > 0 && parseFloat(inflationPercent.value) <= 0)
+    {
+        console.log("value is entered, percentage is not");
+        inflationPercent.value = ((parseFloat(inflationValue.value) / runningTotal) * 100).toFixed(2);
+    }
+    // console.log(parseFloat(inflationPercent.value));
 
-    let inflationPercent = "";
-    let inflationValue = ""
+    //verify initial summary section
+    let initialSumIn = document.getElementById("initialValue")
+    initialSumIn.value = runningTotal.toFixed(2);
+    let discountPercentIn = document.getElementById("discountPercent");
+    if(isNaN(parseFloat(discountPercentIn.value)))
+        discountPercentIn.value = "0.00";
+    let discountValueIn = document.getElementById("discountValue");
+    if(isNaN(parseFloat(discountValueIn.value)))
+        discountValueIn.value = "0.00";
+    let amountDueIn = document.getElementById("amountValue");
+    // discount value entered, percent not
+    if(parseFloat(discountPercentIn.value) > 0)
+    {
+        discountValueIn.value = ((parseFloat(discountPercentIn.value) / 100) * runningTotal).toFixed(2);
+        amountDueIn.value = (runningTotal - parseFloat(discountValueIn.value)).toFixed(2);
+    }
+    // discount percent entered, value not
+    else if(parseFloat(discountValueIn.value) > 0)
+    {
+        discountPercentIn.value = ((parseFloat(discountValueIn.value) / runningTotal) * 100).toFixed(2);
+        amountDueIn.value = (runningTotal - parseFloat(discountValueIn.value)).toFixed(2);
+    }
+    else if(parseFloat(discountValueIn.value) <= 0 && parseFloat(discountPercentIn.value) <= 0)
+    {
+        amountDueIn.value = runningTotal.toFixed(2);
+    } 
+
+    //verify costing spread
+    let materialBreakPercent = document.getElementById("materialBreakPercent");
+    if(isNaN(parseFloat(materialBreakPercent.value)))
+        materialBreakPercent.value = "0.00";
+    materialBreakPercent.value = ((parseFloat(document.getElementById("materialSubTotal").value) / runningTotal) * 100).toFixed(2);
+    
+    let materialBreakValue = document.getElementById("materialBreakValue");
+    if(isNaN(parseFloat(materialBreakValue.value)))
+        materialBreakValue.value = "0.00";
+    materialBreakValue.value = (parseFloat(document.getElementById("materialSubTotal").value)).toFixed(2);
+
+    let laborBreakPercent = document.getElementById("laborBreakPercent");
+    if(isNaN(parseFloat(laborBreakPercent.value)))
+        laborBreakPercent.value = "0.00";
+    laborBreakPercent.value = ((parseFloat(document.getElementById("laborSubTotal").value) / runningTotal) * 100).toFixed(2);
+    
+    let laborBreakValue = document.getElementById("laborBreakValue");
+    if(isNaN(parseFloat(laborBreakValue.value)))
+        laborBreakValue.value = "0.00";
+    laborBreakValue.value = (parseFloat(document.getElementById("laborSubTotal").value)).toFixed(2);
+
+    let equipmentBreakPercent = document.getElementById("equipmentBreakPercent");
+    if(isNaN(parseFloat(equipmentBreakPercent.value)))
+        equipmentBreakPercent.value = "0.00";
+    equipmentBreakPercent.value = ((parseFloat(document.getElementById("poolSubTotal").value) / runningTotal) * 100).toFixed(2);
+
+    let equipmentBreakValue = document.getElementById("equipmentBreakValue");
+    if(isNaN(parseFloat(equipmentBreakValue.value)))
+        equipmentBreakValue.value = "0.00";
+    equipmentBreakValue.value = (parseFloat(document.getElementById("poolSubTotal").value)).toFixed(2);
+
+    let tilingBreakPercent = document.getElementById("tilingBreakPercent");
+    if(isNaN(parseFloat(tilingBreakPercent.value)))
+        tilingBreakPercent.value = "0.00";
+    equipmentBreakPercent.value = ((parseFloat(document.getElementById("poolSubTotal").value) / runningTotal) * 100).toFixed(2);
+
+    let tilingBreakValue = document.getElementById("tilingBreakValue");
+    if(isNaN(parseFloat(tilingBreakValue.value)))
+        tilingBreakValue.value = "0.00";
+    tilingBreakValue.value = (parseFloat(document.getElementById("tilingSubTotal").value)).toFixed(2);
+    alert("all entries validated.\nplease take a second to proof");
 }

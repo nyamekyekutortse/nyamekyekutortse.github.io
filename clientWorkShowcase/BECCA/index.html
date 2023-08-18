@@ -60,7 +60,7 @@
                             <h2>Initial Sum <br>
                                 <span class = "currencyEntry">(GH&#8373)</span> 
                             </h2>                        
-                            <input type = number role = form class = "numberForm" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue">
+                            <input type = number role = form class = "numberForm" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue" min = "0.00">
                         </span>
                         <h2>discount</h2>
                         <span id = "discounts">
@@ -69,8 +69,8 @@
                                 <h3>Value (GH&#8373)</h3>
                             </span>
                             <span class = "percentValue">
-                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "discountPercent">
-                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" id = "discountValue">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "discountPercent" min = "0.00" max = "100.00">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" id = "discountValue" min = "0.00">
                             </span>
 
                         </span>
@@ -81,6 +81,7 @@
                             <input type = "number" role = form class = numberForm placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "final amount due for client" id = "amountValue">
                         </span>
                     </div>
+
                     <div class="breakdown">
                         <span class="materialCost">
                             <h2>Material Cost</h2>
@@ -89,10 +90,9 @@
                                 <h3>Value (GH&#8373)</h3>
                             </span>
                             <span class = "percentValue">
-                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn">
-                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
-                            </span>
-                            
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "materialBreakPercent" min = "0.00" max = "100.00">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" min = "0.00" id = "materialBreakValue">
+                            </span>        
                         </span>
                         <span class="equipmentsFixtures">
                             <h2>equipment and fixtures</h2>
@@ -101,8 +101,8 @@
                                 <h3>Value (GH&#8373)</h3>
                             </span>
                             <span class = "percentValue">
-                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" max  ="100" class = "percentageIn">
-                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" max  ="100" class = "percentageIn" id = "equipmentBreakPercent" min = "0.00" max = "100.00">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" min = "0.00" id = "equipmentBreakValue">
                             </span>
                         </span>
                         <span class="poolTiling">
@@ -112,8 +112,8 @@
                                 <h3>Value (GH&#8373)</h3>
                             </span>
                             <span class = "percentValue">
-                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn">
-                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "tilingBreakPercent" min = "0.00" max = "100.00">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" min = "0.00" id = "tilingBreakValue">
                             </span>
                         </span>
                         <span class="civWorks">
@@ -123,8 +123,8 @@
                                 <h3>Value (GH&#8373)</h3>
                             </span>
                             <span class = "percentValue">
-                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn">
-                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn">
+                                <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "laborBreakPercent" max = "100.00" min = "0.00">
+                                <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" id = "laborBreakValue" min = "0.00">
                             </span>
                         </span>
                     </div>
@@ -138,11 +138,11 @@
                     <h2>mobilization</h2>
                     <span id="mobPercent">
                         <p>mobilization(%)</p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" max = "100" id = "mobilPercent">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" max = "100" id = "mobilPercent" min = "0.00" max = "100">
                     </span>
                     <span id = "mobilizationVal">
                         <p>mobilization<span class = "currencyEntry">(gh&#8373)</span></p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "mobilTotal">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "mobilTotal" min = "0.00">
                     </span>
                 </span>
                 <!-- <hr id="verticalSeparator"> -->
@@ -150,11 +150,11 @@
                     <h2>balance</h2>
                     <span id="balancePercent">
                         <p>balance(%)</p>
-                        <input role="form" type = "number" aria-label = "balance percent" placeholder="0.00" step = "0.01" id = "balPercent">
+                        <input role="form" type = "number" aria-label = "balance percent" placeholder="0.00" step = "0.01" id = "balPercent" min = "0.00" max = "100">
                     </span>
                     <span id="balanceVal">
                         <p>balance <span class = "currencyEntry">(gh&#8373)</span></p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = balTotal>
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = balTotal min = "0.00">
                     </span>
                 </span>
                 <span id = "inflationAdjust">
@@ -163,11 +163,11 @@
                     </h2>
                     <span id="inflationPercent">
                         <p>inflation(%)</p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "inflationPercentIn" min = "0.00" max = "100">
                     </span>
                     <span id="inflationValue">
                         <p>inflation<span class = "currencyEntry">(gh&#8373)</span></p>
-                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01">
+                        <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "inflationValueIn" min = "0.00" max = "100">
                     </span>
                 </span>
                 <button onclick = "verifyBreakDown()">confirm / verify</button>

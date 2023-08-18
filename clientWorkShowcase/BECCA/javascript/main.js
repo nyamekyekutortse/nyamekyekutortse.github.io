@@ -1,4 +1,4 @@
-alert("Project in progress\nCurrent results may differ from finished product\n68% complete\nOrange Areas - appearance to be changed \nRed Areas - not functioning\nRecently updated to add calculations");
+//  alert("Project in progress\nCurrent results may differ from finished product\n20% complete\nOrange Areas - appearance to be changed \n Red Areas - not functioning");
 
 class InvoiceItems
 {

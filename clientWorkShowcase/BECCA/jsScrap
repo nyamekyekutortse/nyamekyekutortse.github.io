@@ -1,0 +1,45 @@
+//  computation for if percentage is entered or not
+    if(((parseFloat(mobilizationPercent.value) > 0 && parseFloat(mobilizationPercent.value) <= 100)) || 
+        ((parseFloat(mobilizationTotal.value)) >= 0))
+    {
+        if(parseFloat(mobilizationPercent) * runningTotal != parseFloat(mobilizationTotal.value) && (mobilizationTotal.value <= 0))
+        {
+            mobilizationTotal.value = (((parseFloat(mobilizationPercent.value) * runningTotal).toFixed(2)) / 100).toFixed(2);
+            
+        }
+    }
+    if( parseFloat(mobilizationTotal.value) > 0)
+    {
+        console.log("entered");
+        mobilizationPercent.value = ((parseFloat(mobilizationTotal.value) * 100) / runningTotal).toFixed(2);
+    }
+
+
+    //nothing entered for mobilization
+    // if(parseFloat(mobilizationPercent.value) <= 0 && parseFloat(mobilizationTotal.value) <= 0)
+    // {
+    //     console.log("setting balance to running total")
+    //     balanceTotal.value = runningTotal;
+    //     console.log(runningTotal);
+    //     balancePercent.value = 100;
+    // }
+    //both entries for mobilization are entered
+    if(parseFloat(mobilizationPercent.value) > 0 && parseFloat(mobilizationTotal.value) > 0)
+    {
+        balanceTotal.value = (runningTotal - parseFloat(mobilizationTotal.value)).toFixed(2);
+        balancePercent.value = ((parseFloat(balanceTotal.value) * 100) / runningTotal).toFixed(2);
+    }
+    else if(parseFloat(balancePercent.value) > 0 &&  parseFloat(balanceTotal.value) > 0)
+    {
+        console.log("update mobilizations")
+        mobilizationTotal.value = (runningTotal - parseFloat(balanceTotal.value)).toFixed(2);
+        mobilizationPercent.value = (100 - parseFloat(balancePercent.value)).toFixed(2);
+    }
+    //percentage for balance and value are greater than zero here
+    console.log(parseFloat(balancePercent.value));
+    console.log(parseFloat(balanceTotal.value));
+
+
+
+
+
