@@ -85,6 +85,7 @@
                         <input role = "form" type = "date" id = "draftedDate" placeholder = "" aria-label= "date of invoice draft">
                     </span> -->
                 </div>  
+                <button onclick = "verifyBreakDown()" id = "verifyAll">confirm / verify</button>
             </section>
             <!-- SECTION 2 -->
             <hr>
@@ -287,7 +288,7 @@
             </section>
             <hr>
             <!-- SECTION  5 -->
-            <section id = equipmentInvoice>
+            <section id = "equipmentInvoice" class = "sectionFive">
                 <h2>pool equipment invoice</h2>
                 <span class="invoiceTable">
                     <table id = "poolEquipmentTable">
@@ -337,6 +338,8 @@
                                 </td>
                                 <td colspan="4" id = "computedEquipmentSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
+                                    <span id = "subTB">subtotal</span>
+                                    <br>
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
                                     <input id = "poolSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
@@ -346,9 +349,9 @@
                 </span>
                 <button onclick = "calculatePoolTotal()">confirm / verify</button>
             </section>
-
+            <hr>
             <!-- Section 6 -->
-            <section id = "tilingInvoice">
+            <section id = "tilingInvoice" class = "sectionSix">
                 <h2>tiling material invoice</h2>
                 <span class="invoiceTable">
                     <table id = "tilingTable">
@@ -398,7 +401,8 @@
                                 </td>
                                 <td colspan="4" id = "computedEquipmentSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
-                                    <span>SUBTOTAL</span><br>
+                                    <span id = "subTC">SUBTOTAL</span>
+                                    <br>
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
                                     <input id = "tilingSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
@@ -408,9 +412,9 @@
                 </span>
                 <button onclick = "calculateTotalTiling()">confirm / verify</button>
             </section>
-
+            <hr>
             <!-- Section 7 -->
-            <section id = "laborInvoice">
+            <section id = "laborInvoice" class =  "sectionSeven">
                 <h2>labor and civil works invoice</h2>
                 <span class="laborTable">
                     <table id = "laborTable">
@@ -438,9 +442,9 @@
                                 <td>
                                     <button onclick="addLaborEntry()" id = "addMaterialButton">New Item</button>
                                 </td>
-                                <td colspan="4" id = "computedLaborSubTotal" class = "subTotalRow">
+                                <td colspan="4" id = "computedLaborSubTotal" class = "subTotalRowLabor">
                                     <!-- TODO: update aria labels when cleaning up -->
-                                    <span>SUBTOTAL</span>
+                                    <span id = "subTD">SUBTOTAL</span>
                                     <br>
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
                                     <input id = "laborSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
@@ -451,12 +455,29 @@
                 </span>
                 <button onclick = "calculateTotalLabor()">confirm / verify</button>
             </section>
+            <!-- Section 8 -->
             <footer id = "disclaimer">
+                <span>
+                    Thank you for your business.
+                </span>
                 <span class="voidCondition">
                     This Invoice is valid for 10 days upon receipt.
                 </span>
+                <hr>
                 <span class="contactInformation">
-                    Contact info goes here.
+                    <span class = "footerPhone">
+                        <i class='bx bxs-phone'></i>phone
+                        <br>
+                        <a href = "tel:+233243167543">+233-(0)-24-316-7543</a>
+                    </span>
+                    <span class = "background">
+                        <img src = "media/black.svg">
+                    </span>
+                    <!-- <hr style="margin-bottom: 0.05in; margin-top: 0.05in;"> -->
+                    <span class = "footerMail">
+                        <i class='bx bxs-envelope' ></i>email<br>
+                        <a href = "mailto:renovatiogh@gmail.com">renovatiogh@gmail.com</a>
+                    </span>
                 </span>
             </footer>
         </main>

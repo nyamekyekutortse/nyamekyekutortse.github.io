@@ -304,6 +304,14 @@ input[id="clientNumber"]::-webkit-outer-spin-button
         text-transform: uppercase;
     }
 
+#verifyAll
+{
+    justify-self: center;
+    align-self: center;
+    margin-left: 39%;
+    border-radius: 0;
+    border: none;
+}
 /* SECTION 2 */
     /* SECTION 2A */
     .sectionTwo
@@ -813,6 +821,7 @@ input[id="clientNumber"]::-webkit-outer-spin-button
     .sectionFour h2
     {
         text-transform: uppercase;
+        text-decoration: underline;
     }
 
 /* *styles for "description, "material..." */
@@ -842,7 +851,7 @@ input[id="clientNumber"]::-webkit-outer-spin-button
 
 .sectionFour .invoiceTable table tbody tr:nth-child(odd)
 {
-    background: rgba(114, 141, 156, 0.38);
+    background: rgba(39, 140, 195, 0.87);
     line-height: 0;
     margin-top: 0;
 }
@@ -851,7 +860,7 @@ input[id="clientNumber"]::-webkit-outer-spin-button
 {
     line-height: 0;
     margin-top: 0;
-    background: rgba(72, 81, 86, 0.73);
+    background: rgba(12, 186, 225, 0.94);
 }
 
 .sectionFour .invoiceTable table tbody tr td
@@ -949,4 +958,288 @@ input[id="clientNumber"]::-webkit-outer-spin-button
     top: 7px;
     text-transform: uppercase;
     margin-bottom: 0.15in;
+}
+
+/* sectionFive */
+.sectionFive
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.25in;
+    justify-items: center;
+    align-items: center;
+}
+
+/* *style for "pool equipment invoice" */
+    .sectionFive h2
+    {
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+/* *styles for "description, "material..." */
+    .sectionFive .invoiceTable table thead tr
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: left;
+        /* border-bottom: 2px solid white; */
+        /* outline-style: solid; */
+    }
+
+.sectionFive .invoiceTable table thead tr th
+{
+    border-bottom: 2px solid white;
+    border-right: 1px solid white;
+}
+
+.sectionFive .invoiceTable table tbody tr
+{
+    line-height: 0;
+    margin-top: 0;
+    height: 0.45in;
+    background: rgba(132, 187, 219, 0.84);
+    background-repeat: no-repeat;
+}
+
+.sectionFive .invoiceTable table tbody tr:nth-child(odd)
+{
+    background: rgba(39, 140, 195, 0.87);
+    line-height: 0;
+    margin-top: 0;
+}
+
+.sectionFive .invoiceTable table tbody tr:last-child
+{
+    line-height: 0;
+    margin-top: 0;
+    background: rgba(12, 186, 225, 0.94);
+}
+
+#subTB
+{
+    position: relative;
+    font-size: 15px;
+    top: 7px;
+    text-transform: uppercase;
+    margin-bottom: 0.15in;
+}
+
+/* sectionSix */
+.sectionSix
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.25in;
+    justify-items: center;
+    align-items: center;
+}
+
+/* *style for "tiling material invoice" */
+    .sectionSix h2
+    {
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+/* *styles for "description, "material..." */
+    .sectionSix .invoiceTable table thead tr
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: left;
+        /* border-bottom: 2px solid white; */
+        /* outline-style: solid; */
+    }
+
+.sectionSix .invoiceTable table thead tr th
+{
+    border-bottom: 2px solid white;
+    border-right: 1px solid white;
+}
+
+.sectionSix .invoiceTable table tbody tr
+{
+    line-height: 0;
+    margin-top: 0;
+    height: 0.45in;
+    background: rgba(132, 187, 219, 0.84);
+    background-repeat: no-repeat;
+}
+
+.sectionSix .invoiceTable table tbody tr:nth-child(odd)
+{
+    background: rgba(39, 140, 195, 0.87);
+    line-height: 0;
+    margin-top: 0;
+}
+
+.sectionSix .invoiceTable table tbody tr:last-child
+{
+    line-height: 0;
+    margin-top: 0;
+    background: rgba(12, 186, 225, 0.94);
+}
+
+#subTC
+{
+    position: relative;
+    font-size: 15px;
+    top: 7px;
+    text-transform: uppercase;
+    margin-bottom: 0.15in;
+}
+
+/* Section 7 */
+.sectionSeven
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.25in;
+    justify-items: center;
+    align-items: center;
+}
+
+/* *style for "tiling material invoice" */
+    .sectionSeven h2
+    {
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+/* *styles for "description, "material..." */
+    .sectionSeven .laborTable table thead tr
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: left;
+        /* border-bottom: 2px solid white; */
+        /* outline-style: solid; */
+    }
+
+.sectionSeven .laborTable table thead tr th
+{
+    border-bottom: 2px solid white;
+    border-right: 1px solid white;
+}
+
+.sectionSeven .laborTable table tbody tr
+{
+    line-height: 0;
+    margin-top: 0;
+    height: 0.45in;
+    background: rgba(132, 187, 219, 0.84);
+    background-repeat: no-repeat;
+}
+
+.sectionSeven .laborTable table tbody tr:nth-child(odd)
+{
+    background: rgba(39, 140, 195, 0.87);
+    line-height: 0;
+    margin-top: 0;
+}
+
+.sectionSix .laborTable table tbody tr:last-child
+{
+    line-height: 0;
+    margin-top: 0;
+    background: rgba(12, 186, 225, 0.94);
+}
+
+
+.subTotalRowLabor,
+#equipmentSummationRow
+{
+    /* align-items: right; */
+    /* padding-left: 0.15in; */
+    background: rgba(12, 186, 225, 0.94);
+}
+
+.subTotalRowLabor input[type = "text"]
+{
+    width: 0.4in;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.subTotalRowLabor input[type = "number"]
+{
+    width: 0.75in;
+}
+
+#subTD
+{
+    position: relative;
+    font-size: 15px;
+    top: 7px;
+    text-transform: uppercase;
+    margin-bottom: 0.15in;
+}
+
+/* Section 8 */
+footer
+{
+    width: 100%;
+    background-color: rgba(33, 156, 215, 1);
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 500;
+    align-items: center;
+}
+
+footer .voidCondition
+{
+    color: rgb(198, 207, 214);
+    z-index: 2
+}
+
+footer .background
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    left: 0.25in;
+    /* width: 15%; */
+    /* background: red; */
+    align-items: center;
+}
+
+footer .background img
+{
+    position: relative;
+    width: 1.35in;
+    margin-left: 1.25in;
+    margin-right: 1.25in;
+    /* top: 10.5in; */
+    /* margin-left: -30.0in; */
+}
+
+footer .contactInformation
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.25in;
+}
+
+footer .contactInformation .footerPhone
+{
+    text-align: left;
+    font-style: normal !important;
+    font-size: 15px;
+}
+
+footer .contactInformation .footerMail
+{
+    text-align: right;
+    font-style: normal !important;
 }
