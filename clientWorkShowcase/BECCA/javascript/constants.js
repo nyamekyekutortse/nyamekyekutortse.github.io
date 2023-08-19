@@ -34,7 +34,45 @@ titleInput.addEventListener('change', () =>
 });
 
 
+//invoice dating
+const invoiceDate = document.getElementById("invoiceDate")
+invoiceDate.innerHTML = getFormattedDate();
+function getFormattedDate() {
+  const currentDate = new Date();
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+  const year = currentDate.getFullYear();
+  return `${day}-${month}-${year}`;
+}
 
+//invoice number generation
+const invoiceNumber = document.getElementById("invoiceNumber");
+invoiceNumber.innerHTML = generateInvoiceNumber();
+function generateInvoiceNumber() {
+  const timestamp = Date.now().toString(); // Get current timestamp
+  const randomString = Math.random().toString(36).substring(2, 9); // Generate random alphanumeric string
+
+  const invoiceNumber = timestamp + randomString;
+  // may change this to contractor name?
+  return "BIN" + invoiceNumber.substring(0, 7); // Limit to 7 characters
+}
+
+//setting currency throughout document
+const currencyIn = document.getElementById("transactionCurrency");
+
+currencyIn.addEventListener("change", () =>
+{
+    var setCurrency = "GH&#8373";
+    if(currencyIn.value.trim() !== "")
+    {
+        if(currencyIn.value.contains("canada"))
+          setCurrency = "CAD";
+        else if(currencyIn.value.contains("BRITISH"))
+        {
+            setCurrency = "GBP";
+        }
+    }
+})
 
 // Units of measure
 // let unitsOfMeasure = ["coil", "coils", "day", "days", "trip", "trips", "pc", "pcs", "bag", "bags", "unit", "units", "ton", "tons", "sq. meter", "sq. meters", "set", "sets"]

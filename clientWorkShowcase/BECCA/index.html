@@ -2,178 +2,229 @@
     <head>
         <title id = "pageTitle"> New Invoice</title>
         <link rel = "stylesheet" href = "css/style.css">
-        <link rel = "stylesheet" href = "css/A4sectioning.css">
+        <!-- <link rel = "stylesheet" href = "css/A4sectioning.css"> -->
+        <link rel = "stylesheet" href = "css/superLayout.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <meta charset="UTF-8">
     </head>
 
     <body>
         <!-- Footer -->
+        <aside class = "notePad" style="display: none;">
+            menu items / tips / notes
+            <button onclick = "verifyBreakDown()">confirm / verify</button>
+        </aside>
         <main>
-            <section id="topSection">
-                <div class="leftLogo">
-                    <span class = "header">official invoice</span>
-                    <img src = "media/white.svg" alt="logo" class="logo" id="leftLogoImage">
-                </div>
+            <section id="topSection" class = "sectionOne">
+                <span class="logo_invoiceHead">
+                    <div class="leftLogo">
+                        <img src = "designElements/logoReimagined/iconOnlyWhite.svg" alt="logo" class="logo" id="leftLogoImage">
+                        <span class="companyData">
+                            <span>
+                                <i class='bx bxs-phone'></i>phone: 
+                                <br>
+                                <a href = "tel:+233243167543">+233-(0)-24-316-7543</a>
+                            </span>
+                            <hr style="margin-bottom: 0.05in; margin-top: 0.05in;">
+                            <span>
+                                <i class='bx bxs-envelope' ></i>email<br>
+                                <a href = "mailto:renovatiogh@gmail.com">renovatiogh@gmail.com</a>
+                            </span>
+                        </span>
+                    </div>
+                    <span class = "invoiceHead">
+                        <span class = "header">
+                            <!-- <span class = "headerTop">official</span> -->
+                            <span class="headerBottom">invoice</span>
+                        </span>
+                    </span>
+                    <span class = "invoiceDetails" id = "invoiceDetails">
+                        <span>Invoice No: <span id = "invoiceNumber"></span></span>
+                        <span>Invoice Date: <span id = "invoiceDate"></span></span>
+                        <span>Due Date: <span id = "dueDate"></span><input role = "form" type = "date" id = "payByDate" aria-label = "due date for invoice"></span>
+                    </span>
+                </span>
                 <span class="documentHeading" id = "invoiceTitle">
-                    <!-- proposed construction of 16ft x 24ft rectangular residential swimming pool. -->
-                    <!-- <hr> -->
-                    <!-- <input role = "form" type="text" id = "projectTitle" placeholder="enter project title here"> -->
-                    <textarea rows="2" cols="50" placeholder="enter project title here" id = "projectTitle"></textarea>
+                    <textarea rows="2" cols="70" placeholder="enter project title here" id = "projectTitle" maxlength = "150"></textarea>
                 </span>
                 <div id = "additions" class="additionalInfo">
-                    
                     <span class="clientInfo">
-                        <span>name of client 
+                        <span class = "clientContact">
+                            <p>invoice to</p> 
+                            <input role = "form" type = "text" id = "clientName" aria-label = "name of client" placeholder="client name">
                             <br>
-                            <input role = "form" type = "text" id = "clientName" aria-label = "name of client" placeholder="FirstName LastName">
+                            <input role = "form" type = "number" id = "clientNumber" aria-label = "phone number of client" placeholder = "client phone">
+                            <br>
+                            <input role = "form" type = "text" id = "clientMail" aria-label = "email of client" placeholder = "client email">
                         </span>
-                        <span>project location
-                            <br>
-                            <input role = "form" type = "text" id = "projectLocation" aria-label = "location of project" placeholder = "location">
+                        <span id = "projectData">
+                            <!-- <p>project location</p> -->
+                            <input role = "form" type = "text" id = "projectLocation" aria-label = "location of project" placeholder = "project location">
                         </span>
                     </span>
                     <span class="contractorInfo">
-                        <span>contractor name 
-                            <br>
-                            <input role = "form" id = "contractorName" aria-label = "name of contractor" type = "text" placeholder = "firstName lastName"></span>
                         <span>
-                            currency
-                            <br>
-                            <input role = "form" type = "text" id = "transactionCurrency" aria-label="currency of transaction" placeholder = 'ghana cedi (gh&#8373)' class = "currencyEntry">
+                            <p id = "recievedSub">received from </p>
+                            <input role = "form" id = "contractorName" aria-label = "name of contractor" type = "text" placeholder = "contractor name">
+                        </span>
+                        <span id = "billingCurrencyBox">
+                            <p id = "currencySub">billing currency</p>
+                            <input role = "form" type = "text" id = "transactionCurrency" aria-label="currency of transaction" placeholder = 'ghanaian cedi (gh&#8373)' class = "currencyEntry" list = "currencies">
+                            <datalist id  ="currencies" style="text-transform: uppercase;">
+                                <option value = "CANADIAN DOLLAR (CAD)"></option>
+                                <option value = "BRITISH POUND (GBP)"></option>
+                                <option value = "EUROPEAN EURO (EUR)"></option>
+                                <option value = "GHANAIAN CEDI (GH&#8373)"></option>
+                                <option value = "US DOLLAR (USD)"></option>
+                                <option></option>
+                            </datalist>
                         </span>
                     </span>
-                    <span id = "dateContainer">date drafted
-                        <br>
+                    <!-- <span id = "dateContainer" class = "dateOfInvoice">
+                        <p>invoice date</p>
                         <input role = "form" type = "date" id = "draftedDate" placeholder = "" aria-label= "date of invoice draft">
-                    </span>
+                    </span> -->
                 </div>  
             </section>
             <!-- SECTION 2 -->
-            <section id = "initialSummary"> 
+            <hr>
+            <section id = "initialSummary" class = "sectionTwo"> 
                 <p class = "description">
                     Below is a brief summary of the invoice. Further breakdown is the subsequent sections
                 </p>
-                <hr class = "sectionDivider">
+                <!-- <hr class = "sectionDivider"> -->
                 <span class="overviewBill">
                     <div class="numbers">
-                        <span id="intitalSum">
-                            <h2>Initial Sum <br>
-                                <span class = "currencyEntry">(GH&#8373)</span> 
-                            </h2>                        
-                            <input type = number role = form class = "numberForm" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue" min = "0.00">
+                        <span id="intitalSum" class = "initialTotals">
+                            <span>
+                                <h2>Initial Sum</h2>
+                                <span class = "subHeading">(GH&#8373)</span> 
+                            </span>                    
+                            <input type = "number" role = form class = "numberForm" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "Initial sum" id = "initialValue" min = "0.00">
                         </span>
-                        <h2>discount</h2>
-                        <span id = "discounts">
-                            <span class = "percentValueHeader">
+                        
+                        <span id = "discounts" class = "discountTotals">
+                            <h2>discount</h2>
+                            <span class = "discountPercent">
                                 <h3>Percentage (%)</h3>
-                                <h3>Value (GH&#8373)</h3>
-                            </span>
-                            <span class = "percentValue">
                                 <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "discountPercent" min = "0.00" max = "100.00">
+                            </span>
+                            <span class = "discountValue">
+                                <h3>Value (GH&#8373)</h3>
                                 <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" id = "discountValue" min = "0.00">
                             </span>
-
                         </span>
-                        <span id="amountDue">
-                            <h2>
-                                <span class = "currencyEntry">Amount Due <br>(GH&#8373)</span>
-                            </h2>
+                        <span id="amountDue" class="amountTotals">
+                            <span>
+                                <h2>Amount Due</h2>
+                                <span class = "subHeading">(GH&#8373)</span> 
+                            </span>     
                             <input type = "number" role = form class = numberForm placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "final amount due for client" id = "amountValue">
                         </span>
                     </div>
-
+                    <p class = "description">
+                        Below is the distribution of cost for different parts of the project.
+                    </p>
                     <div class="breakdown">
+
                         <span class="materialCost">
                             <h2>Material Cost</h2>
-                            <span class = "percentValueHeader">
+                            <span class="materialPercent">
                                 <h3>Percentage (%)</h3>
-                                <h3>Value (GH&#8373)</h3>
-                            </span>
-                            <span class = "percentValue">
                                 <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "materialBreakPercent" min = "0.00" max = "100.00">
+                            </span>
+                            <span class="materialTotals">
+                                <h3>Value (GH&#8373)</h3>
                                 <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" min = "0.00" id = "materialBreakValue">
-                            </span>        
+                            </span>
                         </span>
                         <span class="equipmentsFixtures">
                             <h2>equipment and fixtures</h2>
-                            <span class = "percentValueHeader">
+                            <span class="efPercent">
                                 <h3>Percentage (%)</h3>
-                                <h3>Value (GH&#8373)</h3>
-                            </span>
-                            <span class = "percentValue">
                                 <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" max  ="100" class = "percentageIn" id = "equipmentBreakPercent" min = "0.00" max = "100.00">
+                            </span>
+
+                            <span class="efTotals">
+                                <h3>Value (GH&#8373)</h3>
                                 <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" min = "0.00" id = "equipmentBreakValue">
                             </span>
                         </span>
                         <span class="poolTiling">
                             <h2>Pool Tiling and coping</h2>
-                            <span class = "percentValueHeader">
+                            <span class="ptcPercent">
                                 <h3>Percentage (%)</h3>
-                                <h3>Value (GH&#8373)</h3>
-                            </span>
-                            <span class = "percentValue">
                                 <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "tilingBreakPercent" min = "0.00" max = "100.00">
+                            </span>
+                            <span class = "ptcTotals">
+                                <h3>Value (GH&#8373)</h3>
                                 <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" min = "0.00" id = "tilingBreakValue">
                             </span>
                         </span>
                         <span class="civWorks">
                             <h2>civil works and labor charges</h2>
-                            <span class = "percentValueHeader">
+                            <span class="civWorkPercent">
                                 <h3>Percentage (%)</h3>
-                                <h3>Value (GH&#8373)</h3>
-                            </span>
-                            <span class = "percentValue">
                                 <input type = "number" role = "form" placeholder = "0.00%" step = "0.10" aria-label = "percentage of total cost" class = "percentageIn" id = "laborBreakPercent" max = "100.00" min = "0.00">
+                            </span>
+                            <span class="civWorkTotals">
+                                <h3>Value (GH&#8373)</h3>
                                 <input type = "number" role = "form" placeholder = "GH&#8373 0.00" step = "0.01" aria-label = "cost of materials" class = "valueIn" id = "laborBreakValue" min = "0.00">
                             </span>
                         </span>
                     </div>
                 </span>
-
             </section>
+            <hr>
             <!-- SECTION 3 -->
-            <!-- * Update aria labels accordingly. -->
-            <section id = "percentageBreakdown">
-                <span id="mobilization">
+            <!-- ! Update aria labels accordingly. -->
+            <section id = "percentageBreakdown" class = "sectionThree">
+                <span id="mobilization" class = "mobilization">
                     <h2>mobilization</h2>
-                    <span id="mobPercent">
-                        <p>mobilization(%)</p>
+                    <span id="mobPercent" class = "mobilizationPercent">
+                        <h3>mobilization(%)</h3>
                         <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" max = "100" id = "mobilPercent" min = "0.00" max = "100">
                     </span>
-                    <span id = "mobilizationVal">
-                        <p>mobilization<span class = "currencyEntry">(gh&#8373)</span></p>
+                    <span id = "mobilizationVal" class = "mobilizationTotals"> 
+                        <h3>
+                            mobilization<span class = "currencyEntry">(gh&#8373)</span>
+                        </h3>
                         <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "mobilTotal" min = "0.00">
                     </span>
                 </span>
                 <!-- <hr id="verticalSeparator"> -->
-                <span id="balance">
+                <span id="balance" class ="balance">
                     <h2>balance</h2>
-                    <span id="balancePercent">
-                        <p>balance(%)</p>
+                    <span id="balancePercent" class = "balancePercent">
+                        <h3>balance(%)</h3>
                         <input role="form" type = "number" aria-label = "balance percent" placeholder="0.00" step = "0.01" id = "balPercent" min = "0.00" max = "100">
                     </span>
-                    <span id="balanceVal">
-                        <p>balance <span class = "currencyEntry">(gh&#8373)</span></p>
+                    <span id="balanceVal" class ="balanceTotals">
+                        <h3>
+                            balance <span class = "currencyEntry">(gh&#8373)</span>
+                        </h3>
                         <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = balTotal min = "0.00">
                     </span>
                 </span>
-                <span id = "inflationAdjust">
+                <span id = "inflationAdjust" class = "inflation">
                     <h2>
-                        inflation adjustment
+                        inflation
                     </h2>
-                    <span id="inflationPercent">
-                        <p>inflation(%)</p>
+                    <span id="inflationPercent" class ="inflationPercent">
+                        <h3>inflation(%)</h3>
                         <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "inflationPercentIn" min = "0.00" max = "100">
                     </span>
-                    <span id="inflationValue">
-                        <p>inflation<span class = "currencyEntry">(gh&#8373)</span></p>
+                    <span id="inflationValue" class = "inflationTotals">
+                        <h3>inflation
+                            <span class = "currencyEntry">(gh&#8373)</span>
+                        </h3>
                         <input role="form" type = "number" aria-label = "inflation value in currency" placeholder="0.00" step = "0.01" id = "inflationValueIn" min = "0.00" max = "100">
                     </span>
                 </span>
-                <button onclick = "verifyBreakDown()">confirm / verify</button>
             </section>
+            <hr>
             <!-- SECTION 4 -->
-            <section id = materialInvoice>
+            <section id = "materialInvoice" class = "sectionFour">
                 <h2>material invoice</h2>
                 <span class="invoiceTable">
                     <table id = "materialTable">
@@ -223,6 +274,8 @@
                                 </td>
                                 <td colspan="4" id = "computedSubTotal" class = "subTotalRow">
                                     <!-- TODO: update aria labels when cleaning up -->
+                                    <span id = "subT">subtotal</span>
+                                    <br>
                                     <input id = "subCurrency" role = "form" type = "text" placeholder="gh&#8373" aria-label="" class = "currencyEntry">
                                     <input id = "materialSubTotal" role = "form" type = "number" placeholder="0.00" aria-label="">
                                 </td>
@@ -232,6 +285,7 @@
                 </span>
                 <button onclick = "calculateTotalMaterial()">confirm / verify</button>
             </section>
+            <hr>
             <!-- SECTION  5 -->
             <section id = equipmentInvoice>
                 <h2>pool equipment invoice</h2>

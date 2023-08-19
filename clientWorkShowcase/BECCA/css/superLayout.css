@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Victor+Mono:wght@100;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&display=swap');
+/* separator styling */
+    hr
+    {
+        margin-top: 0.15in;
+    }
+
+input
+{
+    border-radius: 0;
+    color: black;
+}
+
+a, 
+a:visited
+{
+    text-decoration: none;
+}
+
+input::placeholder
+{
+    color: rgb(198, 198, 198);
+}
+
+input[type = "text"]
+{
+    text-transform: uppercase;
+}
+
+button
+{
+    color: black;
+    text-transform: uppercase;
+}
+
+/* top section */
+.sectionOne
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.logo_invoiceHead
+{
+    display: flex;
+    width: 9.05in;
+}
+
+
+.logo_invoiceHead .invoiceHead
+{
+    left: 5.30in;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    background: rgb(31, 138, 200);
+    height: 1.85in;
+    width: 2.25in;
+    /* display: flex; */
+    align-items: bottom;
+    justify-content: center;
+    vertical-align: center;
+    z-index: 2;
+}
+
+.logo_invoiceHead .invoiceHead .header
+{
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column;
+    line-height: 40px;
+    align-items: bottom;
+    justify-items: center;
+    vertical-align: bottom;
+}
+
+/* * Styles for "official" */
+    .logo_invoiceHead .invoiceHead .headerTop
+    {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+/* * Styles for "invoice" */
+    .logo_invoiceHead .invoiceHead .headerBottom
+    {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-align: center;
+        margin-top: 1.45in;
+    }
+
+.sectionOne .leftLogo
+{
+    width: 100%;
+    background: rgba(33, 156, 215, 1);
+    display: flex;
+    flex-direction: column;
+    height: 1in;
+    align-items: left;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+}
+
+.sectionOne .leftLogo .companyData
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 3.45in;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/* * style for company logo */
+    .sectionOne .leftLogo img
+    {
+        width: 0.5in;
+        height: 0.5in;  
+        margin-left: 0.25in;
+        /* outline: solid 1px white; */
+        /* outline-offset: 0.05in; */
+        background: rgba(62, 112, 140, 1);
+        border-radius: 5px;
+    }
+
+.sectionOne .documentHeading
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -0.95in;
+    margin-left: 0.05in;
+}
+
+/* * style for document title */
+    .sectionOne .documentHeading textarea
+    {
+        background: none;
+        width: 5.2in;
+        text-transform: uppercase;
+        font-size: 20px;
+        resize: none;
+        text-align: left;
+        font-weight: 500;
+        margin-top: -0.5in;
+    }
+
+    #invoiceDetails
+    {
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        padding-left: 3.05in;
+        padding-top: 1.90in;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+.sectionOne .additionalInfo
+{
+
+}
+
+.sectionOne .additionalInfo .clientInfo
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.15in;
+    justify-content: left;
+    z-index: 4;
+    margin-left: 0.05in;
+}
+
+.sectionOne .additionalInfo .clientInfo .clientContact
+{
+    display: block;
+}
+
+input[id="clientNumber"]::-webkit-inner-spin-button,
+input[id="clientNumber"]::-webkit-outer-spin-button 
+{
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* * style for name and location */
+    .sectionOne .additionalInfo .clientInfo p
+    {
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: rgb(255, 255, 255);
+    }
+
+/* * style for input forms for client name and prohect location */
+    .sectionOne .additionalInfo .clientInfo input
+    {
+        text-transform: uppercase;
+        text-align: left;
+        border: none;
+        border-radius: 0;
+    }
+
+    #clientName
+    {
+        height: 0.35in;
+        font-weight: 500;
+        font-size: 15px;
+        width: 2.3in;
+        text-transform: uppercase;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+    }
+
+    #projectData
+    {
+        margin-top: -0.15in;
+        width: 2.3in;
+    }
+
+    #clientNumber, #clientMail, #projectLocation
+    {
+        width: 2.3in;
+    }
+
+.sectionOne .additionalInfo .contractorInfo
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.0in;
+    line-height: 0.25in;
+    justify-content: right;
+    align-items: right;
+    margin-left: 5.35in;
+    margin-top: -0.5in;
+}
+
+/* * style for name and currency */
+    .sectionOne .additionalInfo .contractorInfo p
+    {
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    #recievedSub
+    {
+        font-weight: 500;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: rgb(255, 255, 255);
+    }
+
+    #contractorName
+    {
+        margin-top: -1.9in;
+        height: 0.35in;
+        font-weight: 500;
+        font-size: 15px;
+        width: 2.3in;
+        text-transform: uppercase;
+        font-family: 'IBM Plex Sans Arabic', sans-serif;
+    }
+
+/* * style for input forms for contractor name and currency */
+    .sectionOne .additionalInfo .contractorInfo input
+    {
+        text-transform: uppercase;
+        text-align: left;
+        border: none;
+        border-radius: 0;
+    }
+
+    #currencySub
+    {
+        font-size: 10px;
+    }
+
+    #billingCurrencyBox
+    {
+        /* margin-top: -1in; */
+        line-height: 0.15in
+    }
+.sectionOne .additionalInfo .dateOfInvoice
+{
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+}
+
+/* *style for date of invoice entry */
+    .sectionOne .additionalInfo .dateOfInvoice input
+    {
+        width: 1in;    
+    }
+
+/* *style for "invoice date */
+    .sectionOne .additionalInfo .dateOfInvoice p
+    {
+        text-transform: uppercase;
+    }
+
+/* SECTION 2 */
+    /* SECTION 2A */
+    .sectionTwo
+    {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 0.25in;
+    }
+
+    /* *style for descriptive text */
+        .sectionTwo .description
+        {
+            display: block;
+            text-align: center;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+    .sectionTwo .overviewBill .numbers
+    {
+        display: flex;
+        gap: 0.3in;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionTwo .overviewBill .numbers .initialTotals
+    {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.20in;
+        margin-top: 0.15in;
+        height: 2.35in;
+        width: 2.35in;
+        border-radius: 35px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(225, 235, 244);
+    }
+
+    /* *style for currency */
+        .sectionTwo .overviewBill .numbers .initialTotals .subHeading
+        {
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 1);
+            margin-left: -0.2in;
+        }
+
+    /* * style for "initial sum */
+        .sectionTwo .overviewBill .numbers .initialTotals h2
+        {
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 1);
+            margin-left: -0.2in;
+        }
+
+    /* *style for initial sum value box */
+        .sectionTwo .overviewBill .numbers .initialTotals input
+        {
+            width: 1.75in;
+            /* height: 0.5in; */
+            /* font-size: 15px; */
+        }
+
+    .sectionTwo .overviewBill .discountTotals
+    {
+        display: flex;
+        flex-direction: column;
+        height: 2.55in;
+        width: 2.55in;
+        border-radius: 35px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(225, 235, 244);
+        /* flex-direction: row; */
+    }
+
+    /* *style for "discount */
+        .sectionTwo .overviewBill .discountTotals h2
+        {
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 1);
+        }
+
+    .sectionTwo .overviewBill .discountTotals .discountPercent
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* *style for "percentage" */
+        .sectionTwo .overviewBill .discountTotals .discountPercent h3
+        {
+            text-transform: uppercase; 
+            font-size: 13px; 
+            color: rgba(0, 0, 0, 1);
+            margin-left: -0.62in;
+        }
+
+    /* * style for percentage entry */
+        .sectionTwo .overviewBill .discountTotals .discountPercent input
+        {
+            text-transform: uppercase; 
+            width: 0.75in;
+            color: rgba(0, 0, 0, 1);
+            margin-left: -0.61in;
+        }
+
+    /* *style for "value" */
+        .sectionTwo .overviewBill .discountTotals .discountValue h3
+        {
+            text-transform: uppercase;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .sectionTwo .overviewBill .discountTotals .discountValue input
+        {
+            text-transform: uppercase;
+            width: 1.75in;
+        }
+
+    .sectionTwo .overviewBill .numbers .amountTotals
+    {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.20in;
+        margin-top: 0.15in;
+        height: 2.35in;
+        width: 2.35in;
+        border-radius: 35px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(225, 235, 244);
+    }
+
+    /* *style for "amount due */
+        .sectionTwo .overviewBill .numbers .amountTotals h2
+        {
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 1);
+            margin-left: -0.05in;
+        }
+
+    /* *style for "ghc"*/
+        .sectionTwo .overviewBill .numbers .amountTotals .subHeading
+        {
+            color: rgba(0, 0, 0, 1);
+            margin-left: -0.07in;
+        }
+
+    /* *style for amount due value box */
+        .sectionTwo .overviewBill .numbers .amountTotals input
+        {
+            width: 1.75in;
+            /* height: 0.5in; */
+            /* font-size: 15px; */
+        }
+
+/* SECTION 2B */
+    .sectionTwo .breakdown
+    {
+        display:flex;
+        flex-direction: row;
+        gap: 0.15in;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.3in;
+        /* flex-direction: column; */
+    }
+
+    .sectionTwo .breakdown .materialCost
+    {
+        /* background: red; */
+        width: 2in;
+    }
+
+    /* *style for "materialCost */
+        .sectionTwo .breakdown .materialCost h2
+        {
+            text-transform: uppercase;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+
+    .sectionTwo .breakdown .materialPercent
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* *style for "percentage" */
+        .sectionTwo .breakdown .materialCost .materialPercent h3
+        {
+            text-transform: uppercase; 
+            font-size: 10px;
+            font-weight: 400; 
+        }
+    
+    /* * style for percentage entry */
+        .sectionTwo .breakdown .materialCost .materialPercent input
+        {
+            text-transform: uppercase; 
+            width: 0.75in;
+        }
+
+    /* *style for "value" */
+        .sectionTwo .breakdown .materialCost .materialTotals h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * style for material total input */
+        .sectionTwo .breakdown .materialCost .materialTotals input
+        {
+            text-transform: uppercase;
+            width: 1.5in;
+        }
+
+    .sectionTwo .breakdown .equipmentsFixtures
+    {
+        width: 2.2in;
+    }
+
+    /* *styles for "equipment and fixtures */
+        .sectionTwo .breakdown .equipmentsFixtures h2
+        {
+            text-transform: uppercase;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+
+    /* * styles for "percentage" */
+        .sectionTwo .breakdown .equipmentsFixtures .efPercent h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * styles for ef percentage input */
+        .sectionTwo .breakdown .equipmentsFixtures .efPercent input
+        {
+            width: 0.75in;
+        }
+
+    /* * styles for "percentage" */
+        .sectionTwo .breakdown .equipmentsFixtures .efTotals h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * styles for ef percentage input */
+        .sectionTwo .breakdown .equipmentsFixtures .efTotals input
+        {
+            width: 1.5in;
+        }
+
+    .sectionTwo .breakdown .poolTiling
+    {
+        /* background: red; */
+        width: 2.0in;
+    }
+
+    /* *styles for "pool tiling an coping" */
+        .sectionTwo .breakdown .poolTiling h2
+        {
+            text-transform: uppercase;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+
+    /* * styles for "percentage" */
+        .sectionTwo .breakdown .poolTiling .ptcPercent h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * styles for ef percentage input */
+        .sectionTwo .breakdown .poolTiling .ptcPercent input
+        {
+            width: 0.75in;
+        }
+
+    /* * styles for "percentage" */
+        .sectionTwo .breakdown .poolTiling .ptcTotals h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * styles for ef percentage input */
+        .sectionTwo .breakdown .poolTiling .ptcTotals input
+        {
+            width: 1.5in;
+        }
+
+    .sectionTwo .breakdown .civWorks
+    {
+        /* background: red; */
+        width: 3.5in;
+    }
+
+    /* *styles for "civil works and labor charges" */
+        .sectionTwo .breakdown .civWorks h2
+        {
+            text-transform: uppercase;
+            font-size: 12px;
+            text-decoration: underline;
+        }
+
+    /* * styles for "percentage" */
+        .sectionTwo .breakdown .civWorks .civWorkPercent h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * styles for ef percentage input */
+        .sectionTwo .breakdown .civWorks .civWorkPercent input
+        {
+            width: 0.75in;
+        }
+
+    /* * styles for "value" */
+        .sectionTwo .breakdown .civWorks .civWorkTotals h3
+        {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+    /* * styles for ef percentage input */
+        .sectionTwo .breakdown .civWorks .civWorkTotals input
+        {
+            width: 1.5in;
+        }
+
+/* SECTION 3 */
+.sectionThree
+{
+    position: relative;
+    display: flex;
+    gap: 0.15in;
+    width: 100%;
+    margin-top: 0.25in;
+    justify-content: center;
+}
+
+.sectionThree .mobilization
+{
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* * style for "mobilization" */
+    .sectionThree .mobilization h2
+    {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+/* * style for "percentage" */
+    .sectionThree .mobilization .mobilizationPercent h3
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+/* *style for percentage input */
+    .sectionThree .mobilization .mobilizationPercent input
+    {
+        text-transform: uppercase;
+        width: 0.75in;
+    }
+
+/* *style for "value" */
+    .sectionThree .mobilization .mobilizationTotals h3
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+/* *style for "value" input */
+    .sectionThree .mobilization .mobilizationTotals input
+    {
+        text-transform: uppercase;
+        width: 1.5in;
+    }
+
+.sectionThree .balance
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* *style for "balance" */
+    .sectionThree .balance h2
+    {
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+/* *style for "percentage" */
+    .sectionThree .balance .balancePercent h3
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+/* *style for percentage input */
+    .sectionThree .balance .balancePercent input
+    {
+        text-transform: uppercase;
+        width: 0.75in;
+        text-align: center;
+    }
+
+/* *style for "value" */
+    .sectionThree .balance .balanceTotals h3
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+/* *style for "value" input */
+    .sectionThree .balance .balanceTotals input
+    {
+        text-transform: uppercase;
+        width: 1.5in;
+        text-align: center;
+    }
+
+.sectionThree .inflation
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* *style for "inflation" */
+    .sectionThree .inflation h2
+    {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+/* *style for "percentage" */
+    .sectionThree .inflation .inflationPercent h3
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 0.38in;
+    }
+
+/* *style for percentage input */
+    .sectionThree .inflation .inflationPercent input
+    {
+        text-transform: uppercase;
+        width: 0.75in;
+        margin-left: 0.45in 
+    }
+
+/* *style for "value" */
+    .sectionThree .inflation .inflationTotals h3
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: right;
+    }
+
+
+/* SECTION 4 */
+.sectionFour
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.25in;
+    justify-items: center;
+    align-items: center;
+}
+
+/* *style for "material invoice */
+    .sectionFour h2
+    {
+        text-transform: uppercase;
+    }
+
+/* *styles for "description, "material..." */
+    .sectionFour .invoiceTable table thead tr
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: left;
+        /* border-bottom: 2px solid white; */
+        /* outline-style: solid; */
+    }
+
+.sectionFour .invoiceTable table thead tr th
+{
+    border-bottom: 2px solid white;
+    border-right: 1px solid white;
+}
+
+.sectionFour .invoiceTable table tbody tr
+{
+    line-height: 0;
+    margin-top: 0;
+    height: 0.45in;
+    background: rgba(132, 187, 219, 0.84);
+    background-repeat: no-repeat;
+}
+
+.sectionFour .invoiceTable table tbody tr:nth-child(odd)
+{
+    background: rgba(114, 141, 156, 0.38);
+    line-height: 0;
+    margin-top: 0;
+}
+
+.sectionFour .invoiceTable table tbody tr:last-child
+{
+    line-height: 0;
+    margin-top: 0;
+    background: rgba(72, 81, 86, 0.73);
+}
+
+.sectionFour .invoiceTable table tbody tr td
+{
+    /* border-right: 1px solid white; */
+}
+
+.descriptionEntry input
+{
+    width: 1.5in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.materialEntry input
+{
+    width: 2.2in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.quantityEntry
+{
+    gap: 0.05in;  
+}
+
+.quantityEntry input[type="number"]
+{
+    width: 0.75in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.quantityEntry input[type="text"]
+{
+    width: 0.8in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.unitPrices
+{
+    text-transform: uppercase;
+}
+
+.unitPrices input[type = "number"]
+{
+    width: 0.75in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.unitPrices input[type = "text"]
+{
+    width: 0.5in;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+}
+
+.totalEntry
+{
+    gap: 0.05in;
+}
+
+.totalEntry input[type = "text"]
+{
+    width: 0.4in;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+}
+
+.totalEntry input[type = "number"]
+{
+    width: 0.75in;
+    color: rgba(0, 0, 0, 1);
+}
+
+.subTotalRow
+{
+    /* align-items: right; */
+    padding-left: 5.15in;
+}
+
+.subTotalRow input[type = "text"]
+{
+    width: 0.4in;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.subTotalRow input[type = "number"]
+{
+    width: 0.75in;
+}
+
+#subT
+{
+    position: relative;
+    font-size: 15px;
+    top: 7px;
+    text-transform: uppercase;
+    margin-bottom: 0.15in;
+}

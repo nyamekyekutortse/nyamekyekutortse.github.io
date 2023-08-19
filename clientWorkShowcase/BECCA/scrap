@@ -2,7 +2,7 @@
                 <section id = "topSection">
                     <!-- document title and stuff go here. -->
                     <div class="leftLogo">
-                        <img src = "media/white.svg" alt="logo" class="logo" id="leftLogoImage">
+                        <img src = "media/white.svg" alt="logo" class="logo" id="leftLogoImage"></img>
                         <span class = "header">official invoice</span>
                     </div>
                     <span class="documentHeading" id = "invoiceTitle">

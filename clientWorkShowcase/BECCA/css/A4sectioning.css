@@ -3,18 +3,26 @@ input
     color: black;
 }
 
-button{
+button
+{
     color: black;
 }
+
+textarea
+{
+    resize: none;
+}
+
 #topSection
 {
     position: relative;
-    width: 8.05in;
+    width: 9.05in;
     margin-left: 0.2in;
     display: flex;
     /* background: red; */
     margin-top: 0.25in;
-    height: 2in;
+    height: 2.5in;
+    /* height: auto; */
 }
 
 input[type=text]
@@ -31,15 +39,17 @@ input[type=text]
 .header
 {
     position: absolute;
-    z-index: 3;
-    top: -0.05in;
-    font-size: 30px;
+    /* z-index: 3; */
+    top: -0.08in;
+    font-size: 33px;
     text-align: center;
     left: 2.1in;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: 700;
     text-transform: uppercase;
     white-space: nowrap;
+    color: rgba(62, 112, 140, 1);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #invoiceTitle
@@ -50,23 +60,29 @@ input[type=text]
     top: 0.32in;
     width: 5in;
     text-transform: uppercase;
-    line-height: 15px;
+    line-height: 18px;
 }
 
 #projectTitle
 {
-    width: 5.5in;
-    height: 0.35in;
-    /* resize: both; */
+    width: 8.5in !important;
+    /* height: 0.55in; */
+    height: auto;
+    margin-bottom: 0.25in !important;
+    resize: none;
     /* height: auto; */
     overflow-wrap: break-word;
     white-space: pre-wrap;
     vertical-align: top;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 1);
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 14px;
+    line-height: 19px;
+    margin-top: -0.10in;
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    /* overflow: hidden; */
 }
 
 #additions
@@ -84,10 +100,16 @@ input[type=text]
     gap: 0.15in;
 }
 
+#additions p
+{
+    color: rgba(62, 112, 140, 1)
+}
+
 #clientName,
 #contractorName
 {
     width: 3in;
+    color: rgba(62, 112, 140, 1);
 }
 
 .contractorInfo
@@ -137,6 +159,8 @@ input[type=text]
     gap: 0.25in;
     display: flex;
 }
+
+
 /* Section 2 */
 #initialSummary
 {
@@ -145,10 +169,20 @@ input[type=text]
     margin-left: 0.2in;
     display: flex;
     flex-direction: column;
-    background: orange;
+    /* background: orange; */
     margin-top: 0.25in;
     gap: 1.28in;
     
+}
+
+h2 
+{
+    line-height: 0.15in;
+}
+
+.subHeading
+{
+    font-size: 12px !important;
 }
 
 .overviewBill
@@ -171,7 +205,7 @@ input[type=text]
     margin-top: -0.80in;
     text-transform: uppercase;
     margin-left: 0.45in;
-    /* background: pink; */
+    line-height: 0.45in;
 }
 
 #initialSum
@@ -182,7 +216,7 @@ input[type=text]
 
 #initialSum input
 {
-    width: 1.5in;
+    width: 1.25in;
 }
 
 #discounts
@@ -245,6 +279,7 @@ input[type=text]
 #amountValue
 {
     width: 2.5in;
+    margin-top: -0.35in;
 }
 
 .description
@@ -261,7 +296,7 @@ input[type=text]
     width: 8.05in;
     margin-left: 0.2in;
     display: flex;
-    background: rgb(255, 145, 0);
+    /* background: orange; */
     margin-top: 0.25in;
     height: 1.2in;
     text-transform: uppercase;
@@ -312,7 +347,7 @@ h2
     width: 8.05in;
     margin-left: 0.2in;
     display: block;
-    background: orange;
+    /* background: orange; */
     margin-top: 0.25in;
     height: auto;
 }
@@ -434,7 +469,7 @@ th{
     width: 8.05in;
     margin-left: 0.2in;
     display: block;
-    background: orange;
+    /* background: orange; */
     margin-top: 0.25in;
     height: auto;
 }
@@ -447,7 +482,7 @@ th{
     width: 8.05in;
     margin-left: 0.2in;
     display: block;
-    background: orange;
+    /* background: orange; */
     margin-top: 0.25in;
     height: auto;
 }
@@ -459,7 +494,7 @@ th{
     width: 4.55in;
     margin-left: 0.2in;
     display: block;
-    background: orange;
+    /* background: orange; */
     margin-top: 0.25in;
     height: auto;
 }
