@@ -7,6 +7,28 @@ Just for previews and demos
 ### Contract Previews
 <a href = "contracts/TRANS/index.html">Trans International</a>
 
+home
+web
+    curation
+    projects
+    contract
+design
+    web
+    app
+    graphics
+others
+    projects | learning
+    technologies
+    photography
+about
+    portfolio
+    resume
+    bio
+connect
+    contact
+    network
+    clients
+
 
 Clean and Minimal:
 White: rgba(255, 255, 255, 1)

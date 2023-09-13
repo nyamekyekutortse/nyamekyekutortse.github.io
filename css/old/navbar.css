@@ -1,0 +1,136 @@
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    /* background: rgb(0, 165, 211); */
+    background-color: rgba(13, 13, 13, 0.13);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+nav:hover
+{
+    background-color: rgb(0, 0, 0)
+}
+
+.navbar
+{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 100;
+}
+
+.navbar a
+{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    transition: all 0.5s ease-in-out;
+}
+
+.leftLinks,
+.rightLinks
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    gap: 15px;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 15px;
+}
+
+.leftLinks
+{
+    padding-right: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.rightLinks
+{
+    padding-left: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.link
+{
+    transition: all 0.5s linear;
+}
+
+.navIcon
+{
+    display: block;
+    text-align: center
+    position: relative;
+    opacity: 0;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none !important;
+}
+
+.link:hover .linkText
+{
+    font-weight: 500;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+.link:hover .navIcon
+{
+    display: block;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 100%;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none !important;
+}
+
+.name
+{
+    font-family: 'Yatra One', cursive;
+    text-transform: uppercase;
+    font-size: 20px;  
+}
+
+.first
+{
+    position: relative;
+    left: 27%;
+    top: 13px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.last
+{
+    position: relative;
+    top: -10px;
+    left: 27%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.projectShow
+{
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 30px;
+    position: relative;
+    color: white;
+}
+
+.linkText
+{
+    color: rgb(183, 182, 182);
+    font-weight: 400;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.5s ease-in-out;
+    letter-spacing: 1px;
+}
